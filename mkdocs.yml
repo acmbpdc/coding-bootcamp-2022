@@ -1,0 +1,53 @@
+site_name: ACMBPDC
+theme:
+  name: null
+  custom_dir: 'theme'
+nav:
+  - Home: 'index.md'
+  - Sessions:
+    - '1: HTML/CSS': './01-HTML-CSS/README.md'
+    - '2: JavaScript (Basics)': './02-JavaScript-1/README.md'
+    - '3: JavaScript (Advanced)': './03-JavaScript-2/README.md'
+    - '4: APIs': './04-API/README.md'
+    - '5: CLI & Git': './05-CLI-Git/README.md'
+    - '6: GitHub': './06-GitHub/README.md'
+plugins:
+  - search
+  - spellcheck
+  - with-pdf:
+      author: ACM BITS Pilani Dubai Campus
+      #copyright: ANY TEXT
+      #
+      #cover: false
+      #back_cover: true
+      #cover_title: TITLE TEXT
+      #cover_subtitle: SUBTITLE TEXT
+      #custom_template_path: TEMPLATES PATH
+      #
+      #toc_title: TOC TITLE TEXT
+      #heading_shift: false
+      #toc_level: 3
+      #ordered_chapter_level: 2
+      #excludes_children:
+      #    - 'release-notes/:upgrading'
+      #    - 'release-notes/:changelog'
+      #
+      #exclude_pages:
+      #    - 'bugs/'
+      #    - 'appendix/contribute/'
+      #convert_iframe:
+      #    - src: IFRAME SRC
+      #      img: POSTER IMAGE URL
+      #      text: ALTERNATE TEXT
+      #    - src: ...
+      #two_columns_level: 3
+      #
+      #render_js: true
+      #headless_chrome_path: headless-chromium
+      #
+      #output_path: any-place/document.pdf
+      #enabled_if_env: ENABLE_PDF_EXPORT
+      #
+      #debug_html: true
+      #show_anchors: true
+      #verbose: true
