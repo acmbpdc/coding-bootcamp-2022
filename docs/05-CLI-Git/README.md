@@ -524,7 +524,8 @@ echo $temp_variable
 
 The `$` is used to reference this variable in the terminal. But the functionality of the `$` doesn't end here.
 
-**Command Substitution:**
+**Command Substitution**
+
 Here's another cool thing you can do with this concept
 ```bash
 echo "The output of the wc command is $(wc teds_friends.txt)"
@@ -562,16 +563,16 @@ printf "Ted Mosby\nAnd Friends" | grep Friends | wc
 ```
 So again, what just happened?
 
-printf outputs
+`printf` outputs
 ```
 Ted Mosby
 And Friends
 ```
-then grep Friends searches that string and outputs
+then `grep Friends` searches that string and outputs
 ```
 And Friends
 ```
-Now this is passed to wc which of course prints the final output that is, 1 line, 2 words, and 12 characters. Pretty nifty right!
+Now this is passed to `wc` which of course prints the final output that is, 1 line, 2 words, and 12 characters. Pretty nifty right!
 
 #### **Output Redirection**
  
@@ -768,7 +769,7 @@ cd himym
 To initialize the repository, use the `init` subcommand.
 
 ```bash
-$ git init
+git init
 ```
 
 >   #### Repository
@@ -778,7 +779,7 @@ $ git init
 You have now created a `git` repository on your local system. If you list all files.
 
 ```bash
-$ ls -la
+ls -la
 ```
 This command is only for unix shells, or windows powershell. For windows cmd, you can use your file explorer and check the show hidden items option.
 
@@ -809,7 +810,7 @@ Git uses 3 logical areas to provide version control:
 Create a file called `README.md`
 
 ```bash
-$ touch README.md
+touch README.md
 ```
 In windows you can simply use a text editor of your choice.
 
@@ -828,7 +829,7 @@ Hello, world!
 Use the `status` subcommand
 
 ```bash
-$ git status
+git status
 ```
 
 You will be provided with the following information.
@@ -896,13 +897,13 @@ Earlier, our file was untracked. `git` has now added the file into the staging a
 Confirm the changes with `commit` and a message by using the `-m` flag
 
 ```bash
-$ git commit -m "Intial Commit" # the -m flag is for a message. A message usually describes what the commit has done.
+git commit -m "Intial Commit" # the -m flag is for a message. A message usually describes what the commit has done.
 ```
 
 Checking the status again
 
 ```bash
-$ git status
+git status
 On branch master
 nothing to commit, working tree clean
 ```
@@ -916,7 +917,7 @@ _Working tree clean_ means there is nothing new in our directory.
 We can `log` the `commit` history
 
 ```bash
-$ git log	# shows the most recent commit at the top
+git log	# shows the most recent commit at the top
 ```
 <!-- Feel free to remove this -->
 You can notice the following:
