@@ -930,7 +930,7 @@ You can notice the following:
 Try to use the `-p` flag with `log`
 
 ```bash
-$ git log -p	# shows what changed with each commit
+git log -p	# shows what changed with each commit
 ```
 
 `branch`
