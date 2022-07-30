@@ -32,9 +32,7 @@ Another great thing about CLI's is that you look really cool working with it... 
 
 We are going to be using a pretty nifty tool called `Git Bash`. `Git Bash` is an application for Microsoft Windows environments which provides an emulation layer for a command line experience. 
 
-*What Does that mean?* It means you can experience a *Linux*-like terminal within your windows PC. Git Bash comes included with Git itself, so just download Git from:
-
-[GIT DOWNLOAD LINK FOR WINDOWS](https://git-scm.com/download/win)
+*What Does that mean?* It means you can experience a *Linux*-like terminal within your windows PC. Git Bash comes included with Git itself, so just download Git from [git-scm.com](https://git-scm.com/download/win)
 
 If you don't know if you're a 32 or 64 bit system check *settings > system > about* (might vary depending on Windows version)
 
