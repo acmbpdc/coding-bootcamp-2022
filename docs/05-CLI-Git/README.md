@@ -1,8 +1,8 @@
-# The Crash Course for your Command Line (and Git)
+# Command Line Interfaces (and Git)
 
 A command-line interface (CLI) is a text-based interface used to run programs, manage computer files and interact with your computer. Most operating systems (OSes) also offer a graphical user interface (GUI) which is usually easier to learn.
 
-## So Why CLI's?
+## So Why CLI?
 
 Fluency on the command line is a skill which improves your productivity and flexibility as a computer engineer:
 
@@ -50,7 +50,7 @@ If you don't know if you're a 32 or 64 bit system check *settings > system > abo
 
 ### **Mac**
 
-TODO (Mostly no installation needed?)
+The Mac shell is Unix based just like Linux, so no extra installation will be required initially. Simply launch the CLI by pressing `cmd+space`, type in `terminal` and hit enter.
 
 ### **Linux Distros**
 
@@ -703,7 +703,7 @@ command not found: git
 
 So Follow the instructions on [this](https://git-scm.com/downloads) page to install `git`.
 
-Try the following command:
+After installation, try the following command:
 
 ```bash
 git --version
