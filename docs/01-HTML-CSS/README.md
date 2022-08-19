@@ -20,7 +20,7 @@ This week, we'll be learning about HTML and CSS, and we'll cover these topics to
 - Grid
 - Flexbox
 - Forms
-
+- How to use DevTools?
 ---
 ## What is Web Development ?
 Web development refers to the process of  building, creating, and maintaining websites. It can be divided in to two parts; 
@@ -264,6 +264,227 @@ background-image: url("../resources/nyancat.png"); /*The background-image CSS pr
 font-family: "Courier New"; /* The font-family CSS property is used to specify the typeface of the text. When using a multi-word font name, it is best practice to wrap them in quotes*/
 }
 ```
-## How to use browser DevTools?
+## Colors
+You can define colors as either RGB, HEX (hexadecimal), or HSL (Hue,Saturation, Lightness) values.
+rgb(red, green, blue)
+- **RGB Colors**:
+
+RGB colors can be defined in CSS like the following ` color: rgb(red, green, blue)`
+Each parameter (red, green, and blue) defines the intensity of the color between 0 and 255.
 
 
+For example, rgb(255, 0, 0) is displayed as red, because red is set to its highest value (255) and the others are set to 0.
+To display black, set all color parameters to 0, like this: rgb(0, 0, 0).
+To display white, set all color parameters to 255, like this: rgb(255, 255, 255).
+
+You can also have an additional parameter '**alpha**' which will decide the transparency/ opacity of the color, and it ranges from 0.0 to 1.0 `rgb(222, 100, 234, 0.5)`
+
+```CSS
+color: rgb(255,0,0) /* Red */
+color: rgb(0, 0, 255) /* Blue */
+color: rgb(106, 90, 205) /* Indigo */
+color: rgb(106, 90, 205, 0.1) /* Indigo, more transparent */
+color: rgb(106, 90, 205, 0.7) /* Indigo, more opaque */
+```
+- **HEX colors**: 
+
+A **hexadecimal color** is specified with: `#RRGGBB`, where the RR (red), GG (green) and BB (blue) hexadecimal integers specify the components of the color.
+Each of fields of red, green, and blue can have value from 00 in hexadecimal (decimal 0) to FF in hexadecimal(decimal 255). Similar to the RGB colors, where (255,255,255) represents white, in hex #FFFFFF represents white.
+```CSS
+  background-color: #ffffff; /* Black */
+  background-color : #000000; /* White */
+  background-color: #00ff00; /* Green */
+  background-color: #ff0000; /* Red */
+  background-color: #0000ff; /* Blue */
+``` 
+
+- **HSL colors**: 
+
+A color can be specified using hue, saturation, and lightness (HSL) in the form:
+
+`hsl(hue, saturation, lightness)`
+
+**Hue** is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+
+**Saturation** is a percentage value, 0% means a shade of gray, and 100% is the full color.
+
+**Lightness** is also a percentage, 0% is black, 50% is neither light or dark, 100% is white
+```CSS
+color: hsl(0, 100%, 50%) /*Red */
+color: hsl(240, 100%, 50%) /*Blue */
+color: hsl(39, 100%, 50%) /* Golden */
+color: hsl(274.6, 100%, 25.5%) /* Indigo */
+```
+## CSS Positioning
+CSS positioning refers to how an element is positioned in a document. The `top`, `right`, `bottom`, and `left` properties which refer to the distance in each respective direction from the window or other elements determine the final location of positioned elements. 
+There are a few types of positioning in CSS:
+
+- **Static Positioning**: 
+
+The element is positioned according to the normal flow of the document. The `top`, `right`, `bottom`, `left`, and `z-index` properties have no effect.This means that the element will appear in the same order as it is mentioned in the HTML document, and will take up the closest space availible.  This is the default value (***we usually need to change this***).
+
+```CSS
+h1 {
+  position: static;
+}
+```
+- **Relative Positioning**:
+
+The element is positioned according to the normal flow of the document, and then offset relative to it's position in a `static`(default position) based on the values of `top`, `right`, `bottom`, and `left`. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were `static`.
+
+
+```CSS
+h1{
+  position: static;
+}
+h2{
+  position: relative;
+  top: 40px;
+  left: 40px;
+}
+h3{
+  position: static;
+}
+/* Here, only the h2 element position will be changed by 40px downwards and  40 px right*/
+/* relative to its default position. The other elements are unaffected*/
+```
+- **Absolute Positioning**: 
+ Using absolute positioning, an element is positioned relative to its parent container, if any, otherwise, it is placed relative to the screen (initial containing block). We can also use `position: fixed` to directly position the element w.r.t the screen (initial containing block)
+
+ ```CSS
+ .parentdiv{
+  background-color: 'red';
+ }
+ h1{
+  position: absolute;
+  top: 40px;
+  left: 40px;
+ }
+ /* Here, h1 is present inside a div with class name 'parentdiv'. */ 
+ /*The h1 element is positioned with respect to the boundaries of the parentdiv and not its sibling elements. */
+ ```
+## CSS Typography
+CSS typography relates to the style, spacing, and proportions of text on a website. Good typography can greatly improve a site's user experience, and the readability of the text. Good typography can allow users to grasp the meaning of the text quicker, and makes it more aesthetic. There are a few properties relating to typography in CSS:
+
+- **Color**:
+
+You can set the color of text by using the `color` property. It can hold values of type RGB, RGBA, HSL or HEX values (*as discussed earlier*)
+
+- **Font Family**: 
+
+You can use the `font-family` property to set which font the text will be using. You can also set multiple fonts to a text, so if the browser was not able to load the first font, then it will use the next font, and so on.
+
+```CSS
+text1 {
+    font-family: "Source Sans Pro", "Arial", "sans-serif";
+    /* The browser will use Arial if Source Sans is not availible, else sans-serif if Arial is not availible either */
+}
+/* sans-serif font. */
+.text2 {
+    font-family: "sans-serif";
+}
+/* monospace font */
+.text3 {
+    font-family: "monospace";
+}
+```
+- **Font Size**: 
+
+You can control the font size of your text using the `font-size` property. The `font-size` can have various units like:
+
+```CSS
+/* The text will use the browser's default medium size. */
+.text1 {
+    font-size: medium;
+}
+/* Using pixel values */
+.text2 {
+    font-size: 20px;
+}
+/* You can use em values.
+The value is relative to the parent's font-size.
+As a result, the value will cascade if used on child elements. */
+.text3 {
+    font-size: 1.2em;
+}
+/* You can use percentage values. They act like em values.*/
+.text4 {
+    font-size: 90%;
+}
+/* You can use relative keywords */
+.text5 {
+    font-size: smaller;
+}
+/* You can use absolute keywords (like shirt sizes) */
+.text6 {
+    font-size: x-large;
+}
+```
+- **Font Weight**:
+ 
+ You can choose the font weight by using the `font-weight` property. It can store values like `normal`,`bold`, or numerical values like `600`, `800`, etc.
+ ```CSS
+.text1 {
+    font-size: x-large;
+    font-weight: normal;
+}
+/* BOLD text. */
+.text2 {
+    font-size: x-large;
+    font-weight: bold;
+}
+/* using a numerical value for the weight */
+.text3 {
+    font-size: x-large;
+    font-weight: 800;
+}
+ ```
+
+- **Font Style**: 
+You can choose the Italics of the text using the `font-style` property. It can store values like `normal`, `italic`, or `oblique`.
+
+```CSS
+body {
+  
+}
+.text1 {
+    font-style: normal;
+}
+/* slightly slanted text. */
+.text2 {
+    font-style: italic;
+}
+/* relatively more slanted text */
+.text3 {
+    font-style: oblique;
+}
+```
+
+- **Text Align and Decoration**: 
+
+You can set the alignment of the text using `text-align` property, or underline/ strikethrough the text using `text-decoration` property .
+```CSS
+.text1 {
+    font-size: large;
+    text-align: left;
+}
+/* using pixel values for spacing. */
+.text2 {
+    font-size: large;
+    text-align: right;
+}
+/* using em values for spacing */
+.text3 {
+    font-size: large;
+    text-align: center;
+}
+.text4 {
+    font-size: large;
+    text-align: justify;
+}
+.text5 {
+    font-size: large;
+    text-decoration: underline;
+}
+```
+## 
