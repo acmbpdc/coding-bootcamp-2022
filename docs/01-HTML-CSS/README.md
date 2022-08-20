@@ -1,6 +1,6 @@
 # Week 1: HTML & CSS
 ---
-Welcome to the first session of ACM BITS Pilani Dubai's 2022 Coding BootCamp !! We hope this bootcamp will set a rock solid foundation to your journey in Computer Science!
+Welcome to the first session of ***ACM BITS Pilani Dubai's 2022 Coding BootCamp*** !! We hope this bootcamp will set a rock solid foundation to your journey in Computer Science!
 
 This week, we'll be learning about HTML and CSS, and we'll cover these topics today.
 
@@ -65,7 +65,7 @@ Elements are denoted as "tags" in HTML, starting with `<>`and ending with `</>` 
 </ul>
 
 ```
-<centre><img src="assets/ross_list.jpg" alt="drawing" style="width:500px;"/></centre>
+<centre><img src="assets/ross_list.jpg" alt="drawing" style="width:500px;"/></centre><br>
 *Ross didn't know about HTML lists. Don't be like Ross.*
 Here is an example of how tags are arranged in an HTML document:
 
@@ -128,10 +128,10 @@ You can also create tables in HTML using the `<table>` tag. For each row inside 
 
 *Output of the above code*
 ## Semantic HTML
-A semantic element in HTML clearly describes what it means to both the developer and the browser. Non-semantic elements such as `<div>` and `<span>` tell us nothing about its content from the name, however elements such as `<form>`, `<table>`, `<article>` clearly denote that they contain a form, table and article.
-<img src="assets/htmlsemantic.gif" alt="drawing" />
-For example in the above image, if we use the header/nav/footer tag at any location in the HTML file, then they would refer to that part of the webpage since the browser already knows by the tag name which location the content should go.
-<img src="assets/chandler_semantic.jpg" alt="drawing" style="width:450px;" />
+A semantic element in HTML clearly describes what it means to both the developer and the browser. Non-semantic elements such as `<div>` and `<span>` tell us nothing about its content from the name, however elements such as `<form>`, `<table>`, `<article>` clearly denote that they contain a form, table and article.<br>
+<img src="assets/htmlsemantic.gif" alt="drawing" /><br>
+For example in the above image, if we use the header/nav/footer tag at any location in the HTML file, then they would refer to that part of the webpage since the browser already knows by the tag name which location the content should go.<br>
+<img src="assets/chandler_semantic.jpg" alt="drawing" style="width:450px;" /><br>
 *Unfortunately Chandler still doesn't know the semantics of his life*
 
 ## Intro to CSS
@@ -487,4 +487,80 @@ You can set the alignment of the text using `text-align` property, or underline/
     text-decoration: underline;
 }
 ```
-## 
+## CSS Grids
+The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning. The Grid layout consists of a parent `grid container` element and any number of child `grid items`. These grid items are placed inside the columns and rows of the grid container.
+
+- **Grid Container**: 
+
+You can set any element as a grid container, but it must have the property of `display: grid;` or `display: inline-grid`. We use the `grid-template-columns` to set the number and width of the columns and similiarly `grid-template-rows` for rows.
+```CSS
+.grid-container {
+  display: grid;
+  grid-template-columns: 80px 200px auto 40px;
+  /* Represents 4 columns, with width of 80px,200px, auto and 40px.*/
+  /* The width can be set to auto to make it evenly spaced*/
+  grid-template-rows: 80px 200px;
+/* Represents 2 rows of 80px and 200px height. */
+}
+/* In this manner, we can define the dimensions of the grid. */
+```
+
+- **Grid Item**:
+
+A grid container contains grid items.
+By default, a container has one grid item for each column, in each row, but you can style the grid items so that they will span multiple columns and/or rows.
+ Using the `grid-column` property on a grid item element, we specify which column the element will ***start*** and which column it will ***end***, and vice versa for the `grid-row` property. 
+
+ ```CSS
+.item1 {
+  grid-column: 1 / 5;
+  /* Item starts on column  1 and ends before column 5. */
+}
+
+.item2 {
+  grid-column: 1 / span 3;
+  /* Make "item2" start on column 1 and span 3 columns */
+}
+.item3 {
+  grid-column: 2 / span 3;
+    /* Make "item3" start on column 2 and span 3 columns */
+}
+.item4 {
+  grid-row: 1 / 4;
+  /* Make "item4" start on row-line 1 and end on row-line 4 */
+}
+.item5 {
+  grid-row: 1 / span 2;
+/* Make "item5" start on row 1 and span 2 rows*/
+}
+ ```
+## CSS Flexbox
+CSS Flexbox (FLexible Layout) aims at providing a more efficient way to lay out, align and distribute space among items in a container even when the size is unknown or dynamically changing. The flexbox design consists of two parts: A parent **flexbox container**, and the **flexbox items** inside the parent container. There are various properties for both flexbox container and flexbox items, which can be customised as per user needs. 
+
+- **Flexbox Container**:
+
+The flexbox container is the parent element which will hold the inner flexbox items. Any HTML element can be set as a flexbox container by setting `display:flex;` inside the CSS class rules. 
+The properties for flex container are :
+
+- `flex-direction`
+- `flex-wrap`
+- `flex-flow`
+- `justify-content`
+- `align-items`
+- `align-content`
+
+
+```CSS
+/* The flex-direction property defines in which direction the container wants to stack the flex items.
+ */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  /* The column value stacks the flex items vertically (from top to bottom)
+ */
+/* flex-direction can hold values "column", "column-reverse", "row", "row-reverse" */
+}
+/* The flex-wrap property specifies whether the flex items should wrap or not. */
+
+```
+
