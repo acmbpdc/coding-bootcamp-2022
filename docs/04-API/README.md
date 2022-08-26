@@ -154,8 +154,7 @@ URL: `https://b99.acm.org/jokes`
 URL: `https://b99.acm.org/jokes`
 
 Body:
-```
-json
+```json
 {
   "Joke": "The Pragmatic Programmer: From Journeyman to Master",
   "author": "Andy Hunt, Dave Thomas",
