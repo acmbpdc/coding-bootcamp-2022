@@ -17,6 +17,10 @@ This collection is a companion to the Postman Classroom Program workshop API 101
 ## Getting Started
 
 Brooklyn 99 API Reference
+[](GIFS/gif1.mp4)
+
+![Alt Text](https://media.giphy.com/media/3oxHQoyto7T8wBjUJ2/giphy.gif)
+
 
 Base URL: `b99.acm.org`
 
@@ -36,6 +40,7 @@ Optional filters can be passed as query parameters (see below)
 | married | true/false | false
 | seasonFirstAppearedIn | integer | 1...9
 
+![AltText](https://c.tenor.com/JjY18W3iN8EAAAAC/noice-brooklyn-ninenine.gif)
 
 ### *GET* character by id
 
@@ -68,6 +73,7 @@ Adds a character
   "seasonFirstAppearedIn": 1
 }
 ```
+![AltText](https://media.giphy.com/media/xTiTnCnOXNSRjcOSBy/giphy.gif)
 
 ### *PATCH* - updates a character
 URL: `https://b99.acm.org/characters/:id`
@@ -92,6 +98,7 @@ Update any of these fields for a characters with given id via the JSON body:
   "designation": "south california"
 }
 ```
+![AltText](https://im5.ezgif.com/tmp/ezgif-5-5a2662b969.webp)
 
 ### *DEL* - delete a character
 URL: `https://b99.acm.org/characters/:id`
@@ -136,6 +143,8 @@ You are at a training learning how to use the Brooklyn 99 API.
 - Be sure to save your request!
 
 There are multiple people at here using the same API - don't be surprised if you see new Jokes appearing!
+
+![AltText](https://media.giphy.com/media/3o8doT5DaMjfH3paHC/giphy.gif)
 
 ### *GET* - view inventory
 
@@ -205,4 +214,6 @@ What happens when you:
 - try to add a joke with made-up fields in the body?
 - try to delete the joke named "Ficciones" by Jorge Luis Borges?
 - If you are interested in seeing the code behind this API, you can view it here.
+
+![AltText](https://c.tenor.com/9kwKBjCURKEAAAAC/jake-peralta-amy-santiago.gif)
 
