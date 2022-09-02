@@ -280,11 +280,11 @@ To display white, set all color parameters to 255, like this: rgb(255, 255, 255)
 You can also have an additional parameter '**alpha**' which will decide the transparency/ opacity of the color, and it ranges from 0.0 to 1.0 `rgb(222, 100, 234, 0.5)`
 
 ```CSS
-color: rgb(255,0,0) /* Red */
-color: rgb(0, 0, 255) /* Blue */
-color: rgb(106, 90, 205) /* Indigo */
-color: rgb(106, 90, 205, 0.1) /* Indigo, more transparent */
-color: rgb(106, 90, 205, 0.7) /* Indigo, more opaque */
+color: rgb(255,0,0); /* Red */
+color: rgb(0, 0, 255); /* Blue */
+color: rgb(106, 90, 205); /* Indigo */
+color: rgb(106, 90, 205, 0.1); /* Indigo, more transparent */
+color: rgb(106, 90, 205, 0.7); /* Indigo, more opaque */
 ```
 - **HEX colors**: 
 
@@ -296,7 +296,7 @@ Each of fields of red, green, and blue can have value from 00 in hexadecimal (de
   background-color: #00ff00; /* Green */
   background-color: #ff0000; /* Red */
   background-color: #0000ff; /* Blue */
-``` 
+```
 
 - **HSL colors**: 
 
@@ -310,10 +310,10 @@ A color can be specified using hue, saturation, and lightness (HSL) in the form:
 
 **Lightness** is also a percentage, 0% is black, 50% is neither light or dark, 100% is white
 ```CSS
-color: hsl(0, 100%, 50%) /*Red */
-color: hsl(240, 100%, 50%) /*Blue */
-color: hsl(39, 100%, 50%) /* Golden */
-color: hsl(274.6, 100%, 25.5%) /* Indigo */
+color: hsl(0, 100%, 50%); /*Red */
+color: hsl(240, 100%, 50%); /*Blue */
+color: hsl(39, 100%, 50%); /* Golden */
+color: hsl(274.6, 100%, 25.5%); /* Indigo */
 ```
 ## CSS Positioning
 CSS positioning refers to how an element is positioned in a document. The `top`, `right`, `bottom`, and `left` properties which refer to the distance in each respective direction from the window or other elements determine the final location of positioned elements. 
@@ -547,8 +547,6 @@ The properties for flex container are :
 - `flex-flow`
 - `justify-content`
 - `align-items`
-- `align-content`
-
 
 ```CSS
 /* The flex-direction property defines in which direction the container wants to stack the flex items.
@@ -560,7 +558,106 @@ The properties for flex container are :
  */
 /* flex-direction can hold values "column", "column-reverse", "row", "row-reverse" */
 }
-/* The flex-wrap property specifies whether the flex items should wrap or not. */
 
+/* The flex-wrap property specifies whether the flex items should wrap or not. */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties. */
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* The justify-content property is used to align the flex items 
+The center value aligns the flex items at the center of the container. It can also have values flex-start and flex end for left and right alignn respectively.*/
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* The align-items property is used to align the flex items (vertically i.e top-bottom). */
+/*It can have values flex-start, flex-end, stretch, or center.*/
+.flex-container {
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
 ```
+
+- **Flexbox Items**
+The child divs inside a div assigned as flex container become the flexbox items. We can change the way flexbox items behave or are arranged inside a flexbox container by changing properties such as `align-self`,`flex`,`flex-basis`,`flex-grow`,`flex-shrink`and `order`. Let us take a look at a few examples. 
+```CSS
+/* align-self: Specifies the alignment for a flex item (overrides the flex container's align-items property) */
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div style="align-self: center">3</div>  /*This div is aligned vertically in the center */
+  <div>4</div>
+</div>
+
+/* order: The order property specifies the order of the flex items. */
+/* You can arrange the items in any order by setting the order property.*/
+<div class="flex-container">
+  <div style="order: 3">1</div>
+  <div style="order: 2">2</div>
+  <div style="order: 4">3</div>
+  <div style="order: 1">4</div>
+</div>
+
+/* The flex-grow property specifies how much a flex item will grow relative to the rest of the flex items. */
+<div class="flex-container">
+  <div style="flex-grow: 1">1</div>
+  <div style="flex-grow: 1">2</div>
+  <div style="flex-grow: 8">3</div>  /*Makes the third flex item grow eight times faster than the other flex items*/
+</div>
+/* Similiarly, we can use the flex-shrink property to set how fast an item will shrink w.r.t. other items. */
+/*If it is set to 0, an item will not shrink */
+
+/* The flex-basis property specifies the initial length of a flex item. */
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex-basis: 200px">3</div>
+  <div>4</div>
+</div>
+
+/* The flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties. */
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  /* Make the third flex item not growable (0), not shrinkable (0), and with an initial length of 200 pixels */
+  <div style="flex: 0 0 200px">3</div>
+  <div>4</div>
+</div>
+```
+## **How to use DevTools**
+Browser Developer tools is a menu option on your browser which can be used for inspection, debugging, or making minor changes in the code. There is also a console which can be referred to for error outputs (if any). Let's look at how to use it.
+
+- **How to open it?**
+You can open it by pressing `Ctrl+Shift+I` on Windows, or `⌘ + ⌥ + I
+` on MacOS. You can also right click on any part of a webpage and choose `Inspect` to open Devtools.
+- **DOM Inspector**
+The developer tools usually open by default to the inspector, which looks something like the following screenshot. This tool shows what the HTML on your page looks like at runtime, as well as what CSS is applied to each element on the page. It also allows you to instantly modify the HTML and CSS and see the results of your changes reflected live in the browser viewport. You can modify HTML on the left pane, and CSS on the right side `styles` pane. The target element is highlighted (as shown below).
+<br><img src="assets/DOMinspector.jpg" style="width:600px"><br>
+On top of the right CSS pane you also see a few other tabs.
+**Computed** : This shows the computed styles for the currently selected element (the final, normalized values that the browser applies). It also has a `box model` which represents visually the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is. You can also see the Fonts tab which shows the fonts applied to the current element.
+
+  **Layout**:
+If the page you are inspecting uses CSS Grid, this section allows you to view the grid details.
+- **Sources/Debugger**:
+The JavaScript debugger allows you to watch the value of variables and set breakpoints, places in your code that you want to pause execution and identify the problems that prevent your code from executing properly.
+<br><img src="assets/debugger.jpg" style="width:600px"><br>
+You can set a breakpoint by clicking on the line number (for example a breakpoint has been set by clicking on 19 in the above image.)
+Once the breakpoint is set, the code executes and pauses at a breakpoint, and you can check the values of various variables at that line, and then restart the execution.
+- **Console**: 
+The JavaScript console is an incredibly useful tool for debugging JavaScript that isn't working as expected. It allows you to run lines of JavaScript against the page currently loaded in the browser, and reports the errors encountered as the browser tries to execute your code. You can also `console.log()` any variable values or messages that you want to check in your code, and they will appear here.
+<br><img src="assets/console.jpg" style="width:600px"><br>
+
+
+
+
+
 
