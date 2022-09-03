@@ -1,7 +1,7 @@
 # API Fundamentals
 This collection is a companion to the Postman Classroom Program workshop API 101: API Fundamentals
 
-- What you will learn
+## What you will learn
 - What are APIs?
 - Servers & Clients
 - Making HTTP requests to an API
@@ -14,10 +14,106 @@ This collection is a companion to the Postman Classroom Program workshop API 101
 - [Receiving Responses](https://learning.postman.com/docs/sending-requests/responses/)
 - [Troubleshooting Requests](https://learning.postman.com/docs/sending-requests/troubleshooting-api-requests/)
 
-## Getting Started
+## What's this API Thingy?
+
+Application Programming Interfaces (APIs) allow services to communicate with each other.
+
+### An Analogy
+
+We can think of an API as a **waiter** at a restaurant. 
+
+![](./assets/Digital%20Restaurant.png)
+
+Imagine you go to your favorite restaurant and you want to order.
+
+You, in this case, are the client. You are sending your requests through the waiter, who tells the kitchen what to make.
+
+The waiter will come back with your food, or they may come back to tell you that the kitchen is out of what you ordered.
+
+Regardless, the waiter serves as a mediator between you and the kitchen, and that’s what APIs do for clients and services. 
+
+Similiarly, in the Software World, we may need to get data from a service, like Google or Facebook. Since we don’t have access to those companies codebases, they create APIs so developers can get information from their services without access to the codebase.
+
+
+Both developers and non-developers use APIs to get data from popular services like Twitter and Google to use in their own projects. 
+
+Software today has become more complex and collaborative over the years. Developers no longer need to create every service from scratch. Today you can find a suitable for nearly any kind of operation you might need.
+
+some notable examples include:
+
+- OpenWeatherMap: Allows you to get weather information of the place you input
+- Discord: Create channels, manage bots and more
+- Youtube-to-MP3
+- Spotify: Get your playlist, get information about artists, albums, songs, see what's playing on your device Right Now.
+- Twitter: Mange posts
+- Facebook
+- Google
+- And so many more!
+
+## Clients and Servers
+
+![](./assets/Clients%20and%20Servers.png)
+
+- A client is the entity that makes a request to a server. Somes examples of clients are applications like web browsers. 
+
+- A server controls resources and services. An API is the interface that exposes these resources + services to clients in a network. 
+
+
+The client can interact with an API by making requests over the network to the API. The API will then evaluate the request, perform the required operations, maybe interact with a database or other APIs, then send back a response to the client. 
+
+Postman is a client that allows you to make requests and view responses from servers.
+
+### Requests
+
+- Requests are how we communicate with the API. You need three things to make an API request:
+  - Method (GET, POST, etc)
+  - Address/Endpoint (URL)
+  - Path
+
+These elements let the API know what kind of request you’re making and where to send the request.
+
+Below is a table of the methods that are most commonly used:
+
+| Method | Action |
+| ---    | ---    |
+| GET    | Retrieve information |
+| POST   | Send information |
+| PUT/PATCH | Update information |
+| DELETE | Delete information |
+
+Below is an image showing more about Address and paths
+
+![Example of Address and Path](./assets/Address.png)
+
+### Request Body
+
+When send `POST` and `PUT` requests, the server will often expect data that it will process to complete your request, depending upon the API, it may ask for data in various types such as
+
+- form data
+- JSON
+- text
+- HTML
+- XML
+- files
+- GraphQL
+- … and more!
+
+All of this can be specified under the "Body" tab in Postman (under the request)
+
+### Responses
+When you make an API call, you will get a response value from the server. There are varoius types of responses but here are the most commone ones:
+
+- `200 OK` is usually the best response that the API works as 200 OK means Successful.
+- `201 Created`
+- `400 Bad Request`
+- `401 Unauthorized`
+- `403 Forbidden`
+- `404 Not found`
+
+
+## Hands On
 
 Brooklyn 99 API Reference
-[](GIFS/gif1.mp4)
 
 ![Alt Text](https://media.giphy.com/media/3oxHQoyto7T8wBjUJ2/giphy.gif)
 
