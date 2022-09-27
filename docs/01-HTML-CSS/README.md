@@ -98,7 +98,7 @@ Elements are denoted as "tags" in HTML, starting with `<>`and ending with `</>` 
   ```
 <centre><img src="assets/ross_list.jpg" alt="drawing" style="width:500px;"/></centre><br>
 *Ross didn't know about HTML lists. Don't be like Ross.*
-Here is an example of how tags are arranged in an HTML document:
+
 
 You can also access the entire list of HTML tags [here](https://www.w3schools.com/tags/default.asp).
 
@@ -326,177 +326,177 @@ There are a few types of positioning in CSS:
 
 - **Static Positioning**: 
 
-The element is positioned according to the normal flow of the document. The `top`, `right`, `bottom`, `left`, and `z-index` properties have no effect.This means that the element will appear in the same order as it is mentioned in the HTML document, and will take up the closest space availible.  This is the default value (***we usually need to change this***).
+  The element is positioned according to the normal flow of the document. The `top`, `right`, `bottom`, `left`, and `z-index` properties have no effect.This means that the element will appear in the same order as it is mentioned in the HTML document, and will take up the closest space availible.  This is the default value (***we usually need to change this***).
 
-```CSS
-h1 {
-  position: static;
-}
-```
+  ```CSS
+  h1 {
+    position: static;
+  }
+  ```
 - **Relative Positioning**:
 
-The element is positioned according to the normal flow of the document, and then offset relative to it's position in a `static`(default position) based on the values of `top`, `right`, `bottom`, and `left`. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were `static`.
+  The element is positioned according to the normal flow of the document, and then offset relative to it's position in a `static`(default position) based on the values of `top`, `right`, `bottom`, and `left`. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were `static`.
 
 
-```CSS
-h1{
-  position: static;
-}
-h2{
-  position: relative;
-  top: 40px;
-  left: 40px;
-}
-h3{
-  position: static;
-}
-/* Here, only the h2 element position will be changed by 40px downwards and  40 px right*/
-/* relative to its default position. The other elements are unaffected*/
-```
+  ```CSS
+  h1{
+    position: static;
+  }
+  h2{
+    position: relative;
+    top: 40px;
+    left: 40px;
+  }
+  h3{
+    position: static;
+  }
+  /* Here, only the h2 element position will be changed by 40px downwards and  40 px right*/
+  /* relative to its default position. The other elements are unaffected*/
+  ```
 - **Absolute Positioning**: 
- Using absolute positioning, an element is positioned relative to its parent container, if any, otherwise, it is placed relative to the screen (initial containing block). We can also use `position: fixed` to directly position the element w.r.t the screen (initial containing block)
+  Using absolute positioning, an element is positioned relative to its parent container, if any, otherwise, it is placed relative to the screen (initial containing block). We can also use `position: fixed` to directly position the element w.r.t the screen (initial containing block)
 
- ```CSS
- .parentdiv{
-  background-color: 'red';
- }
- h1{
-  position: absolute;
-  top: 40px;
-  left: 40px;
- }
- /* Here, h1 is present inside a div with class name 'parentdiv'. */ 
- /*The h1 element is positioned with respect to the boundaries of the parentdiv and not its sibling elements. */
- ```
+  ```CSS
+  .parentdiv{
+    background-color: 'red';
+  }
+  h1{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  /* Here, h1 is present inside a div with class name 'parentdiv'. */ 
+  /*The h1 element is positioned with respect to the boundaries of the parentdiv and not its sibling elements. */
+  ```
 ## CSS Typography
 CSS typography relates to the style, spacing, and proportions of text on a website. Good typography can greatly improve a site's user experience, and the readability of the text. Good typography can allow users to grasp the meaning of the text quicker, and makes it more aesthetic. There are a few properties relating to typography in CSS:
 
 - **Color**:
 
-You can set the color of text by using the `color` property. It can hold values of type RGB, RGBA, HSL or HEX values (*as discussed earlier*)
+  You can set the color of text by using the `color` property. It can hold values of type RGB, RGBA, HSL or HEX values (*as discussed earlier*)
 
 - **Font Family**: 
 
-You can use the `font-family` property to set which font the text will be using. You can also set multiple fonts to a text, so if the browser was not able to load the first font, then it will use the next font, and so on.
+  You can use the `font-family` property to set which font the text will be using. You can also set multiple fonts to a text, so if the browser was not able to load the first font, then it will use the next font, and so on.
 
-```CSS
-.text1 {
-    font-family: "Source Sans Pro", "Arial", "sans-serif";
-    /* The browser will use Arial if Source Sans is not availible, else sans-serif if Arial is not availible either */
-}
-/* sans-serif font. */
-.text2 {
-    font-family: "sans-serif";
-}
-```
+  ```CSS
+  .text1 {
+      font-family: "Source Sans Pro", "Arial", "sans-serif";
+      /* The browser will use Arial if Source Sans is not availible, else sans-serif if Arial is not availible either */
+  }
+  /* sans-serif font. */
+  .text2 {
+      font-family: "sans-serif";
+  }
+  ```
 - **Font Size**: 
 
-You can control the font size of your text using the `font-size` property. Here's an example of how to use `font-size`:
+  You can control the font size of your text using the `font-size` property. Here's an example of how to use `font-size`:
 
 
-```CSS
-/* The text will use the browser's default medium size. */
-.text1 {
-    font-size: medium;
-}
-```
-`font size` can also have various units such as using pixel values:`font-size: 20px;`, You can use em values. `em` means that the value is relative to the parent's font-size :`    font-size: 1.2em;`, you can also use percentage:`font-size: 90%;`, relative keywords:`font-size: smaller;`, or absolute keywords like large, x-large, etc.`font-size: x-large;`
+  ```CSS
+  /* The text will use the browser's default medium size. */
+  .text1 {
+      font-size: medium;
+  }
+  ```
+  `font size` can also have various units such as using pixel values:`font-size: 20px;`, You can use em values. `em` means that the value is relative to the parent's font-size :`    font-size: 1.2em;`, you can also use percentage:`font-size: 90%;`, relative keywords:`font-size: smaller;`, or absolute keywords like large, x-large, etc.`font-size: x-large;`
 
 - **Font Weight**:
  
- You can choose the font weight by using the `font-weight` property. It can store values like `normal`,`bold`, or numerical values like `600`, `800`, etc.
- ```CSS
-.text1 {
-    font-size: x-large;
-    font-weight: normal;
-}
-/* BOLD text. */
-.text2 {
-    font-size: x-large;
-    font-weight: bold;
-}
-/* using a numerical value for the weight */
-.text3 {
-    font-size: x-large;
-    font-weight: 800;
-}
- ```
+  You can choose the font weight by using the `font-weight` property. It can store values like `normal`,`bold`, or numerical values like `600`, `800`, etc.
+  ```CSS
+  .text1 {
+      font-size: x-large;
+      font-weight: normal;
+  }
+  /* BOLD text. */
+  .text2 {
+      font-size: x-large;
+      font-weight: bold;
+  }
+  /* using a numerical value for the weight */
+  .text3 {
+      font-size: x-large;
+      font-weight: 800;
+  }
+  ```
 
 - **Font Style**: 
-You can choose the Italics of the text using the `font-style` property. It can store values like `normal`, `italic`, or `oblique`.
+  You can choose the Italics of the text using the `font-style` property. It can store values like `normal`, `italic`, or `oblique`.
 
-```CSS
-body {
-  
-}
-.text1 {
-    font-style: normal;
-  /* font-style can also hold values "italic" and "oblique" */
-}
+  ```CSS
+  body {
+    
+  }
+  .text1 {
+      font-style: normal;
+    /* font-style can also hold values "italic" and "oblique" */
+  }
 
-```
+  ```
 
 - **Text Align and Decoration**: 
 
-You can set the alignment of the text using `text-align` property, or underline/ strikethrough the text using `text-decoration` property .
-```CSS
-.text1 {
-    font-size: large;
-    text-align: left;
-    /* Text align can also hold values: right, center, justify */
-}
-.text5 {
-    font-size: large;
-    text-decoration: underline;
-}
-```
+  You can set the alignment of the text using `text-align` property, or underline/ strikethrough the text using `text-decoration` property .
+  ```CSS
+  .text1 {
+      font-size: large;
+      text-align: left;
+      /* Text align can also hold values: right, center, justify */
+  }
+  .text5 {
+      font-size: large;
+      text-decoration: underline;
+  }
+  ```
 ## CSS Grids
 The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning. The Grid layout consists of a parent `grid container` element and any number of child `grid items`. These grid items are placed inside the columns and rows of the grid container.
 
 - **Grid Container**: 
 
-You can set any element as a grid container, but it must have the property of `display: grid;` or `display: inline-grid`. We use the `grid-template-columns` to set the number and width of the columns and similiarly `grid-template-rows` for rows.
-```CSS
-.grid-container {
-  display: grid;
-  grid-template-columns: 80px 200px auto 40px;
-  /* Represents 4 columns, with width of 80px,200px, auto and 40px.*/
-  /* The width can be set to auto to make it evenly spaced*/
-  grid-template-rows: 80px 200px;
-/* Represents 2 rows of 80px and 200px height. */
-}
-/* In this manner, we can define the dimensions of the grid. */
-```
+  You can set any element as a grid container, but it must have the property of `display: grid;` or `display: inline-grid`. We use the `grid-template-columns` to set the number and width of the columns and similiarly `grid-template-rows` for rows.
+  ```CSS
+  .grid-container {
+    display: grid;
+    grid-template-columns: 80px 200px auto 40px;
+    /* Represents 4 columns, with width of 80px,200px, auto and 40px.*/
+    /* The width can be set to auto to make it evenly spaced*/
+    grid-template-rows: 80px 200px;
+  /* Represents 2 rows of 80px and 200px height. */
+  }
+  /* In this manner, we can define the dimensions of the grid. */
+  ```
 
 - **Grid Item**:
 
-A grid container contains grid items.
-By default, a container has one grid item for each column, in each row, but you can style the grid items so that they will span multiple columns and/or rows.
- Using the `grid-column` property on a grid item element, we specify which column the element will ***start*** and which column it will ***end***, and vice versa for the `grid-row` property. 
+  A grid container contains grid items.
+  By default, a container has one grid item for each column, in each row, but you can style the grid items so that they will span multiple columns and/or rows.
+  Using the `grid-column` property on a grid item element, we specify which column the element will ***start*** and which column it will ***end***, and vice versa for the `grid-row` property. 
 
- ```CSS
-.item1 {
-  grid-column: 1 / 5;
-  /* Item starts on column  1 and ends before column 5. */
-}
+  ```CSS
+  .item1 {
+    grid-column: 1 / 5;
+    /* Item starts on column  1 and ends before column 5. */
+  }
 
-.item2 {
-  grid-column: 1 / span 3;
-  /* Make "item2" start on column 1 and span 3 columns */
-}
-.item3 {
-  grid-column: 2 / span 3;
-    /* Make "item3" start on column 2 and span 3 columns */
-}
-.item4 {
-  grid-row: 1 / 4;
-  /* Make "item4" start on row-line 1 and end on row-line 4 */
-}
-.item5 {
-  grid-row: 1 / span 2;
-/* Make "item5" start on row 1 and span 2 rows*/
-}
- ```
+  .item2 {
+    grid-column: 1 / span 3;
+    /* Make "item2" start on column 1 and span 3 columns */
+  }
+  .item3 {
+    grid-column: 2 / span 3;
+      /* Make "item3" start on column 2 and span 3 columns */
+  }
+  .item4 {
+    grid-row: 1 / 4;
+    /* Make "item4" start on row-line 1 and end on row-line 4 */
+  }
+  .item5 {
+    grid-row: 1 / span 2;
+  /* Make "item5" start on row 1 and span 2 rows*/
+  }
+  ```
 ## CSS Flexbox
 CSS Flexbox (FLexible Layout) aims at providing a more efficient way to lay out, align and distribute space among items in a container even when the size is unknown or dynamically changing. The flexbox design consists of two parts: A parent **flexbox container**, and the **flexbox items** inside the parent container. There are various properties for both flexbox container and flexbox items, which can be customised as per user needs. 
 
@@ -615,24 +615,24 @@ Using CSS proficiently will give you a **modern**, **beautiful** and **clean** w
 Browser Developer tools is a menu option on your browser which can be used for inspection, debugging, or making minor changes in the code. There is also a console which can be referred to for error outputs (if any). Let's look at how to use it.
 
 - **How to open it?**
-You can open it by pressing `Ctrl+Shift+I` on Windows, or `⌘ + ⌥ + I
-` on MacOS. You can also right click on any part of a webpage and choose `Inspect` to open Devtools.
+  You can open it by pressing `Ctrl+Shift+I` on Windows, or `⌘ + ⌥ + I
+  ` on MacOS. You can also right click on any part of a webpage and choose `Inspect` to open Devtools.
 - **DOM Inspector**
-The developer tools usually open by default to the inspector, which looks something like the following screenshot. This tool shows what the HTML on your page looks like at runtime, as well as what CSS is applied to each element on the page. It also allows you to instantly modify the HTML and CSS and see the results of your changes reflected live in the browser viewport. You can modify HTML on the left pane, and CSS on the right side `styles` pane. The target element is highlighted (as shown below).
-<br><img src="assets/DOMinspector.jpg" style="width:600px"><br>
-On top of the right CSS pane you also see a few other tabs.
-**Computed** : This shows the computed styles for the currently selected element (the final, normalized values that the browser applies). It also has a `box model` which represents visually the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is. You can also see the Fonts tab which shows the fonts applied to the current element.
+  The developer tools usually open by default to the inspector, which looks something like the following screenshot. This tool shows what the HTML on your page looks like at runtime, as well as what CSS is applied to each element on the page. It also allows you to instantly modify the HTML and CSS and see the results of your changes reflected live in the browser viewport. You can modify HTML on the left pane, and CSS on the right side `styles` pane. The target element is highlighted (as shown below).
+  <br><img src="assets/DOMinspector.jpg" style="width:600px"><br>
+  On top of the right CSS pane you also see a few other tabs.
+  **Computed** : This shows the computed styles for the currently selected element (the final, normalized values that the browser applies). It also has a `box model` which represents visually the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is. You can also see the Fonts tab which shows the fonts applied to the current element.
 
   **Layout**:
-If the page you are inspecting uses CSS Grid, this section allows you to view the grid details.
+  If the page you are inspecting uses CSS Grid, this section allows you to view the grid details.
 - **Sources/Debugger**:
-The JavaScript debugger allows you to watch the value of variables and set breakpoints, places in your code that you want to pause execution and identify the problems that prevent your code from executing properly.
-<br><img src="assets/debugger.jpg" style="width:600px"><br>
-You can set a breakpoint by clicking on the line number (for example a breakpoint has been set by clicking on 19 in the above image.)
-Once the breakpoint is set, the code executes and pauses at a breakpoint, and you can check the values of various variables at that line, and then restart the execution.
+  The JavaScript debugger allows you to watch the value of variables and set breakpoints, places in your code that you want to pause execution and identify the problems that prevent your code from executing properly.
+  <br><img src="assets/debugger.jpg" style="width:600px"><br>
+  You can set a breakpoint by clicking on the line number (for example a breakpoint has been set by clicking on 19 in the above image.)
+  Once the breakpoint is set, the code executes and pauses at a breakpoint, and you can check the values of various variables at that line, and then restart the execution.
 - **Console**: 
-The JavaScript console is an incredibly useful tool for debugging JavaScript that isn't working as expected. It allows you to run lines of JavaScript against the page currently loaded in the browser, and reports the errors encountered as the browser tries to execute your code. You can also `console.log()` any variable values or messages that you want to check in your code, and they will appear here.
-<br><img src="assets/console.jpg" style="width:600px"><br>
+  The JavaScript console is an incredibly useful tool for debugging JavaScript that isn't working as expected. It allows you to run lines of JavaScript against the page currently loaded in the browser, and reports the errors encountered as the browser tries to execute your code. You can also `console.log()` any variable values or messages that you want to check in your code, and they will appear here.
+  <br><img src="assets/console.jpg" style="width:600px"><br>
 
 
 
