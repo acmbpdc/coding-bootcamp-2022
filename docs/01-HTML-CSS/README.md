@@ -621,9 +621,9 @@ Browser Developer tools is a menu option on your browser which can be used for i
   The developer tools usually open by default to the inspector, which looks something like the following screenshot. This tool shows what the HTML on your page looks like at runtime, as well as what CSS is applied to each element on the page. It also allows you to instantly modify the HTML and CSS and see the results of your changes reflected live in the browser viewport. You can modify HTML on the left pane, and CSS on the right side `styles` pane. The target element is highlighted (as shown below).
   <br><img src="assets/DOMinspector.jpg" style="width:600px"><br>
   On top of the right CSS pane you also see a few other tabs.
-  **Computed** : This shows the computed styles for the currently selected element (the final, normalized values that the browser applies). It also has a `box model` which represents visually the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is. You can also see the Fonts tab which shows the fonts applied to the current element.
+  - **Computed** : This shows the computed styles for the currently selected element (the final, normalized values that the browser applies). It also has a `box model` which represents visually the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is. You can also see the Fonts tab which shows the fonts applied to the current element.
 
-  **Layout**:
+  - **Layout**:
   If the page you are inspecting uses CSS Grid, this section allows you to view the grid details.
 - **Sources/Debugger**:
   The JavaScript debugger allows you to watch the value of variables and set breakpoints, places in your code that you want to pause execution and identify the problems that prevent your code from executing properly.
