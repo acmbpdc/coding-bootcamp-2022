@@ -55,10 +55,10 @@ Elements are denoted as "tags" in HTML, starting with `<>`and ending with `</>` 
   `<script></script>`
 
 - #### `<p>`
-  This tag 
-  `<p></p> `
+  This tag is used for enclosing a paragraph in the webpage.
+  `<p>Your paragraph</p> `
 - #### `<h1>`
-  This tag 
+  This tag is used for headers/titles on the webpage, and the font size can be modified based on the tag as shown below.  
   ``` 
   <h1></h1>  
   <h2></h2> <h3></h3> <h4></h4> <!-- You can give smaller header text sizes also 1:biggest 6:smallest>
