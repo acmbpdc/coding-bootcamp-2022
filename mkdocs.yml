@@ -1,21 +1,66 @@
-site_name: ACMBPDC
+site_name: ACM Coding Bootcamp
+docs_dir: './docs'
+remote_branch: mkdocs-webpage
 theme:
-  name: null
-  custom_dir: 'theme'
+  name: material
+
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  icon: assets/logo.png
+
+  palette:
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.sections
+    - navigation.instant
 nav:
-  - Home: 'index.md'
-  - Sessions:
-    - '1: HTML/CSS': './01-HTML-CSS/README.md'
-    - '2: JavaScript (Basics)': './02-JavaScript-1/README.md'
-    - '3: JavaScript (Advanced)': './03-JavaScript-2/README.md'
-    - '4: APIs': './04-API/README.md'
-    - '5: CLI & Git': './05-CLI-Git/README.md'
-    - '6: GitHub': './06-GitHub/README.md'
+    - Home: 'index.md'
+    - Sessions:
+      - '1: HTML/CSS': './01-HTML-CSS/README.md'
+      - '2: JavaScript (Basics)': './02-JavaScript-1/README.md'
+      - '3: JavaScript (Advanced)': './03-JavaScript-2/README.md'
+      - '4: APIs': './04-API/README.md'
+      - '5: CLI & Git': './05-CLI-Git/README.md'
+      - '6: GitHub': './06-GitHub/README.md'
 plugins:
   - search
-  - spellcheck
-  - with-pdf:
-      author: ACM BITS Pilani Dubai Campus
+markdown_extensions:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+#site_name: ACMBPDC
+#theme:
+  #name: null
+  #custom_dir: 'theme'
+#nav:
+  #- Home: 'index.md'
+  #- Sessions:
+    #- '1: HTML/CSS': './01-HTML-CSS/README.md'
+    #- '2: JavaScript (Basics)': './02-JavaScript-1/README.md'
+    #- '3: JavaScript (Advanced)': './03-JavaScript-2/README.md'
+    #- '4: APIs': './04-API/README.md'
+    #- '5: CLI & Git': './05-CLI-Git/README.md'
+    #- '6: GitHub': './06-GitHub/README.md'
+#plugins:
+  #- search
+  #- spellcheck
+  #- with-pdf:
+      #author: ACM BITS Pilani Dubai Campus
       #copyright: ANY TEXT
       #
       #cover: false
