@@ -1,17 +1,22 @@
-# Welcome to MkDocs
+# Coding Bootcamp - 2022
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This website contains the resources for the *Coding Bootcamp - 2022* organized by [ACM](https://www.acmbpdc.org/).
 
-## Commands
+## Overview
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+This bootcamp will provide its audience the core foundation in this amazing field of programming.
 
-## Project layout
+## Sessions
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+| Session | Topic |
+| :-----: |:-------------:|
+| 1 | [**HTML/CSS**](./01-HTML-CSS) |
+| 2 | **JavaScript (Basics)** |
+| 3 | **JavaScript (Advanced)** |
+| 4 | **APIs** |
+| 5 | **CLI & Git** |
+| 6 | **GitHub** |
+
+## Instructors
+
+This workshop is conducted by the [ACM Team](https://www.acmbpdc.org/about)
