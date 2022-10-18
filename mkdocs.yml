@@ -43,6 +43,7 @@ plugins:
 markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.superfences
 #site_name: ACMBPDC
 #theme:
   #name: null
