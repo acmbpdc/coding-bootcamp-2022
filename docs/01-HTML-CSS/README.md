@@ -142,12 +142,12 @@ Output of the above code
 
 ---
 ## Semantic HTML
->A **Semantic Element** in an HTML tag which clearly denotes the position/content which it will hold.
->
->For example,
->* Elements such as **`<form>`, `<table>`, `<article>`** clearly indicate that they contain a form, table and article. (*Indicate Content*)
->* A **`<header>`,`<nav>`,`<footer>`,`<section>`,`<aside>`** tag are used to indicate the position they will occupy in the webpage, as shown in the below image.(*Indicate Position*)
->* Non-semantic elements such as **`<div>`** and **`<span>`** tell us nothing about its content or position from the name.<br>
+A **Semantic Element** in an HTML tag which clearly denotes the position/content which it will hold.
+
+For example,
+* Elements such as **`<form>`, `<table>`, `<article>`** clearly indicate that they contain a form, table and article. (*Indicate Content*)
+* A **`<header>`,`<nav>`,`<footer>`,`<section>`,`<aside>`** tag are used to indicate the position they will occupy in the webpage, as shown in the below image.(*Indicate Position*)
+* Non-semantic elements such as **`<div>`** and **`<span>`** tell us nothing about its content or position from the name.<br>
 <div align="center">
 <img src="assets/htmlsemantic.gif" alt="drawing" />
 </div><br>
@@ -162,10 +162,10 @@ Output of the above code
 
 ## Intro to CSS
 
->**Cascading Style Sheets**, fondly referred to as CSS, is a simply designed language intended to simplify the process of making web pages presentable. 
->* CSS allows you to apply styles to web pages. More importantly, CSS enables you to do this independent of the HTML that makes up each web page. 
->* It describes how a webpage should look: it prescribes colors, fonts, spacing, and much more. You can make your website look however you want, given you know how to use CSS well.
->* CSS lets developers and designers define how it behaves, including how elements are positioned in the browser. 
+**Cascading Style Sheets**, fondly referred to as CSS, is a simply designed language intended to simplify the process of making web pages presentable. 
+* CSS allows you to apply styles to web pages. More importantly, CSS enables you to do this independent of the HTML that makes up each web page. 
+* It describes how a webpage should look: it prescribes colors, fonts, spacing, and much more. You can make your website look however you want, given you know how to use CSS well.
+* CSS lets developers and designers define how it behaves, including how elements are positioned in the browser. 
 
 Let's take a look at some syntax of CSS.
 ```CSS
@@ -304,7 +304,7 @@ p{
 ```
 ---
 ## Colors
->You can define colors as either **RGB**, **HEX** (hexadecimal), or **HSL** (Hue, Saturation, Lightness) values.
+You can define colors as either **RGB**, **HEX** (hexadecimal), or **HSL** (Hue, Saturation, Lightness) values.
 
 - **RGB Colors**:
   RGB colors can be defined in CSS like the following ` color: rgb(red, green, blue)`. Each parameter (red, green, and blue) defines the intensity of the color between 0 and 255.<br>
@@ -345,8 +345,8 @@ p{
   ```
 ---
 ## CSS Positioning
->**CSS positioning** refers to how an element is positioned in a document. 
->* The `top`, `right`, `bottom`, and `left` properties which refer to the distance in each respective direction from the window or other elements determine the final location of positioned elements. 
+**CSS positioning** refers to how an element is positioned in a document. 
+* The `top`, `right`, `bottom`, and `left` properties which refer to the distance in each respective direction from the window or other elements determine the final location of positioned elements. 
 
 There are a few types of positioning in CSS:
 
@@ -390,8 +390,8 @@ There are a few types of positioning in CSS:
   ```
 ---
 ## CSS Typography
->**CSS typography** relates to the style, spacing, and proportions of text on a website. 
->* Good typography can greatly improve a site's user experience, and the readability of the text,allowing users to grasp the meaning of the text quicker, and makes it more aesthetic. 
+**CSS typography** relates to the style, spacing, and proportions of text on a website. 
+* Good typography can greatly improve a site's user experience, and the readability of the text,allowing users to grasp the meaning of the text quicker, and makes it more aesthetic. 
 
 There are a few properties relating to typography in CSS:
 
@@ -467,8 +467,8 @@ There are a few properties relating to typography in CSS:
   ```
 ---
 ## CSS Grids
->The **CSS Grid Layout** Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning. 
-> The Grid layout consists of a parent **`grid container`** element and any number of child **`grid items`**. These grid items are placed inside the columns and rows of the grid container.
+The **CSS Grid Layout** Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning. 
+ The Grid layout consists of a parent **`grid container`** element and any number of child **`grid items`**. These grid items are placed inside the columns and rows of the grid container.
 
 - **Grid Container**: 
   You can set any element as a grid container, but it must have the property of `display: grid;` or `display: inline-grid`. We use the `grid-template-columns` to set the number and width of the columns and similiarly `grid-template-rows` for rows.
@@ -513,8 +513,8 @@ There are a few properties relating to typography in CSS:
   ```
 ---
 ## CSS Flexbox
->* **CSS Flexbox (Flexible Layout)** aims at providing a more efficient way to lay out, align and distribute space among items in a container even when the size is unknown or dynamically changing. 
->* The flexbox design consists of two parts: A parent **flexbox container**, and the **flexbox items** inside the parent container. There are various properties for both flexbox container and flexbox items, which can be customised as per user needs. 
+**CSS Flexbox (Flexible Layout)** aims at providing a more efficient way to lay out, align and distribute space among items in a container even when the size is unknown or dynamically changing. 
+* The flexbox design consists of two parts: A parent **flexbox container**, and the **flexbox items** inside the parent container. There are various properties for both flexbox container and flexbox items, which can be customised as per user needs. 
 
 - **Flexbox Container**:
   The flexbox container is the parent element which will hold the inner flexbox items. Any HTML element can be set as a flexbox container by setting `display:flex;` inside the CSS class rules. 
@@ -629,8 +629,7 @@ Using CSS proficiently will give you a **modern**, **beautiful** and **clean** w
 
 ---
 ## **How to use DevTools**
->**Browser Developer Tools (DevTools)** is a menu option on your browser which can be used for inspection, debugging, or making minor changes in the code.
-> There is also a console which can be referred to for error outputs (if any). 
+**Browser Developer Tools (DevTools)** is a menu option on your browser which can be used for inspection, debugging, or making minor changes in the code.There is also a console which can be referred to for error outputs (if any). 
 
 Let's look at how to use it.
 
