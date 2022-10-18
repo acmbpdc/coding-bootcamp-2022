@@ -1,5 +1,4 @@
 # HTML & CSS
----
 > Welcome to the first session of ***ACM BITS Pilani Dubai's 2022 Coding BootCamp***!!
  We hope this bootcamp will set a rock solid foundation to your journey in Computer Science!
 Over the course of our **6 Week long Coding Bootcamp**, we will cover topics such as **HTML, CSS, JavaScript, APIs, Command Line, Git and GitHub** which are essential for you to become a **successful Web Developer**!
