@@ -94,8 +94,8 @@ Let's look at a few of them:
 </ul>
 ```
 <div align="center"><img src="assets/ross_list.jpg" alt="drawing" style="width:500px;"/></div>
-<center><i>Ross didn't know about HTML lists. Don't be like Ross.
-</i></center>
+<div align="center"><i>Ross didn't know about HTML lists. Don't be like Ross.
+</i></div>
 <br>
 
 You can also access the entire list of HTML tags [here](https://www.w3schools.com/tags/default.asp).
@@ -133,12 +133,12 @@ Let's look at an example:
 
 </style>
 ```
-<center>
+<div align="center">
 <img src="assets/Ourtable.jpg" alt="drawing" style="width:300px;"/>
-<br></center>
-<center><i>
+<br></div>
+<div align="center"><i>
 Output of the above code
-</i></center>
+</i></div>
 
 ---
 ## Semantic HTML
@@ -154,8 +154,8 @@ For example,
 <div align="center">
 <img src="assets/chandler_semantic.jpg" alt="drawing" style="width:450px;" />
 </div><br>
-<center><i>Unfortunately Chandler still doesn't know the semantics of his life
-</i></center>
+<div align="center"><i>Unfortunately Chandler still doesn't know the semantics of his life
+</i></div>
 
 
 ---
@@ -641,8 +641,11 @@ Let's look at how to use it.
   This tool can:
    * Show what the HTML on your page looks like at runtime, as well as what CSS is applied to each element on the page. 
    * Allows you to instantly modify the HTML and CSS and see the results of your changes reflected live in the browser viewport.
-   * You can modify HTML on the left pane, and CSS on the right side `styles` pane. The target element is highlighted (as shown below).
-  <br><div align="center"><img src="assets/DOMinspector.jpg" style="width:600px"></div><br>
+   * You can modify HTML on the left pane, and CSS on the right side `styles` pane. The target element is highlighted (as shown below).  
+
+<br>
+<div align="center"><img src="assets/DOMinspector.jpg" style="width:600px"></div>
+<br>
   On top of the right CSS pane you also see a few other tabs.
   - **Computed** : It's functions are:
     * Shows the computed styles for the currently selected element (the final, normalized values that the browser applies). 
@@ -652,8 +655,9 @@ Let's look at how to use it.
   - **Layout**:
   If the page you are inspecting uses CSS Grid, this section allows you to view the grid details.
 - **Sources/Debugger**:
-  The JavaScript debugger allows you to watch the value of variables and set breakpoints, places in your code that you want to pause execution and identify the problems that prevent your code from executing properly.
-  <br><div align='center'><img src="assets/debugger.jpg" style="width:600px"></div><br>
+  The JavaScript debugger allows you to watch the value of variables and set breakpoints, places in your code that you want to pause execution and identify the problems that prevent your code from executing properly.  
+  
+<br><div align='center'><img src="assets/debugger.jpg" style="width:600px"></div><br>
   You can set a breakpoint by clicking on the line number (for example a breakpoint has been set by clicking on 19 in the above image.)
   Once the breakpoint is set, the code executes and pauses at a breakpoint, and you can check the values of various variables at that line, and then restart the execution.
 - **Console**: 
@@ -683,12 +687,12 @@ Let's look at how to use it.
 - [x]  Forms
 - [x]  How to use DevTools?
 
-<center><i><b>We hope you learnt a lot!!</b></i></center>
+<div align="center"><i><b>We hope you learnt a lot!!</b></i></div>
 <br>
 
-<center>
+<div align="center">
 <img src="assets/byeee.gif" style="width:600px">
-</center>
+</div>
 
 ---
 
