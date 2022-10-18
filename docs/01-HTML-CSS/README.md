@@ -9,30 +9,30 @@ Over the course of our **6 Week long Coding Bootcamp**, we will cover topics suc
 ## What is Web Development ?
 Web development refers to the process of  building, creating, and maintaining websites. It can be divided in to two parts:
 
->-  **Front-end/Frontend**: 
+-  **Front-end/Frontend**: 
   The front-end as the name suggests refers to the actual website that all the users will be able to see and interact with. A **front end developer** would would write code for the design, layout, colour schemes, animations, etc. of the website and make sure that it **looks beautiful and  modern**.
 
->- **Back-end/Backend**:
+- **Back-end/Backend**:
   The back-end refers to the functions of the website which is not seen by the  users, for example, information retrieval from databases. 
   A developer that is responsible for writing code for both frontend and backend is called a Full Stack Developer.
 
 The three main languages which you will encounter frequently in Web Development are: 
 
-> - **HTML**: The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.
->- **CSS**: Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.
->- **JavaScript**: JavaScript often abbreviated JS is language that is used to decide behaviour of a website (for e.g. what happens when you click a button). You will learn more about this in the JavaScript week of the Coding Bootcamp.
+ - **HTML**: The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.
+- **CSS**: Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.
+- **JavaScript**: JavaScript often abbreviated JS is language that is used to decide behaviour of a website (for e.g. what happens when you click a button). You will learn more about this in the JavaScript week of the Coding Bootcamp.
 
 This week, we'll be focusing on the concepts of HTML and CSS.
 
 ---
 ## What is HTML?
-> * HTML stands for Hyper Text Markup Language, and it is the standard markup language for creating web pages. 
->* HTML describes the structure of a Web page, and consists of a series of elements (usually starting with `<html>` and ending with `</html>`). Elements tell the browser how to display the content.
+ * **HTML** stands for **Hyper Text Markup Language**, and it is the standard markup language for creating web pages. 
+* HTML describes the structure of a Web page, and consists of a series of elements (usually starting with `<html>` and ending with `</html>`). Elements tell the browser how to display the content.
 
 ---
 ## HTML Tags
->* Elements are denoted as "tags" in HTML, starting with `< >` and ending with `< / >` . 
->* There is a tag for every element of a web page. 
+Elements are denoted as "tags" in HTML, starting with **`< >`** and ending with **`< / >`** . 
+* There is a tag for every element of a web page. 
 
 Let's look at a few of them: 
 
@@ -102,10 +102,10 @@ You can also access the entire list of HTML tags [here](https://www.w3schools.co
 
 ---
 ## HTML Tables
->You can **create tables** in HTML using the **`<table>`** tag. 
->* For each row inside a table, you need to include a **`<tr></tr>`**(*tr= Table Row*) tag.
->* For each column element inside a row, **`<td>`** (*td= Table Data*) tag is used. 
->* If you also want to add table header, then you can make another row at the beginning which consists of **`<th>`**(*Table Header*) tags.  
+You can **create tables** in HTML using the **`<table>`** tag. 
+* For each row inside a table, you need to include a **`<tr></tr>`**(*tr= Table Row*) tag.
+* For each column element inside a row, **`<td>`** (*td= Table Data*) tag is used. 
+* If you also want to add table header, then you can make another row at the beginning which consists of **`<th>`**(*Table Header*) tags.  
 
 Let's look at an example:
 ```html
