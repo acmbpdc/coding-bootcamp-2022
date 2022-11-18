@@ -5,7 +5,7 @@
 <center><h1>Javascript Session 2</h1></center>
 
 Section 03.06 Break and Continue Statements
-----------  
+----------
 
 03.06. Break and Continue statement
 ---------------------
@@ -50,8 +50,8 @@ while (i <= 20) {
     i++;
     continue; // skip rest of the loop body
 
-    i + 100; // non of use 
-    console.log('just in even num continue'); // non of use 
+    i + 100; // not of use
+    console.log('just in even num continue'); // not of use
   }
   console.log('Odd Number ', i);
   i++;
@@ -62,7 +62,7 @@ console.log('// ------------------------------');
 for (i = 1; i <= 10; i++) {
   if (i === 5) {
     continue; // skip rest of the loop body
-    console.log('just after 5 continue...'); // non of use 
+    console.log('just after 5 continue...'); // not of use
   }
   console.log(i);
 }
@@ -81,7 +81,7 @@ for(let int = 0; int < 10; int++) {
     break;
   }
 
-  console.log('current Number is:', int); 
+  console.log('current Number is:', int);
 }
 
 ```
@@ -102,8 +102,76 @@ arrDays.forEach(function(day)){
 
 ```
 
+04.05. Objects in  Javascript
+---------------------
+04.05.01 Objects
+- An object in javascript is a variable that can have multiple attributes and methods.
+- Attributes of objects are values that represent different features of that  class.
+- Methods of objects are actions that can be performed by the class using functions.
 
-Section 4. Conditions - Control Flow
+> **Syntax & Example**
+> Let us make an object to represent a person, we will begin with atributes of the person such as their name and age.
+```javascript
+const person = {
+  firstName: "Sheldon",
+  lastName : "Cooper",
+  age      : 35
+};
+
+// We can view these atributes with the syntax variable_name.atribute_name
+console.log("The name of this person is: " + person.firstName + " " + person.lastName);
+```
+
+> We can also alter these atributes to update their values
+```javascript
+console.log("Current age: " + person.age);
+
+person.age += 1;
+
+console.log("Current age: " + person.age);
+```
+
+> Javascript also allows us to add and remove atributes of a class
+```javascript
+// We can add an atribute using the syntax variable_name.atribute_name = value
+person.iq = 187;
+console.log("Sheldon's iq: " + person.iq);
+
+// We can also delete these atributes using the delete keyword
+delete person.iq;
+
+// This line will now give us an error as the atribute has been deleted
+console.log("Sheldon's iq: " + person.iq);
+```
+> If we need to check if and object has a paticular atribute we can use the hasOwnProperty method which is inbuilt into all classes
+
+```javascript
+console.log("Do we have this person's iq?\n" + person.hasOwnProperty("iq"));
+```
+
+
+- We can now add our own methods to our class using functions
+```javascript
+const person = {
+  firstName: "Sheldon",
+  lastName : "Cooper",
+  age      : 35,
+  greetPenny : function() {
+   for (let i = 0; i < 3; i++) {
+        console.log("Hey Penny!");
+    }
+  }
+};
+
+person.greetPenny(); // This calls the method greetPenny
+```
+
+<p align="center">
+  <img src="assets/images/hello_penny.jpeg" alt="JavaScript logo" title="JavaScript tutorial" width="400" />
+</p>
+
+
+Section 5. Conditions - Control Flow
 =====================
 
 - Conditional statements are used to perform different action based on different condition
@@ -118,9 +186,9 @@ Section 4. Conditions - Control Flow
 3. If...else if...else Statement
 4. Switch...Case Statement
 
-04.01. The if statement
+05.01. The if statement
 ---------------------
-04.01. The if statement and comparison operators
+ The if statement and comparison operators
 ---------------------
 
 - If the conditional statement is the simplest and basic control statement make decisions and execute statements conditionally
@@ -177,7 +245,7 @@ if(currentHours >=6 && currentHours < 12) {
 }
 ```
 
-04.02. The if else statement
+05.02. The if else statement
 ---------------------
 
 - The JavaScript `if...else statement` is used to execute the code `weather condition is true or false`
@@ -192,10 +260,10 @@ Use `else` to specify a block of code to be executed, `if the same condition is 
 ```javascript
 // if...else conditional statement
 
-/*if(condition/expression){  
-// content to be executed if condition is true - statements_1  
-}  
-else{  
+/*if(condition/expression){
+// content to be executed if condition is true - statements_1
+}
+else{
 // content to be executed if condition is false - statements_2
 }*/
 
@@ -234,7 +302,7 @@ if(currentHours < 12) {
 }
 ```
 
-04.03. The if else if else statement
+05.03. The if else if else statement
 ---------------------
 
 - The `if...else if...else` a special statement that is used to `combine multiple if...else statements`
@@ -268,7 +336,7 @@ if (num1 == num2) {
 
 // ------------------------------
 
-let age = 15; 
+let age = 15;
 
 if (age >= 60) {
   console.log('SINIOR CIRIZEN!');
@@ -294,7 +362,7 @@ if(currentHours >=6 && currentHours< 12) {
 }
 ```
 
-04.04. The switch case statement
+05.04. The switch case statement
 ---------------------
 
 - The switch...case statement is alternative to an if...else if...else statement, both do almost the same thing
@@ -359,7 +427,7 @@ switch (sweets) {
     console.log('No Sweets! Try some other sweets!');
     break;
 }
-``` 
+```
 ``` javascript
 const color = 'red';
 
@@ -416,77 +484,11 @@ console.log(`Today is ${currentDay}!`);
   <img src="assets/images/bazinga.png" alt="JavaScript logo" title="JavaScript tutorial" width="400" />
 </p>
 
-04.05. Objects in  Javascript 
+
+
+
+05.05 Lookup Tables
 ---------------------
-04.05.01 Objects
-- An object in javascript is a variable that can have multiple attributes and methods.
-- Attributes of objects are values that represent different features of that  class.
-- Methods of objects are actions that can be performed by the class using functions.
-
-> **Syntax & Example**
-> Let us make an object to represent a person, we will begin with atributes of the person such as their name and age.
-```javascript
-const person = {
-  firstName: "Sheldon",
-  lastName : "Cooper",
-  age      : 35
-};
-
-// We can view these atributes with the syntax variable_name.atribute_name
-console.log("The name of this person is: " + person.firstName + " " + person.lastName);
-```
-
-> We can also alter these atributes to update their values
-```javascript
-console.log("Current age: " + person.age);
-
-person.age += 1;
-
-console.log("Current age: " + person.age);
-```
-
-> Javascript also allows us to add and remove atributes of a class
-```javascript
-// We can add an atribute using the syntax variable_name.atribute_name = value
-person.iq = 187;
-console.log("Sheldon's iq: " + person.iq);
-
-// We can also delete these atributes using the delete keyword
-delete person.iq;
-
-// This line will now give us an error as the atribute has been deleted
-console.log("Sheldon's iq: " + person.iq);
-```
-> If we need to check if and object has a paticular atribute we can use the hasOwnProperty method which is inbuilt into all classes
-
-```javascript
-console.log("Do we have this person's iq?\n" + person.hasOwnProperty("iq"));
-```
-
-
-- We can now add our own methods to our class using functions
-```javascript
-const person = {
-  firstName: "Sheldon",
-  lastName : "Cooper",
-  age      : 35,
-  greetPenny : function() {
-   for (let i = 0; i < 3; i++) {
-        console.log("Hey Penny!");
-    }
-  }
-};
-
-person.greetPenny(); // This calls the method greetPenny 
-```
-
-<p align="center">
-  <img src="assets/images/hello_penny.jpeg" alt="JavaScript logo" title="JavaScript tutorial" width="400" />
-</p>
-
-
-04.05.02 Lookup Tables
-
 > In javascript, we can use objects to create a lookup or mapping between different values.
 > A lookup is a variable that maps an input value to a paticular output value.
 
@@ -497,7 +499,8 @@ var mobile_number_lookup = {"Penny":58538902, "Raj" : 98745689, "Sheldon" : 7890
 // To get the corresponding mobile number from a name we use the syntax variable[input value]
 console.log("Raj's number is: ", mobile_number_lookup["Raj");
 ```
-04.05.03 Object Freeze
+05.07 Object Freeze
+---------------------
 > If we want to prevent our object or lookuptable from having any future changes, we make use of the Object.freeze function.
 ```javascript
 const person = {
@@ -519,13 +522,14 @@ console.log(person.age);
 ```
 
 
-04.06. Regular Expressions (RegEx) in  Javascript 
+06. Regular Expressions (RegEx) in  Javascript
 ---------------------
 
 > Regular Expressions is a type of format for strings that allows you to easily find and replace characters as you like.
 
-04.06.01 Search
-> The search method allows us to get the index of the substring in the text. 
+06.01 Search
+---------------------
+> The search method allows us to get the index of the substring in the text.
 > Note that this search is regardless of case sensitivity.
 
 ```javascript
@@ -534,7 +538,8 @@ var text = "Big Bang Theory";
 console.log(text.search(/Theory/i));
 ```
 
-04.06.02 Replace
+06.02 Replace
+---------------------
 > The replace method allows us to replace a substring with any string of our choice.
 
 ```javascript
@@ -543,7 +548,8 @@ var text = "Big Bang Theory";
 console.log(text.replace(/Big/i, "Massive"));
 ```
 
-04.06.03 The Test Method
+06.03 The Test Method
+---------------------
 > This checks if the substring contains a string that meets the following criteria.
 ```javascript
 var expression = /Season 1/ // this expression will return true for all strings with the term Season 1
@@ -552,7 +558,8 @@ console.log(expression.test("Season 1 Episode 12"));
 console.log(expression.test("Season 2 Episode 12"));
 ```
 
-04.06.04 The | Operator
+06.04 The | Operator
+---------------------
 > This operator searches for any of the alternatives provided by the user
 ```javascript
 var expression = /Season 1|Season 2/g // this expression will return true for all strings with Season 1 or Season 2
@@ -561,7 +568,8 @@ console.log(expression.test("Season 1 Episode 12"));
 console.log(expression.test("Season 2 Episode 12"));
 console.log(expression.test("Season 3 Episode 12"));
 ```
-04.06.05 The Match Function
+06.05 The Match Function
+---------------------
 > This returns all instances where a substring matching the regex expression is found.
 ```javascript
 var text = "Big Bang Theory";
@@ -569,7 +577,8 @@ var text = "Big Bang Theory";
 console.log(text.match(/Big/g));
 ```
 
-04.06.06 RegEx Wildcards
+06.06 RegEx Wildcards
+---------------------
 > Wildcards are placeholders that can represent multiple characters in a string.
 
 * \d represents numbers
@@ -586,10 +595,11 @@ console.log(expression.test("xy"));
 console.log(expression.test("1"));
 ```
 
-Section 11. Promise
-=====================  
+Section 7. promise
+=====================
 
-## What is a promise?
+## 7.01. What is a promise?
+
 
 Why is a JavaScript ES6 `promise` called a 'promise'? Here is a snippet from the *Oxford Dictionary of English* definition of 'promise':
 
@@ -665,7 +675,7 @@ Listing 1. Asynchronous `XMLHttpRequest` (and `fetch` alternative) using a promi
 The `fetchJSON()` function in Listing 1 returns a `promise` that resolves to a value converted from JSON data received from a remote API end point. The alternative version of `fetchJSON()` (commented out here) uses a more modern browser function that natively returns a promise.
 
 
-## The .then() method
+## 7.02. The .then() method
 
 A promise exposes a `.then()` method through which you can obtain its fulfilled value or an error value in the case the promise was rejected:
 
@@ -727,7 +737,7 @@ console.log('after promise');
 // oops
 ```
 
-## Promise chaining
+## 7.03 Promise chaining
 
 It is important to understand that the `.then()` method returns a new promise that resolves to the return value of `onFulfilled` (if specified) in case of the 'happy' scenario or the return value of `onRejected()` (if specified) in case of an error. If the return value of these functions is a plain JavaScript value, the new promise is immediately fulfilled with that value. If the return value is yet another promise then the outcome is determined by the inner promise, once settled. If the function does not return a value, the new promise is immediately fulfilled with the value `undefined`.
 
@@ -782,12 +792,133 @@ promise
   .then(console.log); // -> "good"
 ```
 
-## Promise.all()
+## 7.04 Promise.all()
 
 There may be situations where you want to execute multiple promises in parallel and wait until all promises are resolved. Of course, these promises must not be interdependent (i.e. a promise must not depend on the result of another promise running in parallel). The `Promise.all()` method accepts an array (or more precisely, an _iterable_) of promises. It return a new promise that is resolved when all promises in the array are resolved, or rejected as soon as one of the promises in the array is rejected.
 
 The fulfilled value of the new promise is an array of fulfilled values of the individual promises passed to `Promise.all()`, in the same order.
 
-Project
-=====================  
+Section 8. DOM (Document Object Manager)
+========================================
+
+DOM is a system which allows javascript to interact with the html of a webpage. The elements are stored in a type of tree structure that represents the HTML format. Below we can see a visualization of what this looks like.
+
+<p align="center">
+  <img src="assets/images/htmltree.jpeg" alt="htmltree" title="htmltree" width="500" />
+</p>
+
+As we can see, the tree begins with an element called document. This is actually an inbuilt object that javascript gives us. It serves as a starting point from which we can access it's many methods and attributes that allow us to interact with the webpage.
+## 8.01 Finding Elements using DOM
+
+To find an element using DOM, we need an identifier to understand which element we are looking for. Below are examples of HTML and javascript code using different identifiers. First see what the raw html looks like in codepen and then add the javascript later to see the difference.
+
+### 8.01.01 Id of an HTML tag
+Html code
+```
+<html>
+<body>
+<p id="demo"> Who is smart?</p>
+</body>
+</html>
+```
+JS code
+```
+document.getElementById("demo").innerHTML = "Sheldon is smart!";
+```
+
+#### 8.01.02 Name of an HTML tag
+Html code
+```
+<html>
+<body>
+<p id="demo"> Who is smart?</p>
+</body>
+</html>
+```
+JS code
+```
+const element = document.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML = 'The question is: ' + element[0].innerHTML;
+```
+
+#### 8.01.03 Name of a Class Name
+Html code
+```
+<html>
+<body>
+<p class="intro"> Who is smart?</p>
+</body>
+</html>
+```
+JS code
+```
+const element = document.getElementsByClassName("intro");
+
+document.getElementById("demo").innerHTML = 'The question is: ' + element[0].innerHTML;
+```
+
+## 8.02 Writing information from javascript to html
+In some cases we might want javascript to simply paste information onto the page. For this we can use the document.write() function.
+```
+<html>
+<body>
+
+<p>The date and time is</p>
+
+<script>
+document.write(Date()); // Date() returns the current date and time
+</script>
+</body>
+</html>
+```
+
+## 8.03 Altering CSS using javascript
+We use the .style attribute of the document object to edit the css code. Here we take the following steps to change the color of the text
+
+> 1. Get the HTML tag using document.getElementById
+> 2. Get the CSS of this tag from the style attribute.
+> 3. In the CSS attribute get the color attribute.
+> 4. Set this value to "green".
+
+HTML code
+```
+<html>
+<body>
+<p id="p2">This text can change color.</p>
+</body>
+</html>
+```
+JS code
+```
+document.getElementById("p2").style.color = "green";
+```
+
+## 8.04 Using DOM to dynamically alter html
+Changing simple text using DOM is well and good, but how can we use the more powerful aspects of JS such as loops to edit HTML in a dynamic way? To demonstrate this type of behavior we will show you some simple code to use a loop that constantly moves a paragraph across the screen.
+
+HTML code
+```
+<html>
+<body>
+<p id="p3" style = "position: absolute;top : 100px;">This text is moving across the screen.</p>
+
+</body>
+</html>
+```
+
+JS code
+The setTimeout function is a simple function that waits a set amount of milliseconds before executing some code.
+If we run this with i * 10 timeout the it will wait in intervals of 0, 10, 20 and so on before executing the code. This will allow us to see the text move across the screen instead of the loop running faster than we can comprehend it.
+```
+for (let i = 0; i < 1000; i += 0.5) {
+  setTimeout(function () {
+        document.getElementById("p3").style.left = i + "px";
+    }, i * 100);
+}
+```
+
+Section 9. Project
+=====================
+
 [Click here](https://anuragkj.github.io/JS_Project/) for a simple project made by the concepts we learnt till now. Try making more!!
