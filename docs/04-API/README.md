@@ -118,11 +118,11 @@ Brooklyn 99 API Reference
 ![Alt Text](https://media.giphy.com/media/3oxHQoyto7T8wBjUJ2/giphy.gif)
 
 
-Base URL: `b99.acm.org`
+Base URL: `b99.acm.org/api`
 
 ### *GET* Characters
 
-URL: `https://b99.acm.org/characters`
+URL: `https://b99.acm.org/api/characters`
 
 Returns all characters in the database.
 
@@ -136,11 +136,15 @@ Optional filters can be passed as query parameters (see below)
 | married | true/false | false
 | seasonFirstAppearedIn | integer | 1...9
 
+example:
+`characters?filters[married][$eq]=true`
+`characters?filters[name][$contains]=amy`
+
 ![AltText](https://c.tenor.com/JjY18W3iN8EAAAAC/noice-brooklyn-ninenine.gif)
 
 ### *GET* character by id
 
-URL: `https://b99.acm.org/characters/:id`
+URL: `https://b99.acm.org/api/characters/:id`
 
 Get a single character by id
 
@@ -155,7 +159,7 @@ Replace the last part of path with the id of the character you would like to fet
 
 ### *POST* - add character
 
-URL: `https://b99.acm.org/characters`
+URL: `https://b99.acm.org/api/characters`
 
 Adds a character
 
@@ -172,7 +176,7 @@ Adds a character
 ![AltText](https://media.giphy.com/media/xTiTnCnOXNSRjcOSBy/giphy.gif)
 
 ### *PATCH* - updates a character
-URL: `https://b99.acm.org/characters/:id`
+URL: `https://b99.acm.org/api/characters/:id`
 
 Updates a character by id
 
@@ -244,10 +248,10 @@ There are multiple people at here using the same API - don't be surprised if you
 
 ### *GET* - view inventory
 
-URL: `https://b99.acm.org/jokes`
+URL: `https://b99.acm.org/api/jokes`
 
 ### *POST* - add a joke to the store
-URL: `https://b99.acm.org/jokes`
+URL: `https://b99.acm.org/api/jokes`
 
 Body:
 ```json
@@ -259,14 +263,14 @@ Body:
 ```
 
 ### *GET* - search jokes
-URL: `https://b99.acm.org/jokes?search=noice`
+URL: `https://b99.acm.org/api/jokes?search=noice`
 
 | Query | Param |
 | ---   | ---   |
 | search | pragmatic |
 
 ### *PATCH* - change author/season
-URL: `https://b99.acm.org/characters/:id`
+URL: `https://b99.acm.org/api/characters/:id`
 
 | Path Variable | Value |
 | ---           | ---   |
@@ -282,7 +286,7 @@ Body
 
 ### *GET* - get details for a single joke
 
-URL: `https://b99.acm.org/jokes/:id`
+URL: `https://b99.acm.org/api/jokes/:id`
 
 | Path Variable | Value |
 | ---           | ---   |
@@ -290,7 +294,7 @@ URL: `https://b99.acm.org/jokes/:id`
 
 ### *DEL* - delete the joke :(
 
-URL: `https://b99.acm.org/jokes/:id`
+URL: `https://b99.acm.org/api/jokes/:id`
 
 | Path Variable | Value |
 | ---           | ---   |
