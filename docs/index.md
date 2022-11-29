@@ -13,7 +13,7 @@ This bootcamp will provide its audience the core foundation in this amazing fiel
 | 1 | [**HTML/CSS**](./01-HTML-CSS) |
 | 2 | [**JavaScript (Basics)**](./02-JavaScript-1) |
 | 3 | [**JavaScript (Advanced)**](./03-JavaScript-2) |
-| 4 | **APIs** |
+| 4 | [**APIs**](./04-API) |
 | 5 | **CLI & Git** |
 | 6 | **GitHub** |
 
