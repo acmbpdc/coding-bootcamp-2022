@@ -14,7 +14,7 @@ This bootcamp will provide its audience the core foundation in this amazing fiel
 | 2 | [**JavaScript (Basics)**](./02-JavaScript-1) |
 | 3 | [**JavaScript (Advanced)**](./03-JavaScript-2) |
 | 4 | [**APIs**](./04-API) |
-| 5 | **CLI & Git** |
+| 5 | [**CLI & Git**](./05-CLI-Git) |
 | 6 | **GitHub** |
 
 ## Instructors
