@@ -36,7 +36,7 @@ nav:
       - '2: JavaScript (Basics)': './02-JavaScript-1/README.md'
       - '3: JavaScript (Advanced)': './03-JavaScript-2/README.md'
       - '4: APIs': './04-API/README.md'
-      #- '5: CLI & Git': './05-CLI-Git/README.md'
+      - '5: CLI & Git': './05-CLI-Git/README.md'
       #- '6: GitHub': './06-GitHub/README.md'
 plugins:
   - search
