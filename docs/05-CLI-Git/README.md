@@ -105,7 +105,9 @@ Akin to those, CLI's use paths to refer to files and to let you know where you a
 The *path* of a file or a directory describes their location on a computer.
 
 There are two types of paths:
+
 - **Relative Path**: It refers to the location of a file or directory, *relative* to the *current* directory (or *present working directory/pwd*). The paths can look something like `stolen/bluehorn.txt` (no '`/`' in the start)
+
 - **Absolute Path**: It is the location of a file or a directory, *relative* to the *root* directory. These will look something like `/c/Users/TedMosby`. The main difference in how the system recognises Relative and Absolute paths are the leading '`/`' in absolute paths.
 
 Some important shorthand notations:
@@ -297,6 +299,7 @@ When it comes to larger files, it becomes inconvenient to just print the entire 
 ```bash
 less teds_friends.txt # You can use arrow keys to scroll, and type q to quit
 ```
+
 ---
 ### **Task Time**
 
@@ -355,13 +358,14 @@ We can move files into specific directories using the `mv` command
 
 Try the following commands to move `Marshall Eriksen.txt` and `Lily Aldrin.txt` into `married`:
 
-*   ```bash
+*   ```
     mv "Marshall Eriksen.txt" married/ # 'Marshall Eriksen.txt' is moved into the directory 'married'
     ```
 
-*   ```bash
+*   ```
     mv "Lily Aldrin.txt" "married/Lily Aldrin.txt" # renames 'Lily Aldrin.txt' as 'married/Lily Aldrin.txt' and hence moves it into 'married'
     ```
+    
 The `mv` command works the same as *cut and paste* functionality.
 
 #### `cp`
@@ -484,9 +488,10 @@ Feel free to use the `man` command to see more about the command options
 ```bash
 man wc
 ```
+
 *or for `Git Bash` users*
 ```bash
-man wc --help
+wc --help
 ```
 
 #### `grep`
@@ -605,7 +610,6 @@ the architect
 
 Let's just see a few more commands, of course there are so much more, but that's what Google is for!
 
-<br>
 
 #### `history`
 
@@ -770,16 +774,16 @@ To initialize the repository, use the `init` subcommand.
 git init
 ```
 
->   #### Repository
+> #### Repository
 >   
->   A repository is a directory that has elevated functionality.
+> A repository is a directory that has elevated functionality.
 
 You have now created a `git` repository on your local system. If you list all files.
 
 ```bash
 ls -la
 ```
-This command is only for unix shells, or windows powershell. For windows cmd, you can use your file explorer and check the show hidden items option.
+In Windows, you can also use your file explorer and check the show hidden items option.
 
 You should see a **.git** directory. 
 
@@ -810,11 +814,10 @@ Create a file called `README.md`
 ```bash
 touch README.md
 ```
-In windows you can simply use a text editor of your choice.
 
 > A **README** file contains information about your repository, directories and files. It is a form of documentation which is a guide to developers giving a description about your project and instructions on how to run the code. The `.md` stands for **m**ark**d**own file. Markdown is a markup language which is easy to use for formatting text.
 
-With your preferred text editor, add the following content to the `README.md`
+You can use `nano` to write the following into the file.
 
 ```
 # My First Repo
@@ -845,15 +848,16 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
->   #### Branches
+> #### Branches
 >   
->   Git can track file changes across multiple braches/versions of a repository.
->   Each branch is its own universe. Git allows you to create branches from existing ones and move across them.
+> Git can track file changes across multiple braches/versions of a repository.
+> Each branch is its own universe. Git allows you to create branches from existing ones and move across them.
 >	The default branch is called `master`.
 
->   #### Commits
+
+> #### Commits
 >   
->   A commit is nothing but a checkpoint.
+> A commit is nothing but a checkpoint.
 >
 >	The `commit` command takes the staged changes and commits it to the project history.
 >
@@ -931,7 +935,7 @@ Try to use the `-p` flag with `log`
 git log -p	# shows what changed with each commit
 ```
 
-`branch`
+#### `branch`
 
 Earlier we mentioned the master branch, we can even make branches of our own.
 
@@ -949,7 +953,7 @@ To make a new branch all you need to do is
 git branch haircut
 ```
 
-`checkout`
+#### `checkout`
 
 Now that you have a new branch called `haircut`, before you can commit changes to it, you should check it out with a simple command called `checkout`.
 
