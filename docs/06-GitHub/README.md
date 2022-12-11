@@ -571,3 +571,23 @@ Test out the workflow by making your first contribution on GitHub:
     <img src="./assets/github_4.gif">
 </div>
 </br>
+
+## Project
+
+This concludes the ACM Bootcamp 2022, we hope you enjoyed it as much as us, and remember you can always refer back to these docs to help you in the future.
+
+[Here](https://github.com/Fir121/Carbon-Footprint-Tracker) you can find a project that utilises the concepts you learnt through this bootcamp.
+
+We encourage you to try to make a project yourself to *learn by doing*, some useful resources are listed below to help you get started.
+
+### Project Resources
+
+* [List Of Free API's you can use for your websites](https://github.com/public-apis/public-apis)
+* [Firebase - Can be used for databases](https://firebase.google.com/)
+* [Netlify - Can be used to host your website](https://www.netlify.com/)
+* [Generate CSS Gradients](https://cssgradient.io/)
+* [Bootstrap - A great package with HTML,CSS,JS based elements](https://getbootstrap.com/)
+* [Postman - API Testing](https://www.postman.com/)
+* [MDN Web Docs](https://developer.mozilla.org/en-US/)
+* [Font Awesome Icons](https://fontawesome.com/)
+* [Colour Palette Generator](https://coolors.co/)
