@@ -1,0 +1,2485 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../01-HTML-CSS/">
+      
+      
+        <link rel="next" href="../03-JavaScript-2/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>2: JavaScript (Basics) - ACM Coding Bootcamp</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#section-01-operators" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ACM Coding Bootcamp" class="md-header__button md-logo" aria-label="ACM Coding Bootcamp" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ACM Coding Bootcamp
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2: JavaScript (Basics)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-HTML-CSS/" class="md-tabs__link">
+          
+  
+  Sessions
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ACM Coding Bootcamp" class="md-nav__button md-logo" aria-label="ACM Coding Bootcamp" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    ACM Coding Bootcamp
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Sessions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sessions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-HTML-CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1: HTML/CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2: JavaScript (Basics)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    2: JavaScript (Basics)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#section-01-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 01. Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0101-what-is-the-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.01. What is the Operator?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0102-arithmetic-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.02. Arithmetic Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0103-assignment-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.03. Assignment Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0104-logical-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.04. Logical Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0105-comparison-or-relational-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.05. Comparison (or Relational) Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0106-conditional-or-ternary-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.06. Conditional (? or ternary) Operator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0107-string-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.07. String Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0108-operator-precedence" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.08. Operator precedence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-02-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 02. Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 02. Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0201-what-is-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.01. What is a Function?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="02.01. What is a Function?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#020101-here-are-some-advantages-of-using-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.01.01. Here are some advantages of using functions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#020102-function-definition-function-declaration-creating-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.01.02. Function Definition / Function Declaration / Creating Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#020103-function-invocation-calling-a-function-run-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.01.03. Function Invocation / Calling a Function / Run a Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#020104-function-naming" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.01.04. Function Naming
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0202-types-of-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.02. Types of Function
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="02.02. Types of Function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#020201-regular-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.02.01. Regular Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02020201-parameterized-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.02.02.01. Parameterized Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02020202-default-values-for-function-parameters-es6" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.02.02.02. Default Values for Function Parameters ES6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#020203-return-type-function-function-returning-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.02.03. Return Type Function (Function returning values)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0203-different-ways-to-define-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.03. Different ways to define Function
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="02.03. Different ways to define Function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#020301-function-declaration-regularnormal-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.03.01. function declaration (Regular/Normal function)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#020302-function-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.03.02. function expression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#020303-immediately-invoked-function-expression-iife" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.03.03. Immediately invoked function expression (IIFE)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0204-string-methods-and-concatenation" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.04. String Methods and Concatenation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0205-template-string-and-template-literals" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.05. Template String and Template Literals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-03-loops-and-iterations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 03. Loops and Iterations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 03. Loops and Iterations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#different-types-of-loops-in-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Different Types of Loops in JavaScript:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0301-the-for-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.01. The for loop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="03.01. The for loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#030101-the-for-loop-reverse-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.01.01. The for loop - Reverse order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#030102-the-for-loop-find-even-or-odd-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.01.02. The for loop - Find Even or Odd number
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0302-the-while-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.02. The while loop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0303-the-do-while-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.03. The do while loop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0304-the-for-in-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.04. The for in loop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="03.04. The for in loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#030401-the-forin-loop-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.04.01. The for...in Loop - array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#030402-the-forin-loop-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.04.02. The for...in Loop - object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#030403-the-forin-loop-inbuilt-javascript-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.04.03. The for...in Loop - Inbuilt JavaScript objects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0305-the-for-of-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.05. The for of loop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-JavaScript-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3: JavaScript (Advanced)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4: APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-CLI-Git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5: CLI & Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-GitHub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6: GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#section-01-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 01. Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0101-what-is-the-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.01. What is the Operator?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0102-arithmetic-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.02. Arithmetic Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0103-assignment-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.03. Assignment Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0104-logical-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.04. Logical Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0105-comparison-or-relational-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.05. Comparison (or Relational) Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0106-conditional-or-ternary-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.06. Conditional (? or ternary) Operator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0107-string-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.07. String Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0108-operator-precedence" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.08. Operator precedence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-02-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 02. Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 02. Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0201-what-is-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.01. What is a Function?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="02.01. What is a Function?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#020101-here-are-some-advantages-of-using-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.01.01. Here are some advantages of using functions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#020102-function-definition-function-declaration-creating-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.01.02. Function Definition / Function Declaration / Creating Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#020103-function-invocation-calling-a-function-run-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.01.03. Function Invocation / Calling a Function / Run a Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#020104-function-naming" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.01.04. Function Naming
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0202-types-of-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.02. Types of Function
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="02.02. Types of Function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#020201-regular-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.02.01. Regular Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02020201-parameterized-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.02.02.01. Parameterized Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02020202-default-values-for-function-parameters-es6" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.02.02.02. Default Values for Function Parameters ES6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#020203-return-type-function-function-returning-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.02.03. Return Type Function (Function returning values)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0203-different-ways-to-define-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.03. Different ways to define Function
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="02.03. Different ways to define Function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#020301-function-declaration-regularnormal-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.03.01. function declaration (Regular/Normal function)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#020302-function-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.03.02. function expression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#020303-immediately-invoked-function-expression-iife" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.03.03. Immediately invoked function expression (IIFE)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0204-string-methods-and-concatenation" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.04. String Methods and Concatenation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0205-template-string-and-template-literals" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.05. Template String and Template Literals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-03-loops-and-iterations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 03. Loops and Iterations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 03. Loops and Iterations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#different-types-of-loops-in-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Different Types of Loops in JavaScript:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0301-the-for-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.01. The for loop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="03.01. The for loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#030101-the-for-loop-reverse-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.01.01. The for loop - Reverse order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#030102-the-for-loop-find-even-or-odd-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.01.02. The for loop - Find Even or Odd number
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0302-the-while-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.02. The while loop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0303-the-do-while-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.03. The do while loop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0304-the-for-in-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.04. The for in loop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="03.04. The for in loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#030401-the-forin-loop-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.04.01. The for...in Loop - array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#030402-the-forin-loop-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.04.02. The for...in Loop - object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#030403-the-forin-loop-inbuilt-javascript-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.04.03. The for...in Loop - Inbuilt JavaScript objects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0305-the-for-of-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.05. The for of loop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p align="center">
+  <img src="assets/images/js_logo.png" alt="JavaScript logo" title="JavaScript tutorial" width="200" />
+</p>
+
+<p><center><h1>Javascript Session 1</h1></center></p>
+<h2 id="section-01-operators">Section 01. Operators</h2>
+<h2 id="0101-what-is-the-operator">01.01. What is the Operator?</h2>
+<ul>
+<li>We know/use many operators since our initial school days, they are things like addition +, multiplication *, subtraction -, open-close round bracket ( ) or square bracket [ ]</li>
+<li>Operators are symbols/keywords that tell the JavaScript engine to <code>perform some sort of actions</code></li>
+<li>JavaScript operators are symbols that are used to perform operations on operands</li>
+<li>Operators used along with our variables and constants to create
+expressions to implement logic and algorithms</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: <br/>
+Let us take a simple expression <code>var sum = 1 + 2</code>;
+- Here 1 and 2 are called <code>operands</code> and 
+- <code>=</code> &amp; <code>+</code> are called the <code>operator</code>
+- <code>= is the assignment</code> operator, <code>+ is the arithmetic</code> operator</p>
+</blockquote>
+<!-- > **Syntax & Example**: `07.01.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Lets take a look on simple expression </span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+
+<span class="c1">// Here 1 and 2 are called `operands` and </span>
+<span class="c1">// `=` &amp; `+` are called the `operator`</span>
+<span class="c1">// `= is the assignment` operator, `+ is the arithmetic` operator</span>
+</code></pre></div></p>
+</blockquote>
+<p><strong>JavaScript supports the following types of operators</strong>:
+1. Arithmetic Operators
+2. Assignment Operators
+3. Logical Operators
+4. Comparison (or Relational) Operators
+5. Conditional (or ternary) Operators
+6. String Operators
+7. Bitwise Operators</p>
+<h2 id="0102-arithmetic-operators">01.02. Arithmetic Operators</h2>
+<ul>
+<li>Arithmetic operators are used to performing arithmetic operations (just like mathematics - calculations) on numbers/the operands</li>
+</ul>
+<p>JavaScript supports the following Arithmetic operators (List of Arithmetic operators):</p>
+<table>
+<thead>
+<tr>
+<th>Operators</th>
+<th>Description</th>
+<th>Example / Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>Addition</td>
+<td>10 + 20 = 30 (Sum of num1 and num2)</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Subtraction</td>
+<td>20 - 10 = 10 (Difference of num1 and num2)</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+<td>10 * 20 = 200 (Product of num1 and num2)</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Division</td>
+<td>20 / 10 = 2 (Quotient of num1 and num2)</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Modulus (Division Remainder)</td>
+<td>20 % 10 = 0 (Remainder of num1 divided by num2)</td>
+</tr>
+<tr>
+<td>++</td>
+<td>Increment</td>
+<td>var num1 = 100; num1++; Now num1 = 11</td>
+</tr>
+<tr>
+<td>--</td>
+<td>Decrement</td>
+<td>var num1 = 100; num1--; Now num1 = 9</td>
+</tr>
+<tr>
+<td>**</td>
+<td>Exponentiation (ES2016 / ES6)</td>
+<td>2 ** 2 = 4 ; 2 ** 3 = 8 (Multiply num1 for num2 times)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- > **Syntax & Example**: `07.02.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Arithmetic operators</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
+
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Addition &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 14</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Subtraction &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">num2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 6</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Multiplication &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">num2</span><span class="p">);</span><span class="w"> </span><span class="c1">// 40</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Division &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">num2</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2.5</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Modulus reminder &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nx">num2</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2</span>
+<span class="nx">num1</span><span class="o">++</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;after Increment &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 11</span>
+<span class="nx">num2</span><span class="o">--</span><span class="p">;</span><span class="w"> </span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;after Decrement &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">);</span><span class="w"> </span><span class="c1">// 3</span>
+
+<span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Exponentiation &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="nx">num2</span><span class="p">));</span><span class="w"> </span><span class="c1">// (10 ** 4) = 10* 10 * 10 * 10 = 10000</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0103-assignment-operators">01.03. Assignment Operators</h2>
+<ul>
+<li>The Assignment operators are used to assign particular values to variables</li>
+</ul>
+<p>JavaScript supports the following Assignment operators (List of Assignment operators):</p>
+<table>
+<thead>
+<tr>
+<th>Operators</th>
+<th>Description</th>
+<th>Example / Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>Simple Assignment</td>
+<td>10 + 20 = 30; / var total = num1 + num2; (assigns a value to the variable)</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>Add and assign</td>
+<td>var num1 = 10; num1 += 20; Now num1 = 30 (assigns and adds value to the variable, num1 += 20; is equivalent to num1 = num1 + 20;)</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>Subtract and assign</td>
+<td>var num1 = 10; num1 -= 5; Now num1 = 5 (assigns and subtract value to the variable, num1 -= 5; is equivalent to num1 = num1 - 5;)</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>Multiply and assign</td>
+<td>var num1 = 10; num1 <em>= 5; Now num1 = 50 (assigns and multiply value to variable, num1 </em>= 5; is equivalent to num1 = num1 * 5;)</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>Divide and assign</td>
+<td>var num1 = 10; num1 /= 5; Now num1 = 2 (assigns and divide value to the variable, num1 /= 5; is equivalent to num1 = num1 / 5;)</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>Modulus and assign</td>
+<td>var num1 = 10; num1 %= 5; Now num1 = 0 (assigns and Modulus value to the variable, num1 %= 5; is equivalent to num1 = num1 % 5;)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- > **Syntax & Example**: `07.03.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Assignment operators</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span>
+
+<span class="c1">// old methodology</span>
+<span class="c1">// num1 = num1 + num2;</span>
+<span class="c1">// console.log(num1); // 30</span>
+
+<span class="c1">// new techniques</span>
+<span class="nx">num1</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span><span class="w"> </span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 30</span>
+
+<span class="c1">// num2 -= num1; </span>
+<span class="c1">// console.log(num2); // 10</span>
+
+<span class="c1">// num1 *= num2; </span>
+<span class="c1">// console.log(num1); // 200</span>
+
+<span class="c1">// num2 /= num1; </span>
+<span class="c1">// console.log(num2); // 2</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0104-logical-operators">01.04. Logical Operators</h2>
+<ul>
+<li>The Logical operators are used to make decisions based on multiple conditions</li>
+<li>The logical operators are typically used to combine multiple conditional statements and evaluate</li>
+</ul>
+<p>JavaScript supports the following Logical operators (List of Logical operators):</p>
+<table>
+<thead>
+<tr>
+<th>Operators</th>
+<th>Description</th>
+<th>Example / Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&amp;&amp;</td>
+<td>Logical AND</td>
+<td>x &amp;&amp; y; (True if both operands like x and y are true)</td>
+</tr>
+<tr>
+<td>&#124;&#124;</td>
+<td>Logical OR</td>
+<td>x &#124;&#124; y; (True if either x or y is true)</td>
+</tr>
+<tr>
+<td>!</td>
+<td>Logical NOT</td>
+<td>!x; (True if x is not true)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- > **Syntax & Example**: `07.04.01.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Logical operators - basic examples</span>
+
+<span class="c1">// &amp;&amp; (Logical AND) - returns true if both operands are true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;true &amp;&amp; true: &#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;true &amp;&amp; false: &#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;false &amp;&amp; true: &#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+
+<span class="c1">// ------------------------------</span>
+
+<span class="c1">// || (Logical OR) - returns true if one of the operand is true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;true || true: &#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;true || false: &#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;false || true: &#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+
+<span class="c1">// ------------------------------</span>
+
+<span class="c1">// ! (Logical NOT) True if operand is not true (means I will be true if other is false)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">iamcrazy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">iamnotcrazy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">iamcrazy</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;I am crazy?: &#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">iamnotcrazy</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;My mother had me tested&#39;</span><span class="p">);</span>
+</code></pre></div></p>
+</blockquote>
+<hr/>
+<p align="center">
+  <img src="assets/images/crazy.png" alt="JavaScript logo" title="JavaScript tutorial" width="400" />
+</p>
+
+<!-- > **Syntax & Example**: `07.04.02.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Logical operators - real world scenario/example</span>
+
+<span class="c1">// check credit/loan eligibility - (if applicant have HIGH INCOME &amp; GOOD CREDIT SCORE, he is eligible for credit/loan)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">isEarningHighIncome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">isGoodCibilScore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">isEligibleForLoan</span><span class="p">;</span>
+
+<span class="c1">// check eligibility with &amp;&amp; Logical AND operator</span>
+<span class="nx">isEligibleForLoan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">isEarningHighIncome</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">isGoodCibilScore</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;isEligibleForLoan: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">isEligibleForLoan</span><span class="p">);</span>
+
+<span class="c1">// check eligibility with || Logical OR operator</span>
+<span class="nx">isEligibleForLoan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">isEarningHighIncome</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">isGoodCibilScore</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;isEligibleForLoan: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">isEligibleForLoan</span><span class="p">);</span>
+
+<span class="c1">// ! Logical NOT</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">isLoanRefused</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">isEligibleForLoan</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;isLoanRefused: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">isLoanRefused</span><span class="p">);</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0105-comparison-or-relational-operators">01.05. Comparison (or Relational) Operators</h2>
+<ul>
+<li>The JavaScript comparison operator compares the two operands</li>
+<li>It compares two values in a Boolean fashion</li>
+<li>The comparison operators are used to determine the similarity and difference between different variables</li>
+</ul>
+<p>JavaScript supports the following Comparison (or Relational) operators (List of Comparison (or Relational) operators):</p>
+<table>
+<thead>
+<tr>
+<th>Operators</th>
+<th>Description</th>
+<th>Example / Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==  <br/>(Loose Equality Operator)</td>
+<td>Is equal to / identical</td>
+<td>x == y    (True if x is equal to y)</td>
+</tr>
+<tr>
+<td>=== <br/>(Strict Equality Operator)</td>
+<td>Eqaul/identical value and identical type</td>
+<td>x === y (True if x is equal to y, and they are of the same type)</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>Not equal to / different</td>
+<td>x != y (True if x is not equal to y)</td>
+</tr>
+<tr>
+<td>!==</td>
+<td>Not identical    / different value or different type</td>
+<td>x !== y )True if x is not equal to y, or they are not of the same type)</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>Less than</td>
+<td>x &lt; y (True if x is less than y)</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>Greater than</td>
+<td>x &gt; y    (True if x is greater than y)</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Less than or equal to</td>
+<td>x &lt;= y (True if x is less than or equal to y)</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>Greater than or equal to</td>
+<td>x &gt;= y (True if x is greater than or equal to y)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- > **Syntax & Example**: `07.05.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Comparison (or Relational) operators</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">35</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">num3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;25&quot;</span><span class="p">;</span>
+
+<span class="nx">alert</span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">num3</span><span class="p">);</span><span class="w">  </span><span class="c1">// true</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">num3</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">num2</span><span class="p">);</span><span class="w">  </span><span class="c1">// true</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="nx">num3</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">num2</span><span class="p">);</span><span class="w">   </span><span class="c1">// true</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">num2</span><span class="p">);</span><span class="w">   </span><span class="c1">// false</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">num2</span><span class="p">);</span><span class="w">  </span><span class="c1">// true</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="nx">num2</span><span class="p">);</span><span class="w">  </span><span class="c1">// false</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0106-conditional-or-ternary-operator">01.06. Conditional (? or ternary) Operator</h2>
+<ul>
+<li>Conditional Operator returns a value based on the condition, it is like if-else</li>
+<li>The conditional (ternary) operator is the only JavaScript operator that takes three operands </li>
+<li>The conditional operator that assigns a value to a variable based on some condition</li>
+<li>This operator is frequently used as a shortcut/short-hand method for the if statement</li>
+<li><strong>Syntax</strong>: variablename = (condition) ? TRUE value: FALSE value </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Operators</th>
+<th>Description</th>
+<th>Example / Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>?</td>
+<td>Ternary operator</td>
+<td>var result = x &lt; y ? 'x is smaller' : 'y is smaller' (short hand method to write if condition)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- > **Syntax & Example**: `07.06.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Conditional (? or ternary) Operator</span>
+
+<span class="c1">// age category</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">currentAge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">category</span><span class="p">;</span>
+
+<span class="nx">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">currentAge</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;Minor&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Major&#39;</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;AGE category: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">category</span><span class="p">);</span>
+
+<span class="c1">// fees category</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">isAuthorisedMember</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">fees</span><span class="p">;</span>
+
+<span class="nx">fees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">isAuthorisedMember</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;fees / charges: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">fees</span><span class="p">);</span><span class="w"> </span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0107-string-operators">01.07. String Operators</h2>
+<p>Variables can also have string values, <code>+ operator</code> can be used to concatenate strings as well as numbers.</p>
+<p>There are two operators which can also be used be for strings:</p>
+<table>
+<thead>
+<tr>
+<th>Operators</th>
+<th>Description</th>
+<th>Example / Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>Concatenation</td>
+<td>string1 + string2 (Concatenation of string1 and string2)</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>Concatenation assignment</td>
+<td>string1 += string2 (Appends the str2 to the str1)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- > **Syntax & Example**: `07.07.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// String Operators</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">message1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Its your birthday!&quot;</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">message2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot; Smile!&quot;</span><span class="p">;</span>
+
+<span class="nx">alert</span><span class="p">(</span><span class="nx">message1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">message2</span><span class="p">);</span><span class="w"> </span>
+
+<span class="nx">message1</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">message2</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">message1</span><span class="p">);</span><span class="w"> </span>
+</code></pre></div></p>
+</blockquote>
+<p align="center">
+  <img src="assets/images/string_concat.png" alt="I haven't watched the show. Hopefully its a meme :)" title="JavaScript tutorial" width="500" />
+</p>
+
+<h2 id="0108-operator-precedence">01.08. Operator precedence</h2>
+<ul>
+<li>If an expression has more than one operator, the <code>execution order is defined by their precedence</code>, or the implicit priority order of operators</li>
+<li>Operator precedence determines/describes the way in which operators are parsed with respect to each other / <code>order in which operations are performed</code></li>
+<li>The operations inside the <code>parentheses ()</code> are computed first</li>
+<li>If many operations have the same precedence (like addition and subtraction), they are <code>computed from left to right</code></li>
+</ul>
+<!-- > **Syntax & Example**: `07.08.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Operator precedence</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">result1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;10 + 2 * 5 =  &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">result1</span><span class="p">);</span><span class="w"> </span><span class="c1">// answer is 20 NOT 60 (12 * 5 ), actually * or multiplication have higher precedence so the actual calculation is like 10 + ( 2*5 ) = 10 + 10 = 20</span>
+
+<span class="c1">// change precedence with `parentheses ()` </span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">result2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;(10 + 2) * 5 =  &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">result2</span><span class="p">);</span><span class="w"> </span><span class="c1">// (12) * 5 = 60</span>
+
+<span class="c1">// same precedence operators</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">result3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">2</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;10 + 5 - 2 =  &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">result3</span><span class="p">);</span><span class="w"> </span><span class="c1">// 13 first addition than subtraction</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">result4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mf">5</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;10 + (5 - 2) =  &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">result4</span><span class="p">);</span><span class="w"> </span><span class="c1">// 13 first subtraction ie. ( ) than addition</span>
+</code></pre></div></p>
+</blockquote>
+<h1 id="section-02-functions">Section 02. Functions</h1>
+<h2 id="0201-what-is-a-function">02.01. What is a Function?</h2>
+<ul>
+<li>A function is basically a <code>group of statements that perform specific tasks/operations</code></li>
+<li>Functions provide a way to <code>create reusable code packages</code> which are more portable and easier to debug</li>
+<li>Functions allow a programmer to <code>divide a big program</code> into a number of/several small and manageable functions</li>
+<li>It helps programmers in writing <code>modular codes</code></li>
+<li>The function is a kind of reusable tool where we can write code/functionality to reuse whenever we want (Function allow the code to be called many times without repetition)</li>
+<li>Wrapping up / making smaller chunks of statements / reusable codes together for readability or separation of concern/proper organization is functions – (Grouping of a repetitive task)</li>
+<li>Functions (logical block of code) are one of the most important control structure in any programming language</li>
+<li>In other languages, it might be called <code>MODULES, SUBROUTINES(SUB-ROUTINES)</code></li>
+<li>There are two steps to utilize function: </li>
+<li>create/define a function with <code>function</code> keyword  </li>
+<li>call/invoke a function</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: <br/>
+Best Practice - First Define function than call/envoke it!</p>
+</blockquote>
+<h4 id="020101-here-are-some-advantages-of-using-functions">02.01.01. Here are some advantages of using functions:</h4>
+<ul>
+<li><strong>Code reusability</strong> - call a function several times</li>
+<li><strong>Less coding</strong> - makes our program compact, no need to write lines of code each time</li>
+<li><strong>Easier to maintain</strong> - changes are done only at one location</li>
+<li><strong>Easier to eliminate the errors</strong> - fixing errors becomes much easier</li>
+</ul>
+<h4 id="020102-function-definition-function-declaration-creating-function">02.01.02. Function Definition / Function Declaration / Creating Function</h4>
+<ul>
+<li>The function declaration starts by using the <code>function keyword</code>, </li>
+<li>followed by a <code>unique function name</code>, </li>
+<li>a list of <code>parameters in parentheses</code> i.e. () (that might be empty), </li>
+<li>and a statement block surrounded by <code>curly braces { }</code></li>
+</ul>
+<!-- > **Syntax & Example**: `08.01.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">//1. define / declare / create function</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">showMessage</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">//Body of function </span>
+<span class="w">  </span><span class="c1">//code to be executed</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;welcome to JavaScript function&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;welcome to JavaScript function&#39;</span><span class="p">);</span><span class="w">    </span>
+<span class="p">}</span>
+</code></pre></div></p>
+</blockquote>
+<h4 id="020103-function-invocation-calling-a-function-run-a-function">02.01.03. Function Invocation / Calling a Function / Run a Function</h4>
+<ul>
+<li>Defined function can be invoked/called/run from anywhere in the document, by typing <code>function name followed by a set of parentheses, like functionName()</code></li>
+</ul>
+<!-- > **Syntax & Example**: `08.01.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">//2. invoke / call the function</span>
+
+<span class="nx">showMessage</span><span class="p">();</span>
+</code></pre></div></p>
+</blockquote>
+<h4 id="020104-function-naming">02.01.04. Function Naming</h4>
+<p>Function <code>denotes an action/task</code>. The function name should be <code>brief, as accurate as possible and describe</code> what the function does, like a <code>verb</code>.</p>
+<p>Usually, Function name starts with:</p>
+<ul>
+<li>"getSomething" – returns value,</li>
+<li>"createSomething" – create something,</li>
+<li>"calcSomething" – calculate something,</li>
+<li>"checkSomething" – check something and return a boolean, etc.</li>
+</ul>
+<p>Examples of function names:
+- getSum();
+- createFields();
+- calcAge();
+- checkUserType();</p>
+<h2 id="0202-types-of-function">02.02. Types of Function</h2>
+<ul>
+<li>Regular Function</li>
+<li>Parameterized Function</li>
+<li>Return Type Function (Function returning values)</li>
+</ul>
+<h4 id="020201-regular-function">02.02.01. Regular Function</h4>
+<ul>
+<li>Simple/Normal function which we use daily to perform some action/task</li>
+</ul>
+<p align="center">
+  <img src="assets/images/butter.png" alt="JavaScript logo" title="JavaScript tutorial" width="400" />
+</p>
+
+<!-- > **Syntax & Example**: `08.02.01.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">food</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;butter&#39;</span><span class="p">;</span>
+
+<span class="c1">//1. define / declare / create function</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">passButter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">//Body of function </span>
+<span class="w">  </span><span class="c1">//code to be executed</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Please pass the &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">food</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Please pass the &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">food</span><span class="p">);</span><span class="w">    </span>
+<span class="p">}</span>
+
+<span class="c1">//2. invoke / call the function</span>
+<span class="nx">passButter</span><span class="p">();</span>
+</code></pre></div></p>
+</blockquote>
+<h4 id="02020201-parameterized-function">02.02.02.01. Parameterized Function</h4>
+<ul>
+<li>One can pass data to functions using parameters (function arguments)</li>
+<li>You can specify parameters when you define your function to accept input values at run time</li>
+</ul>
+<!-- > **Syntax & Example**: `08.02.02.01.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Parameterized function</span>
+<span class="c1">//1. define / declare / create function</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">passButter</span><span class="p">(</span><span class="nx">food</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">//Body of function </span>
+<span class="w">  </span><span class="c1">//code to be executed</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Please pass the &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">food</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Please pass the &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">food</span><span class="p">);</span><span class="w">    </span>
+<span class="p">}</span>
+
+<span class="c1">//2. invoke / call the function</span>
+<span class="nx">passButter</span><span class="p">(</span><span class="s1">&#39;butter&#39;</span><span class="p">);</span>
+
+<span class="nx">passButter</span><span class="p">(</span><span class="s1">&#39;butter!!!&#39;</span><span class="p">);</span>
+
+<span class="c1">// ------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">total</span><span class="p">;</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">calculateSum</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">total</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">calculateSum</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">);</span>
+<span class="nx">calculateSum</span><span class="p">(</span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">200</span><span class="p">);</span>
+</code></pre></div></p>
+</blockquote>
+<h4 id="02020202-default-values-for-function-parameters-es6">02.02.02.02. Default Values for Function Parameters ES6</h4>
+<p>With ES6, now you can specify default values to the function parameters. This means that if no arguments are provided to the function when it is called these default parameters values will be used.</p>
+<!-- > **Syntax & Example**: `08.02.02.02.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Parameterized function with default parameters</span>
+
+<span class="c1">//1. define / declare / create function</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">sayHello</span><span class="w"> </span><span class="p">(</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;User&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">//Body of function </span>
+<span class="w">  </span><span class="c1">//code to be executed</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">name</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">name</span><span class="p">);</span><span class="w">    </span>
+<span class="p">}</span>
+
+<span class="c1">//2. invoke / call the function</span>
+<span class="nx">sayHello</span><span class="p">();</span>
+
+<span class="nx">sayHello</span><span class="p">(</span><span class="s1">&#39;Sheldon&#39;</span><span class="p">);</span>
+
+<span class="c1">// ------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">total</span><span class="p">;</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">calculateSum</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="o">=</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">num2</span><span class="o">=</span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">total</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">calculateSum</span><span class="p">();</span>
+<span class="nx">calculateSum</span><span class="p">(</span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">200</span><span class="p">);</span>
+</code></pre></div></p>
+</blockquote>
+<h4 id="020203-return-type-function-function-returning-values">02.02.03. Return Type Function (Function returning values)</h4>
+<ul>
+<li>A function can <code>return a value</code> back to the script that called the <code>function, as a result, using the return statement</code></li>
+<li>We can call a function that returns a value and use it in our program</li>
+<li>The return statement usually placed as the last line of the function</li>
+</ul>
+<!-- > **Syntax & Example**: `08.02.03.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Return type function</span>
+<span class="c1">//1. define / declare / create function</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">getSum</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">//Body of function </span>
+<span class="w">  </span><span class="c1">//code to be executed</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="p">(</span><span class="nx">sum</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//2. invoke / call the function</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getSum</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="mf">20</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getSum</span><span class="p">(</span><span class="mf">100</span><span class="p">,</span><span class="mf">200</span><span class="p">));</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getSum</span><span class="p">(</span><span class="mf">50</span><span class="p">,</span><span class="mf">50</span><span class="p">);</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">total</span><span class="p">);</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0203-different-ways-to-define-function">02.03. Different ways to define Function</h2>
+<p>The syntax that we've used before to create functions is called <code>function declaration</code>. There is another syntax for creating a function that is called a <code>function expression</code> and <code>Immediately invoked function expression (IIFE)</code></p>
+<h4 id="020301-function-declaration-regularnormal-function">02.03.01. function declaration (Regular/Normal function)</h4>
+<h4 id="020302-function-expression">02.03.02. function expression</h4>
+<ul>
+<li>Variables contain the expressions of a function</li>
+<li>Anonymous function expression</li>
+<li>Named function expression</li>
+</ul>
+<!-- > **Syntax & Example**: `08.03.02.01.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// function declaration (Regular / normal function)</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">getSum1</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">total</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// ------------------------------</span>
+
+<span class="c1">// function expression - Anonymus</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">getSum2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">total</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">alert</span><span class="p">(</span><span class="nx">getSum2</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="mf">20</span><span class="p">));</span>
+
+<span class="c1">// ------------------------------</span>
+
+<span class="c1">// assign function to another variable</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">sum1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getSum2</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">sum1</span><span class="p">(</span><span class="mf">100</span><span class="p">,</span><span class="mf">200</span><span class="p">));</span>
+</code></pre></div></p>
+</blockquote>
+<!-- > **Syntax & Example**:  -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// function expression - named</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">getSum2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">getTotal</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">total</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">alert</span><span class="p">(</span><span class="nx">getSum2</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="mf">20</span><span class="p">));</span>
+
+<span class="c1">// ------------------------------</span>
+
+<span class="c1">// assign function to another variable</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">sum1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getSum2</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">sum1</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="mf">10</span><span class="p">));</span>
+</code></pre></div></p>
+</blockquote>
+<h4 id="020303-immediately-invoked-function-expression-iife">02.03.03. Immediately invoked function expression (IIFE)</h4>
+<ul>
+<li>It runs as soon as the browser finds it</li>
+<li>Declare and run the function at the same time</li>
+</ul>
+<!-- > **Syntax & Example**: `08.03.03.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Immediately invoked function expression (IIFE)</span>
+<span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Welcome to Immediately invoked function expression (IIFE)&#39;</span><span class="p">);</span>
+<span class="p">}());</span>
+
+
+<span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">userName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Welcome&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">userName</span><span class="p">);</span>
+<span class="p">})(</span><span class="s1">&#39;Sheldon&#39;</span><span class="p">);</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0204-string-methods-and-concatenation">02.04. String Methods and Concatenation</h2>
+<!-- > **Syntax & Example**:  -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">firstName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Sheldon&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">lastName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Cooper&#39;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">fullName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">firstName</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">lastName</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fullName</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">fullName</span><span class="p">);</span>
+
+<span class="c1">// concatenation</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">lastName</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">firstName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">lastName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;Welcome to JavaScript!&#39;</span><span class="p">);</span>
+
+<span class="c1">// append</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">name1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Sheldon &#39;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">name1</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">&#39;Cooper&#39;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name1</span><span class="p">);</span>
+
+<span class="c1">// concat() method</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstName</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">lastName</span><span class="p">));</span>
+
+<span class="c1">// length</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstName</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+
+<span class="c1">// change case</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstName</span><span class="p">.</span><span class="nx">toLowercase</span><span class="p">());</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstName</span><span class="p">.</span><span class="nx">toUppercase</span><span class="p">());</span>
+
+<span class="c1">// escaping</span>
+<span class="c1">// let statement1 = &#39;wait I&#39;m coming, that&#39;s good&#39;;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">statement1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;wait I&#39;m coming, that&#39;s good&quot;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">statement2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;wait I\&#39;m coming, that\&#39;s good&#39;</span><span class="p">;</span>
+
+<span class="c1">// string array - get specific character from string like an array</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstName</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span>
+
+<span class="c1">// indexOf</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstName</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstName</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">));</span>
+
+<span class="c1">// charAt()</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstName</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span>
+
+<span class="c1">// get last character from string</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstName</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="nx">firstName</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">));</span>
+
+<span class="c1">// replace();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">replaceString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Sheldon&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DJ&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;My name is:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">replaceString</span><span class="p">);</span><span class="w"> </span>
+
+<span class="c1">// substring();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstName</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">4</span><span class="p">));</span>
+
+<span class="c1">// slice();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstName</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">4</span><span class="p">));</span>
+
+<span class="c1">// slice(); negative number starts from backside</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstName</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="o">-</span><span class="mf">2</span><span class="p">));</span>
+
+<span class="c1">// includes();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">message2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Hello Sheldon, welcome to JavaScript&#39;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message2</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message2</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s1">&#39;Hi&#39;</span><span class="p">));</span>
+
+<span class="c1">// split()</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">message2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Hello Sheldon, welcome, to JavaScript&#39;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message2</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message2</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">));</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">courses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;If I Could, I Would But I Can&#39;</span><span class="nx">t</span><span class="w"> </span><span class="nx">So</span><span class="w"> </span><span class="nx">I</span><span class="w"> </span><span class="nx">Shan</span><span class="s1">&#39;t&#39;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">courses</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">));</span>
+</code></pre></div></p>
+</blockquote>
+<p align="center">
+  <img src="assets/images/split.png" alt="JavaScript logo" title="JavaScript tutorial" width="400" />
+</p>
+
+<h2 id="0205-template-string-and-template-literals">02.05. Template String and Template Literals</h2>
+<ul>
+<li>ES6 new feature <code>Strings Template</code> offers a convenient way to work with string concatenation/interpolation</li>
+<li>Template literals provide an easy and clean way to create multi-line strings and perform string interpolation</li>
+<li>Intuitive expression interpolation for single-line and multi-line strings</li>
+<li>Use <code>back-tick (grave accent)</code> character and <code>{ var name in curly brace }</code>, no + plus sign required</li>
+<li>
+<p>The best part of Template Literals (Template Strings) is we can <code>use 'single' "double" quotes inside</code></p>
+</li>
+<li>
+<p>It is part of ES6 but compatible with all the modern browsers and its latest versions</p>
+</li>
+</ul>
+<!-- > **Syntax & Example**:  -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">//old plain javascript approach</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Sheldon&#39;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">greetMessage1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Welcome&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;to JavaScript.&#39;</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greetMessage1</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;// ------------------------------&#39;</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">firstName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Sheldon&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">lastName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Cooper&#39;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">course</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;JavaScript&#39;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">fullName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`Hey </span><span class="si">${</span><span class="nx">firstName</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">lastName</span><span class="si">}</span><span class="sb"> Welcome to </span><span class="si">${</span><span class="nx">course</span><span class="si">}</span><span class="sb">.`</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;// ------------------------------&#39;</span><span class="p">);</span>
+
+<span class="c1">//ES6 Template Literals (Template Strings) approach</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">greetMessage2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`Hello </span><span class="si">${</span><span class="nx">firstName</span><span class="si">}</span><span class="sb">, How are you?`</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greetMessage2</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;// ------------------------------&#39;</span><span class="p">);</span>
+<span class="c1">// ------------------------------</span>
+
+<span class="c1">//ES6 multi-line string</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">greetMessage3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`ES6 Template Literals (Template Strings):</span>
+<span class="sb">                    With Template Literals (Template Strings)</span>
+<span class="sb">                    we can add multiple lines in string concatenation/interpolation</span>
+<span class="sb">`</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greetMessage3</span><span class="p">);</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">greetMessage4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ES6</span><span class="w"> </span><span class="nx">Template</span><span class="w"> </span><span class="nx">Literals</span><span class="w"> </span><span class="p">(</span><span class="nx">Template</span><span class="w"> </span><span class="nx">Strings</span><span class="p">)</span><span class="o">:</span>
+<span class="w">                    </span><span class="nx">With</span><span class="w"> </span><span class="nx">Template</span><span class="w"> </span><span class="nx">Literals</span><span class="w"> </span><span class="p">(</span><span class="nx">Template</span><span class="w"> </span><span class="nx">Strings</span><span class="p">)</span>
+<span class="w">                    </span><span class="nx">we</span><span class="w"> </span><span class="nx">can</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">multiple</span><span class="w"> </span><span class="nx">lines</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="nx">concatenation</span><span class="o">/</span><span class="nx">interpolation</span>
+<span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greetMessage4</span><span class="p">);</span>
+</code></pre></div></p>
+</blockquote>
+<h1 id="section-03-loops-and-iterations">Section 03. Loops and Iterations</h1>
+<ul>
+<li>Loops are used to execute the <code>same block of code again, with a different value, until a certain condition is met</code></li>
+<li>Loops can execute/repeat a block of code (an action) a number of/several times</li>
+<li>The basic idea behind a loop is to <code>automate the repetitive tasks within a program to save time and effort</code></li>
+<li>It makes the <code>code compact</code></li>
+<li>It is mostly used in array or object (to iterate through series)</li>
+<li>Loops/iterations is an instruction repeat until a specific condition is reached</li>
+</ul>
+<h3 id="different-types-of-loops-in-javascript">Different Types of Loops in JavaScript:</h3>
+<ol>
+<li>for loop</li>
+<li>while loop</li>
+<li>do...while loop</li>
+<li>for...in loop</li>
+<li>for...of loop (ES6)</li>
+<li>for...each</li>
+</ol>
+<h2 id="0301-the-for-loop">03.01. The for loop</h2>
+<ul>
+<li>The <code>For</code> loop is used to run a piece of code a <code>set amount of times</code></li>
+<li>Loops through a block of code until the <code>counter reach a specified number</code></li>
+<li>The for loop <code>repeats a block of code until a certain condition</code> is met</li>
+<li>The for loop is the most simple/compact form of looping</li>
+<li>For loop consists of 3 statements (), mostly <code>i = index</code> is used for loop initialization</li>
+</ul>
+<!-- > **Syntax & Example**: `03.01.01.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// for loop</span>
+
+<span class="cm">/* for (statement 1; statement 2; statement 3) {</span>
+<span class="cm">  // Code to be executed</span>
+<span class="cm">} */</span>
+
+
+<span class="cm">/* for(variable definition/index/initialization; condition checking; increment/decrement expression) {</span>
+<span class="cm">  // Code to be executed</span>
+<span class="cm">} */</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;=</span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello, The current index/num is: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;Hello, The current index/num is: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&lt;/li&gt;&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello, The current index/num is: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</blockquote>
+<h3 id="030101-the-for-loop-reverse-order">03.01.01. The for loop - Reverse order</h3>
+<!-- > **Syntax & Example**: `03.01.02.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// for loop - reverse order</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello, The current index/num is: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;Hello, The current index/num is: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&lt;/li&gt;&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello, The current index/num is: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</blockquote>
+<h3 id="030102-the-for-loop-find-even-or-odd-number">03.01.02. The for loop - Find Even or Odd number</h3>
+<!-- > **Syntax & Example**: `03.01.03.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// for loop - to find out odd even number</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The current index/num is EVEN : &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="cm">/* else {</span>
+<span class="cm">    console.log(&#39;The current index/num is ODD : &#39; + i);</span>
+<span class="cm">  } */</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0302-the-while-loop">03.02. The while loop</h2>
+<ul>
+<li>Loops through a block of code until the specified condition evaluates to true</li>
+<li>In For loop, a variable is part of a loop, but in While loop, we need to declare variable externally</li>
+</ul>
+<!-- > **Syntax & Example**: `03.02.01.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// while loop</span>
+
+<span class="cm">/*while(condition) {</span>
+<span class="cm">  // Code to be executed</span>
+<span class="cm">}*/</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello, The current index/num is: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;Hello, The current index/num is: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&lt;/li&gt;&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello, The current index/num is: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0303-the-do-while-loop">03.03. The do while loop</h2>
+<ul>
+<li>The do...while loop is similar to the while loop except that the <code>condition check happens at the end of the loop</code></li>
+<li>The do...while loop will always be <code>executed at least once (before checking if the condition is true)</code>, even if the condition is false</li>
+</ul>
+<!-- > **Syntax & Example**: `03.03.01.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// do...while loop</span>
+
+<span class="cm">/*do {</span>
+<span class="cm">    // Code to be executed</span>
+<span class="cm">}</span>
+<span class="cm">while(condition);*/</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello, The current index/num is: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;Hello, The current index/num is: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&lt;/li&gt;&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello, The current index/num is: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"> </span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0304-the-for-in-loop">03.04. The for in loop</h2>
+<ul>
+<li>The for-in loop is a special type of a loop that <code>iterates over the properties of an object or the elements of an array</code></li>
+</ul>
+<p align="center">
+  <img src="assets/images/love.png" alt="JavaScript logo" title="JavaScript tutorial" width="400" />
+</p>
+
+<h4 id="030401-the-forin-loop-array">03.04.01. The for...in Loop - array</h4>
+<!-- > **Syntax & Example**: `03.04.01.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// for...in loop</span>
+
+<span class="cm">/*for(variable/key in array/object) {</span>
+<span class="cm">    // Code to be executed</span>
+<span class="cm">}*/</span>
+
+<span class="c1">// An array with some elements</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">air</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Nitrogen&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Oxygen&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Carbon Dioxide&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Water Vapour&quot;</span><span class="p">];</span>
+
+<span class="c1">// Loop through all the elements in the array </span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">love</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">air</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">air</span><span class="p">[</span><span class="nx">love</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; is in the air!&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">air</span><span class="p">[</span><span class="nx">love</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; is in the air!&lt;/li&gt;&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">air</span><span class="p">[</span><span class="nx">love</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; is in the air!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</blockquote>
+<h4 id="030402-the-forin-loop-object">03.04.02. The for...in Loop - object</h4>
+<!-- > **Syntax & Example**: `03.04.02.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// for...in loop</span>
+
+<span class="cm">/*for(variable/key in array/object) {</span>
+<span class="cm">    // Code to be executed</span>
+<span class="cm">}*/</span>
+
+<span class="c1">// An object with some properties </span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">objEmployee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;emp_name&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Sheldon&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;emp_addres&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Mumbai&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;emp_id&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;029&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;emp_age&#39;</span><span class="o">:</span><span class="mf">35</span><span class="p">};</span>
+
+<span class="c1">// Loop through all the properties in the object  </span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">emp</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">objEmployee</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Employee &#39;</span><span class="o">+</span><span class="w"> </span><span class="nx">emp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; is: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">objEmployee</span><span class="p">[</span><span class="nx">emp</span><span class="p">]);</span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;Employee &#39;</span><span class="o">+</span><span class="w"> </span><span class="nx">emp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; is: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">objEmployee</span><span class="p">[</span><span class="nx">emp</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&lt;/li&gt;&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Employee &#39;</span><span class="o">+</span><span class="w"> </span><span class="nx">emp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; is: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">objEmployee</span><span class="p">[</span><span class="nx">emp</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</blockquote>
+<h4 id="030403-the-forin-loop-inbuilt-javascript-objects">03.04.03. The for...in Loop - Inbuilt JavaScript objects</h4>
+<!-- > **Syntax & Example**: `03.04.03.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// for...in loop</span>
+
+<span class="cm">/*for(variable/key in array/object) {</span>
+<span class="cm">    // Code to be executed</span>
+<span class="cm">}*/</span>
+
+<span class="c1">// Loop through all the properties in the inbuilt object - window, document, navigator</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">props</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">window</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// alert(&#39;document object properties &#39; + props);</span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;document object properties &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">props</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&lt;/li&gt;&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;document object properties &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">props</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0305-the-for-of-loop">03.05. The for of loop</h2>
+<ul>
+<li>Loops over <code>iterable objects such as arrays, strings</code>, etc.</li>
+<li>ES6 introduces a new for-of loop which allows us to iterate over arrays or strings very easily</li>
+<li>The code inside the loop is executed for each element of the iterable object</li>
+</ul>
+<!-- > **Syntax & Example**: `03.05.01.script.js` -->
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+```javascript
+// for...of loop</p>
+</blockquote>
+<p>/<em>for(element in array/string) {
+  // Code to be executed
+} </em>/</p>
+<p>// Iterating over an array
+let arrDays = ["Monday", "TuesDay", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];</p>
+<p>for (let day of arrDays) {
+  console.log(day);
+  document.write('<li>' + day + '</li>');
+}</p>
+<p>// Iterating over string
+let name = 'JavaScript';
+for (let letter of name) {
+  document.write(letter + ',');
+  console.log(letter + ',');
+}</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.sections", "navigation.instant"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>

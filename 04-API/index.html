@@ -1,0 +1,1454 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../03-JavaScript-2/">
+      
+      
+        <link rel="next" href="../05-CLI-Git/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>4: APIs - ACM Coding Bootcamp</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-fundamentals" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ACM Coding Bootcamp" class="md-header__button md-logo" aria-label="ACM Coding Bootcamp" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ACM Coding Bootcamp
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4: APIs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-HTML-CSS/" class="md-tabs__link">
+          
+  
+  Sessions
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ACM Coding Bootcamp" class="md-nav__button md-logo" aria-label="ACM Coding Bootcamp" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    ACM Coding Bootcamp
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Sessions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sessions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-HTML-CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1: HTML/CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-JavaScript-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2: JavaScript (Basics)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-JavaScript-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3: JavaScript (Advanced)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4: APIs
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4: APIs
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-will-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      What you will learn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-this-api-thingy" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's this API Thingy?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What's this API Thingy?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      An Analogy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clients-and-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clients and Servers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clients and Servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Body
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hands-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hands On
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hands On">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET Characters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-character-by-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET character by id
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-add-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST - add character
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-updates-a-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH - updates a character
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#del-delete-a-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      DEL - delete a character
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mission
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-you-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before you start
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-view-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET - view inventory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-add-a-joke-to-the-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST - add a joke to the store
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-search-jokes" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET - search jokes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-change-authorseason" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH - change author/season
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-get-details-for-a-single-joke" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET - get details for a single joke
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#del-delete-the-joke" class="md-nav__link">
+    <span class="md-ellipsis">
+      DEL - delete the joke :(
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-to-read-api-documentation-is-a-crucial-skill-when-working-with-apis-it-is-also-important-to-get-familiar-with-reading-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning to read API documentation is a crucial skill when working with APIs. It is also important to get familiar with reading errors.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#play-around-with-some-requests-and-see-if-you-can-get-the-api-to-generate-any-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Play around with some requests and see if you can get the API to generate any errors
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-CLI-Git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5: CLI & Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-GitHub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6: GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-will-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      What you will learn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-this-api-thingy" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's this API Thingy?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What's this API Thingy?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      An Analogy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clients-and-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clients and Servers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clients and Servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Body
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hands-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hands On
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hands On">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET Characters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-character-by-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET character by id
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-add-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST - add character
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-updates-a-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH - updates a character
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#del-delete-a-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      DEL - delete a character
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mission
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-you-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before you start
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-view-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET - view inventory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-add-a-joke-to-the-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST - add a joke to the store
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-search-jokes" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET - search jokes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-change-authorseason" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH - change author/season
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-get-details-for-a-single-joke" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET - get details for a single joke
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#del-delete-the-joke" class="md-nav__link">
+    <span class="md-ellipsis">
+      DEL - delete the joke :(
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-to-read-api-documentation-is-a-crucial-skill-when-working-with-apis-it-is-also-important-to-get-familiar-with-reading-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning to read API documentation is a crucial skill when working with APIs. It is also important to get familiar with reading errors.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#play-around-with-some-requests-and-see-if-you-can-get-the-api-to-generate-any-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Play around with some requests and see if you can get the API to generate any errors
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="api-fundamentals">API Fundamentals</h1>
+<p>This collection is a companion to the Postman Classroom Program workshop API 101: API Fundamentals</p>
+<h2 id="what-you-will-learn">What you will learn</h2>
+<ul>
+<li>What are APIs?</li>
+<li>Servers &amp; Clients</li>
+<li>Making HTTP requests to an API</li>
+<li>Understanding API responses</li>
+<li>Submitting data to APIs</li>
+<li>Using query parameters to refine requests</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://learning.postman.com/docs/sending-requests/requests/">Sending Requests in Postman</a></li>
+<li><a href="https://learning.postman.com/docs/sending-requests/responses/">Receiving Responses</a></li>
+<li><a href="https://learning.postman.com/docs/sending-requests/troubleshooting-api-requests/">Troubleshooting Requests</a></li>
+</ul>
+<h2 id="whats-this-api-thingy">What's this API Thingy?</h2>
+<p>Application Programming Interfaces (APIs) allow services to communicate with each other.</p>
+<h3 id="an-analogy">An Analogy</h3>
+<p>We can think of an API as a <strong>waiter</strong> at a restaurant. </p>
+<p><img alt="" src="assets/Digital%20Restaurant.png" /></p>
+<p>Imagine you go to your favorite restaurant and you want to order.</p>
+<p>You, in this case, are the client. You are sending your requests through the waiter, who tells the kitchen what to make.</p>
+<p>The waiter will come back with your food, or they may come back to tell you that the kitchen is out of what you ordered.</p>
+<p>Regardless, the waiter serves as a mediator between you and the kitchen, and that’s what APIs do for clients and services. </p>
+<p>Similiarly, in the Software World, we may need to get data from a service, like Google or Facebook. Since we don’t have access to those companies codebases, they create APIs so developers can get information from their services without access to the codebase.</p>
+<p>Both developers and non-developers use APIs to get data from popular services like Twitter and Google to use in their own projects. </p>
+<p>Software today has become more complex and collaborative over the years. Developers no longer need to create every service from scratch. Today you can find a suitable for nearly any kind of operation you might need.</p>
+<p>some notable examples include:</p>
+<ul>
+<li>OpenWeatherMap: Allows you to get weather information of the place you input</li>
+<li>Discord: Create channels, manage bots and more</li>
+<li>Youtube-to-MP3</li>
+<li>Spotify: Get your playlist, get information about artists, albums, songs, see what's playing on your device Right Now.</li>
+<li>Twitter: Mange posts</li>
+<li>Facebook</li>
+<li>Google</li>
+<li>And so many more!</li>
+</ul>
+<h2 id="clients-and-servers">Clients and Servers</h2>
+<p><img alt="" src="assets/Clients%20and%20Servers.png" /></p>
+<ul>
+<li>
+<p>A client is the entity that makes a request to a server. Somes examples of clients are applications like web browsers. </p>
+</li>
+<li>
+<p>A server controls resources and services. An API is the interface that exposes these resources + services to clients in a network. </p>
+</li>
+</ul>
+<p>The client can interact with an API by making requests over the network to the API. The API will then evaluate the request, perform the required operations, maybe interact with a database or other APIs, then send back a response to the client. </p>
+<p>Postman is a client that allows you to make requests and view responses from servers.</p>
+<h3 id="requests">Requests</h3>
+<ul>
+<li>Requests are how we communicate with the API. You need three things to make an API request:</li>
+<li>Method (GET, POST, etc)</li>
+<li>Address/Endpoint (URL)</li>
+<li>Path</li>
+</ul>
+<p>These elements let the API know what kind of request you’re making and where to send the request.</p>
+<p>Below is a table of the methods that are most commonly used:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>Retrieve information</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>Send information</td>
+</tr>
+<tr>
+<td>PUT/PATCH</td>
+<td>Update information</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>Delete information</td>
+</tr>
+</tbody>
+</table>
+<p>Below is an image showing more about Address and paths</p>
+<p><img alt="Example of Address and Path" src="assets/Address.png" /></p>
+<h3 id="request-body">Request Body</h3>
+<p>When send <code>POST</code> and <code>PUT</code> requests, the server will often expect data that it will process to complete your request, depending upon the API, it may ask for data in various types such as</p>
+<ul>
+<li>form data</li>
+<li>JSON</li>
+<li>text</li>
+<li>HTML</li>
+<li>XML</li>
+<li>files</li>
+<li>GraphQL</li>
+<li>… and more!</li>
+</ul>
+<p>All of this can be specified under the "Body" tab in Postman (under the request)</p>
+<h3 id="responses">Responses</h3>
+<p>When you make an API call, you will get a response value from the server. There are varoius types of responses but here are the most commone ones:</p>
+<ul>
+<li><code>200 OK</code> is usually the best response that the API works as 200 OK means Successful.</li>
+<li><code>201 Created</code></li>
+<li><code>400 Bad Request</code></li>
+<li><code>401 Unauthorized</code></li>
+<li><code>403 Forbidden</code></li>
+<li><code>404 Not found</code></li>
+</ul>
+<h2 id="hands-on">Hands On</h2>
+<p>Brooklyn 99 API Reference</p>
+<p><img alt="Alt Text" src="https://media.giphy.com/media/3oxHQoyto7T8wBjUJ2/giphy.gif" /></p>
+<p>Base URL: <code>b99.acm.org/api</code></p>
+<h3 id="get-characters"><em>GET</em> Characters</h3>
+<p>URL: <code>https://b99.acm.org/api/characters</code></p>
+<p>Returns all characters in the database.</p>
+<p>Optional filters can be passed as query parameters (see below)</p>
+<table>
+<thead>
+<tr>
+<th>Query</th>
+<th>Params</th>
+<th>example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>search</td>
+<td>a search string to be matched against author/title (example: borges). Case insensitive, partial match OK.</td>
+<td>Jake Peralta</td>
+</tr>
+<tr>
+<td>designation</td>
+<td>filter by genre (case-insensitive, exact match)</td>
+<td>Detective</td>
+</tr>
+<tr>
+<td>workplace</td>
+<td>filter by genre (case-insensitive, exact match)</td>
+<td>Brooklyn 99</td>
+</tr>
+<tr>
+<td>married</td>
+<td>true/false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>seasonFirstAppearedIn</td>
+<td>integer</td>
+<td>1...9</td>
+</tr>
+</tbody>
+</table>
+<p>example:
+<code>characters?filters[married][$eq]=true</code>
+<code>characters?filters[name][$contains]=amy</code></p>
+<p><img alt="AltText" src="https://c.tenor.com/JjY18W3iN8EAAAAC/noice-brooklyn-ninenine.gif" /></p>
+<h3 id="get-character-by-id"><em>GET</em> character by id</h3>
+<p>URL: <code>https://b99.acm.org/api/characters/:id</code></p>
+<p>Get a single character by id</p>
+<p>Replace the last part of path with the id of the character you would like to fetch.</p>
+<p><code>/characters/:id</code></p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Variables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>ZUST9JFx-Sd9X0k</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post-add-character"><em>POST</em> - add character</h3>
+<p>URL: <code>https://b99.acm.org/api/characters</code></p>
+<p>Adds a character</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jake Peralata&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;maritalStatus&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;married&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;designation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;detective&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;workplace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;brooklyn 99&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;halloweenHeist&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;seasonFirstAppearedIn&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+</code></pre></div>
+<img alt="AltText" src="https://media.giphy.com/media/xTiTnCnOXNSRjcOSBy/giphy.gif" /></p>
+<h3 id="patch-updates-a-character"><em>PATCH</em> - updates a character</h3>
+<p>URL: <code>https://b99.acm.org/api/characters/:id</code></p>
+<p>Updates a character by id</p>
+<p>Update any of these fields for a characters with given id via the JSON body:
+- <code>name</code> (string)
+- <code>maritalStatus</code> (string)
+- <code>designation</code> (string)
+- <code>workplace</code> (string)
+- <code>halloweenHeist</code> (integer)</p>
+<table>
+<thead>
+<tr>
+<th>Path Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>ZUST9JFx-Sd9X0k</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Body</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;designation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;south california&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<img alt="AltText" src="https://im5.ezgif.com/tmp/ezgif-5-5a2662b969.webp" /></p>
+<h3 id="del-delete-a-character"><em>DEL</em> - delete a character</h3>
+<p>URL: <code>https://b99.acm.org/characters/:id</code></p>
+<table>
+<thead>
+<tr>
+<th>Path Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>ZUST9JFx-Sd9X0k</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mission">Mission</h2>
+<p>Need to put some random mission here please
+You are at a training learning how to use the Brooklyn 99 API.</p>
+<h3 id="before-you-start">Before you start</h3>
+<ul>
+<li>Check out the request documentation in the Brooklyn 99 API Reference folder to get familiar with the API and the types of requests you can make.</li>
+</ul>
+<p>There are multiple ways to view documentation:</p>
+<p>Click the three dots next a folder in the file explorer, then "View Documentation". This will show all the documentation for the whole collection.
+  Navigate to a request and click the small file icon in the far-right menu</p>
+<ul>
+<li>Need help?</li>
+</ul>
+<p>If you get stuck, search the Postman forums or post a new topic in the Training category if you don't see your question. Also, see these general troubleshooting tips.</p>
+<ul>
+<li>Check the Postman Console in the lower left</li>
+</ul>
+<p>The Postman Console is a useful tool for debugging requests when you get errors, or you want to view logged data from your test scripts.</p>
+<ul>
+<li>
+<p>Hint: You will need to figure out a way to find the id of the joke you've just added. Take a look at the Brooklyn 99 API Reference - how can you find the new joke's id?</p>
+</li>
+<li>
+<p>Instead of hard-coding the id in the request URL, set the id as a collection variable called newJokeId. This way you can reuse the same id in other requests like this: {{JokeId}}</p>
+</li>
+<li>
+<p>To use your variable newJokeId as a path parameter in the request URL, include :newJokeId (with a colon in front) in your request URL. Then in the Params tab of the request you can specify the Value of the path parameter as your variable {{newJokeId}} (with double curly braces)</p>
+</li>
+<li>
+<p>Be sure to save your variables!</p>
+</li>
+<li>
+<p>Remember to use your collection variable {{newJokeId}} as the value for the path parameter :newJokeId in your request URL!</p>
+</li>
+<li>
+<p>Be sure to save your request!</p>
+</li>
+</ul>
+<p>There are multiple people at here using the same API - don't be surprised if you see new Jokes appearing!</p>
+<p><img alt="AltText" src="https://media.giphy.com/media/3o8doT5DaMjfH3paHC/giphy.gif" /></p>
+<h3 id="get-view-inventory"><em>GET</em> - view inventory</h3>
+<p>URL: <code>https://b99.acm.org/api/jokes</code></p>
+<h3 id="post-add-a-joke-to-the-store"><em>POST</em> - add a joke to the store</h3>
+<p>URL: <code>https://b99.acm.org/api/jokes</code></p>
+<p>Body:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Joke&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The Pragmatic Programmer: From Journeyman to Master&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Andy Hunt, Dave Thomas&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;season&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="get-search-jokes"><em>GET</em> - search jokes</h3>
+<p>URL: <code>https://b99.acm.org/api/jokes?search=noice</code></p>
+<table>
+<thead>
+<tr>
+<th>Query</th>
+<th>Param</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>search</td>
+<td>pragmatic</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patch-change-authorseason"><em>PATCH</em> - change author/season</h3>
+<p>URL: <code>https://b99.acm.org/api/characters/:id</code></p>
+<table>
+<thead>
+<tr>
+<th>Path Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>ZUST9JFx-Sd9X0k</td>
+</tr>
+</tbody>
+</table>
+<p>Body</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;me&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="get-get-details-for-a-single-joke"><em>GET</em> - get details for a single joke</h3>
+<p>URL: <code>https://b99.acm.org/api/jokes/:id</code></p>
+<table>
+<thead>
+<tr>
+<th>Path Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>ZUST9JFx-Sd9X0k</td>
+</tr>
+</tbody>
+</table>
+<h3 id="del-delete-the-joke"><em>DEL</em> - delete the joke :(</h3>
+<p>URL: <code>https://b99.acm.org/api/jokes/:id</code></p>
+<table>
+<thead>
+<tr>
+<th>Path Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>ZUST9JFx-Sd9X0k</td>
+</tr>
+</tbody>
+</table>
+<h2 id="learning-to-read-api-documentation-is-a-crucial-skill-when-working-with-apis-it-is-also-important-to-get-familiar-with-reading-errors">Learning to read API documentation is a crucial skill when working with APIs. It is also important to get familiar with reading errors.</h2>
+<h2 id="play-around-with-some-requests-and-see-if-you-can-get-the-api-to-generate-any-errors">Play around with some requests and see if you can get the API to generate any errors</h2>
+<p>What happens when you:</p>
+<ul>
+<li>pass unrecognized parameters?</li>
+<li>hit an unrecognized endpoint?</li>
+<li>try to make a PUT request on a field you don't have permission to edit?</li>
+<li>try to add a joke with made-up fields in the body?</li>
+<li>try to delete the joke named "Ficciones" by Jorge Luis Borges?</li>
+<li>If you are interested in seeing the code behind this API, you can view it here.</li>
+</ul>
+<p><img alt="AltText" src="https://c.tenor.com/9kwKBjCURKEAAAAC/jake-peralta-amy-santiago.gif" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.sections", "navigation.instant"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1924 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../02-JavaScript-1/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>1: HTML/CSS - ACM Coding Bootcamp</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#html-css" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ACM Coding Bootcamp" class="md-header__button md-logo" aria-label="ACM Coding Bootcamp" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ACM Coding Bootcamp
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1: HTML/CSS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Sessions
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ACM Coding Bootcamp" class="md-nav__button md-logo" aria-label="ACM Coding Bootcamp" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    ACM Coding Bootcamp
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Sessions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sessions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1: HTML/CSS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1: HTML/CSS
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-web-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Web Development ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is HTML?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML Tags
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML Tags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;html&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;title&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;body&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;script&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;p&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h1" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;h1&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#br" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;br&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#img" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;img&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;audio&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#div" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;div&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-href" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;a href=""&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#form" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;form&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;input&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#button" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;button&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ul" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;ul&gt;
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML Tables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantic-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic HTML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intro-to-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intro to CSS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#different-ways-to-link-css-with-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Different ways to link CSS with HTML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Different ways to link CSS with HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#external-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      External CSS:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal CSS:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inline-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inline CSS:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-selectors-and-visual-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Selectors and Visual rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-syntax-p-font-size-30px-background-color-blue-width-200px-important-opacity-05-background-image-urlresourcesnyancatpng" class="md-nav__link">
+    <span class="md-ellipsis">
+      /* Example syntax*/ p{ font-size: 30px; background-color: blue; width: 200px !important; opacity: 0.5; background-image: url(&quot;../resources/nyancat.png&quot;); }
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-positioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Positioning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-typography" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Typography
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-grids" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Grids
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-flexbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Flexbox
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-devtools" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to use DevTools
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-JavaScript-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2: JavaScript (Basics)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-JavaScript-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3: JavaScript (Advanced)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4: APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-CLI-Git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5: CLI & Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-GitHub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6: GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-web-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Web Development ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is HTML?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML Tags
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML Tags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;html&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;title&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;body&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;script&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;p&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h1" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;h1&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#br" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;br&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#img" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;img&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;audio&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#div" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;div&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-href" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;a href=""&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#form" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;form&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;input&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#button" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;button&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ul" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;ul&gt;
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML Tables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantic-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic HTML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intro-to-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intro to CSS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#different-ways-to-link-css-with-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Different ways to link CSS with HTML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Different ways to link CSS with HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#external-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      External CSS:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal CSS:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inline-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inline CSS:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-selectors-and-visual-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Selectors and Visual rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-syntax-p-font-size-30px-background-color-blue-width-200px-important-opacity-05-background-image-urlresourcesnyancatpng" class="md-nav__link">
+    <span class="md-ellipsis">
+      /* Example syntax*/ p{ font-size: 30px; background-color: blue; width: 200px !important; opacity: 0.5; background-image: url(&quot;../resources/nyancat.png&quot;); }
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-positioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Positioning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-typography" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Typography
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-grids" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Grids
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-flexbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Flexbox
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-devtools" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to use DevTools
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="html-css">HTML &amp; CSS</h1>
+<p>Welcome to the first session of <strong><em>ACM BITS Pilani Dubai's 2022 Coding BootCamp</em></strong>!!  </p>
+<p>We hope this bootcamp will set a rock solid foundation to your journey in Computer Science!  </p>
+<p>Over the course of our <strong>6 Week long Coding Bootcamp</strong>, we will cover topics such as <strong>HTML, CSS, JavaScript, APIs, Command Line, Git and GitHub</strong> which are essential for you to become a <strong>successful Web Developer</strong>!</p>
+<hr />
+<h2 id="what-is-web-development">What is Web Development ?</h2>
+<p>Web development refers to the process of  building, creating, and maintaining websites. It can be divided in to two parts:</p>
+<ul>
+<li>
+<p><strong>Front-end/Frontend</strong>: 
+  The front-end as the name suggests refers to the actual website that all the users will be able to see and interact with. A <strong>front end developer</strong> would would write code for the design, layout, colour schemes, animations, etc. of the website and make sure that it <strong>looks beautiful and  modern</strong>.</p>
+</li>
+<li>
+<p><strong>Back-end/Backend</strong>:
+  The back-end refers to the functions of the website which is not seen by the  users, for example, information retrieval from databases. 
+  A developer that is responsible for writing code for both frontend and backend is called a Full Stack Developer.</p>
+</li>
+</ul>
+<p>The three main languages which you will encounter frequently in Web Development are: </p>
+<ul>
+<li><strong>HTML</strong>: The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.</li>
+<li><strong>CSS</strong>: Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.</li>
+<li><strong>JavaScript</strong>: JavaScript often abbreviated JS is language that is used to decide behaviour of a website (for e.g. what happens when you click a button). You will learn more about this in the JavaScript week of the Coding Bootcamp.</li>
+</ul>
+<p>This week, we'll be focusing on the concepts of HTML and CSS.</p>
+<hr />
+<h2 id="what-is-html">What is HTML?</h2>
+<ul>
+<li><strong>HTML</strong> stands for <strong>Hyper Text Markup Language</strong>, and it is the standard markup language for creating web pages. </li>
+<li>HTML describes the structure of a Web page, and consists of a series of elements (usually starting with <code>&lt;html&gt;</code> and ending with <code>&lt;/html&gt;</code>). Elements tell the browser how to display the content.</li>
+</ul>
+<hr />
+<h2 id="html-tags">HTML Tags</h2>
+<p>Elements are denoted as "tags" in HTML, starting with <strong><code>&lt; &gt;</code></strong> and ending with <strong><code>&lt; / &gt;</code></strong> . 
+* There is a tag for every element of a web page. </p>
+<p>Let's look at a few of them: </p>
+<ul>
+<li>
+<h4 id="html"><code>&lt;html&gt;</code></h4>
+  This is the HTML document tag, marks the start and end of HTML document. By convention, all other tags are included inside the <code>html</code> tag.
+  <code>&lt;html&gt;&lt;/html&gt;</code></li>
+<li>
+<h4 id="title"><code>&lt;title&gt;</code></h4>
+  This tag is used to decide what title will be display on the tab of the browser you are using.
+  <code>&lt;title&gt;&lt;/title&gt;</code></li>
+<li>
+<h4 id="body"><code>&lt;body&gt;</code></h4>
+  This tag encloses all the content inside the whitespace area or the area in which you can interact with the website.
+  <code>&lt;body&gt; Some content &lt;/body&gt; &lt;!-- Body of a webpage --&gt;</code></li>
+<li>
+<h4 id="script"><code>&lt;script&gt;</code></h4>
+<p>You can write Javascript code here, this tag is usually inside <code>&lt;body&gt;</code> at the ending before <code>&lt;/body&gt;</code>
+  <code>&lt;script&gt;&lt;/script&gt;</code></p>
+</li>
+<li>
+<h4 id="p"><code>&lt;p&gt;</code></h4>
+<p>This tag is used for enclosing a paragraph in the webpage.
+  <code>&lt;p&gt;Your paragraph&lt;/p&gt;</code></p>
+</li>
+<li>
+<h4 id="h1"><code>&lt;h1&gt;</code></h4>
+  This tag is used for headers/titles on the webpage, and the font size can be modified based on the tag as shown below.<br />
+  <div class="highlight"><pre><span></span><code>&lt;h1&gt;&lt;/h1&gt;  
+&lt;h2&gt;&lt;/h2&gt; &lt;h3&gt;&lt;/h3&gt; &lt;h4&gt;&lt;/h4&gt; 
+&lt;!-- You can give smaller header text sizes also, 1 is the biggest and 6 is the smallest --&gt;
+&lt;!-- This is the syntax for a HTML comment --&gt;
+</code></pre></div></li>
+<li>
+<h4 id="br"><code>&lt;br&gt;</code></h4>
+  This tag is a new line tag, it does not require a closing tag 
+  <code>&lt;br&gt;</code></li>
+<li>
+<h4 id="img"><code>&lt;img&gt;</code></h4>
+  This is an image tag, you can specify the path of the image by typing it inside <code>src=""</code>.
+  <code>&lt;img src="/././*.jpg"&gt; &lt;/img&gt;</code></li>
+<li>
+<h4 id="audio"><code>&lt;audio&gt;</code></h4>
+  This is an audio tag, if you want to play sounds on the webpage.<br />
+<code>&lt;audio&gt;&lt;/audio&gt;</code></li>
+<li>
+<h4 id="div"><code>&lt;div&gt;</code></h4>
+  This is a very commonly used tag, basically if you want create box section.You can place other content inside and the size/colour and other properties can be changed using CSS.
+    <code>&lt;div&gt;&lt;/div&gt;</code></li>
+<li>
+<h4 id="a-href"><code>&lt;a href=""&gt;</code></h4>
+  This is link tag which redirects to another website
+  <code>&lt;a href="someotherwebsite.com"&gt; Click me pls :) &lt;/a&gt;</code></li>
+<li>
+<h4 id="form"><code>&lt;form&gt;</code></h4>
+  This tag is used for denoting forms (signup/login/other) 
+  <code>&lt;form&gt;&lt;/form&gt;</code></li>
+<li>
+<h4 id="input"><code>&lt;input&gt;</code></h4>
+  This tag is used to create an "input text" field (usually inside a form, or maybe a search bar)
+  <code>&lt;input&gt;&lt;/input&gt;</code></li>
+<li>
+<h4 id="button"><code>&lt;button&gt;</code></h4>
+  This tag is used to create a button
+  <code>&lt;button&gt;Click Here!&lt;/button&gt;</code></li>
+<li>
+<h4 id="ul"><code>&lt;ul&gt;</code></h4>
+  The <code>&lt;ul&gt;</code> tag stands for unordered list, the <code>&lt;li&gt;</code> element signifies a list item inside the UL.
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>          
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>List Item 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>List Item 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  ..
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div></li>
+</ul>
+<div align="center"><img src="assets/ross_list.jpg" alt="drawing" style="width:500px;"/></div>
+<div align="center"><i>Ross didn't know about HTML lists. Don't be like Ross.
+</i></div>
+<p><br></p>
+<p>You can also access the entire list of HTML tags <a href="https://www.w3schools.com/tags/default.asp">here</a>.</p>
+<hr />
+<h2 id="html-tables">HTML Tables</h2>
+<p>You can <strong>create tables</strong> in HTML using the <strong><code>&lt;table&gt;</code></strong> tag. 
+* For each row inside a table, you need to include a <strong><code>&lt;tr&gt;&lt;/tr&gt;</code></strong>(<em>tr= Table Row</em>) tag.
+* For each column element inside a row, <strong><code>&lt;td&gt;</code></strong> (<em>td= Table Data</em>) tag is used. 
+* If you also want to add table header, then you can make another row at the beginning which consists of <strong><code>&lt;th&gt;</code></strong>(<em>Table Header</em>) tags.  </p>
+<p>Let's look at an example:
+<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">table</span> <span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 1<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 2<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 3<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>R1C1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>R1C2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>R1C3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>R2C1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>R2C2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>R2C3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span> 
+        <span class="cm">&lt;!-- Here R1C1 means Row 1 column 1 --&gt;</span>   
+        <span class="cm">&lt;!-- &lt;table&gt;&lt;/table&gt; is usually included inside &lt;body&gt;&lt;/body&gt; tag --&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- P.S you would also need to paste this inside &lt;head&gt;&lt;/head&gt; for proper formatting --&gt;</span>
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"> </span>
+
+<span class="w">    </span><span class="nt">table</span><span class="o">,</span><span class="w"> </span><span class="nt">th</span><span class="o">,</span><span class="w"> </span><span class="nt">td</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span>
+<span class="w">      </span><span class="k">border-collapse</span><span class="p">:</span><span class="w"> </span><span class="kc">collapse</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<div align="center">
+<img src="assets/Ourtable.jpg" alt="drawing" style="width:300px;"/>
+<br></div>
+<div align="center"><i>
+Output of the above code
+</i></div>
+
+<hr />
+<h2 id="semantic-html">Semantic HTML</h2>
+<p>A <strong>Semantic Element</strong> in an HTML tag which clearly denotes the position/content which it will hold.</p>
+<p>For example,
+* Elements such as <strong><code>&lt;form&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;article&gt;</code></strong> clearly indicate that they contain a form, table and article. (<em>Indicate Content</em>)
+* A <strong><code>&lt;header&gt;</code>,<code>&lt;nav&gt;</code>,<code>&lt;footer&gt;</code>,<code>&lt;section&gt;</code>,<code>&lt;aside&gt;</code></strong> tag are used to indicate the position they will occupy in the webpage, as shown in the below image.(<em>Indicate Position</em>)
+* Non-semantic elements such as <strong><code>&lt;div&gt;</code></strong> and <strong><code>&lt;span&gt;</code></strong> tell us nothing about its content or position from the name.<br></p>
+<div align="center">
+<img src="assets/htmlsemantic.gif" alt="drawing" />
+</div>
+<p><br></p>
+<div align="center">
+<img src="assets/chandler_semantic.jpg" alt="drawing" style="width:450px;" />
+</div>
+<p><br></p>
+<div align="center"><i>Unfortunately Chandler still doesn't know the semantics of his life
+</i></div>
+
+<hr />
+<h2 id="intro-to-css">Intro to CSS</h2>
+<p><strong>Cascading Style Sheets</strong>, fondly referred to as CSS, is a simply designed language intended to simplify the process of making web pages presentable. 
+* CSS allows you to apply styles to web pages. More importantly, CSS enables you to do this independent of the HTML that makes up each web page. 
+* It describes how a webpage should look: it prescribes colors, fonts, spacing, and much more. You can make your website look however you want, given you know how to use CSS well.
+* CSS lets developers and designers define how it behaves, including how elements are positioned in the browser. </p>
+<p>Let's take a look at some syntax of CSS.
+<div class="highlight"><pre><span></span><code><span class="c">/* This is a CSS comment */</span>
+<span class="nt">h1</span><span class="p">{</span><span class="w">  </span><span class="c">/* Here, the h1 part is called selector since it selects only the h1 html tags and applies these properties.*/</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">    </span><span class="n">size</span><span class="p">:</span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="kc">red</span><span class="p">;</span>
+<span class="c">/* The curly braces part is called the declaration.*/</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<hr />
+<h2 id="different-ways-to-link-css-with-html">Different ways to link CSS with HTML</h2>
+<p>There are three ways to link a CSS file with HTML: </p>
+<ul>
+<li>
+<h4 id="external-css">External CSS:</h4>
+<p>When we talk of external CSS, we have our CSS stylesheet stored in a different file than the HTML file. 
+  To use the CSS style sheet, each HTML page must include a reference to the external style sheet file inside the <link> element, inside the head section, for e.g.
+  <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;mystyle.css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>This is a heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is a paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></p>
+</li>
+<li>
+<h4 id="internal-css">Internal CSS:</h4>
+<p>An internal CSS stylesheet may be used if the design and colours of the stylesheet are unique to that specific HTML file, i.e it doesn't need to be shared among other HTML pages. The internal CSS is defined inside of the <code>&lt;style&gt;</code> tag, inside the <code>&lt;head&gt;</code> section. It is basically copying an entire css file and pasting inside <code>&lt;style&gt;&lt;/style&gt;</code> tags, for e.g.
+  <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">linen</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">maroon</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin-left</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div></p>
+</li>
+<li>
+<h4 id="inline-css">Inline CSS:</h4>
+  An inline CSS style is applied when we want to apply a unique style to a single element on a webpage. This can be done using the <code>style</code> property within a tag and specifying the properties in that.
+  <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:blue;text-align:center;&quot;</span><span class="p">&gt;</span>This is a heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:red;&quot;</span><span class="p">&gt;</span>This is a paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></li>
+</ul>
+<hr />
+<h2 id="css-selectors-and-visual-rules">CSS Selectors and Visual rules</h2>
+<blockquote>
+<p><strong>CSS selectors</strong> are used to "find" (or select) the HTML elements you want to style. </p>
+</blockquote>
+<p>There are a few ways in which you can use CSS selectors:</p>
+<ul>
+<li>
+<p><strong>Simple selectors</strong>: Using Simple Selectors you can select HTML elements based on their name, id or class. For e.g.
+  <div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c">/*Here, all &lt;p&gt; elements on the page will be center-aligned, with a red text color */</span>
+<span class="w">  </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">#</span><span class="nn">para1</span><span class="w"> </span><span class="p">{</span>
+<span class="c">/* The CSS rule below will be applied to the HTML element with id=&quot;para1&quot;  */</span>
+<span class="w">  </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">center</span><span class="w"> </span><span class="p">{</span>
+<span class="c">/*all HTML elements with class=&quot;center&quot; will be red and center-aligned*/</span><span class="w">   </span>
+<span class="w">  </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Combinator selectors</strong>: Using this method, you can select HTML elements based on a defined relationship between elements, for example child of an element, adjacent to an element, etc.
+  Here are a few types of Combinator selector: </p>
+<ul>
+<li>
+<p><strong>Descendant Selector</strong>
+This snippet selects all <code>&lt;p&gt;</code> elements inside <code>&lt;div&gt;</code> elements 
+  <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Child Selector</strong>
+This snippet selects all <code>&lt;p&gt;</code> elements that are children of a <code>&lt;div&gt;</code> element
+  <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Adjacent Sibling selector</strong>
+Sibling elements must have the same parent element, and "adjacent" means "immediately following"
+The below rule selects the first <code>&lt;p&gt;</code> element that are placed immediately after <code>&lt;div&gt;</code> elements
+  <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>General Sibling Selector</strong>
+The general sibling selector selects all elements that are next siblings of a specified element.
+The below rule selects all <code>&lt;p&gt;</code> elements that are next siblings of <code>&lt;div&gt;</code> elements 
+  <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w">   </span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Now moving on to <strong>CSS Visual Rules</strong>, these are basically the rules which we write inside the declaration part <code>{}</code> of the rules in a CSS Stylesheet. Let's look at some basic CSS rules to get started (there are many more than given in this snippet):</p>
+<h2 id="example-syntax-p-font-size-30px-background-color-blue-width-200px-important-opacity-05-background-image-urlresourcesnyancatpng"><div class="highlight"><pre><span></span><code><span class="c">/* Example syntax*/</span>
+<span class="nt">p</span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span><span class="w">   </span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="k">opacity</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">&quot;../resources/nyancat.png&quot;</span><span class="p">);</span><span class="w"> </span>
+<span class="p">}</span>
+</code></pre></div></h2>
+<h2 id="colors">Colors</h2>
+<p>You can define colors as either <strong>RGB</strong>, <strong>HEX</strong> (hexadecimal), or <strong>HSL</strong> (Hue, Saturation, Lightness) values.</p>
+<ul>
+<li>
+<p><strong>RGB Colors</strong>:
+  RGB colors can be defined in CSS like the following <code>color: rgb(red, green, blue)</code>. Each parameter (red, green, and blue) defines the intensity of the color between 0 and 255.<br>
+  For example, rgb(255, 0, 0) is displayed as red, because red is set to its highest value (255) and the others are set to 0.<br>
+  To display black, set all color parameters to 0, like this: <code>rgb(0, 0, 0)</code>.<br>
+  To display white, set all color parameters to 255, like this: <code>rgb(255, 255, 255)</code>.<br>
+  You can also have an additional parameter '<strong>alpha</strong>' which will decide the transparency/ opacity of the color, and it ranges from 0.0 to 1.0 <code>rgb(222, 100, 234, 0.5)</code>
+  <div class="highlight"><pre><span></span><code><span class="nt">color</span><span class="o">:</span><span class="w"> </span><span class="nt">rgb</span><span class="o">(</span><span class="nt">255</span><span class="o">,</span><span class="nt">0</span><span class="o">,</span><span class="nt">0</span><span class="o">);</span><span class="w"> </span><span class="c">/* Red */</span>
+<span class="nt">color</span><span class="o">:</span><span class="w"> </span><span class="nt">rgb</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="o">,</span><span class="w"> </span><span class="nt">255</span><span class="o">);</span><span class="w"> </span><span class="c">/* Blue */</span>
+<span class="nt">color</span><span class="o">:</span><span class="w"> </span><span class="nt">rgb</span><span class="o">(</span><span class="nt">106</span><span class="o">,</span><span class="w"> </span><span class="nt">90</span><span class="o">,</span><span class="w"> </span><span class="nt">205</span><span class="o">);</span><span class="w"> </span><span class="c">/* Indigo */</span>
+<span class="nt">color</span><span class="o">:</span><span class="w"> </span><span class="nt">rgb</span><span class="o">(</span><span class="nt">106</span><span class="o">,</span><span class="w"> </span><span class="nt">90</span><span class="o">,</span><span class="w"> </span><span class="nt">205</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="p">.</span><span class="nc">1</span><span class="o">);</span><span class="w"> </span><span class="c">/* Indigo, more transparent */</span>
+<span class="nt">color</span><span class="o">:</span><span class="w"> </span><span class="nt">rgb</span><span class="o">(</span><span class="nt">106</span><span class="o">,</span><span class="w"> </span><span class="nt">90</span><span class="o">,</span><span class="w"> </span><span class="nt">205</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="p">.</span><span class="nc">7</span><span class="o">);</span><span class="w"> </span><span class="c">/* Indigo, more opaque */</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>HEX colors</strong>: 
+  A <strong>hexadecimal color</strong> is specified with: <code>#RRGGBB</code>, where the RR (red), GG (green) and BB (blue) hexadecimal integers specify the components of the color.<br>
+  Each of fields of red, green, and blue can have value from 00 in hexadecimal (decimal 0) to FF in hexadecimal(decimal 255). Similar to the RGB colors, where (255,255,255) represents white, in hex #FFFFFF represents white.
+  <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">background-color</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">ffffff</span><span class="o">;</span><span class="w"> </span><span class="c">/* Black */</span>
+<span class="w">  </span><span class="nt">background-color</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">000000</span><span class="o">;</span><span class="w"> </span><span class="c">/* White */</span>
+<span class="w">  </span><span class="nt">background-color</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">00ff00</span><span class="o">;</span><span class="w"> </span><span class="c">/* Green */</span>
+<span class="w">  </span><span class="nt">background-color</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">ff0000</span><span class="o">;</span><span class="w"> </span><span class="c">/* Red */</span>
+<span class="w">  </span><span class="nt">background-color</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">0000ff</span><span class="o">;</span><span class="w"> </span><span class="c">/* Blue */</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>HSL colors</strong>: 
+  A color can be specified using hue, saturation, and lightness (HSL) in the form:<br>
+  <code>hsl(hue, saturation, lightness)</code><br>
+  <strong>Hue</strong> is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.<br>
+  <strong>Saturation</strong> is a percentage value, 0% means a shade of gray, and 100% is the full color.<br>
+  <strong>Lightness</strong> is also a percentage, 0% is black, 50% is neither light or dark, 100% is white
+  <div class="highlight"><pre><span></span><code><span class="nt">color</span><span class="o">:</span><span class="w"> </span><span class="nt">hsl</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span><span class="w"> </span><span class="nt">100</span><span class="o">%,</span><span class="w"> </span><span class="nt">50</span><span class="o">%);</span><span class="w"> </span><span class="c">/*Red */</span>
+<span class="nt">color</span><span class="o">:</span><span class="w"> </span><span class="nt">hsl</span><span class="o">(</span><span class="nt">240</span><span class="o">,</span><span class="w"> </span><span class="nt">100</span><span class="o">%,</span><span class="w"> </span><span class="nt">50</span><span class="o">%);</span><span class="w"> </span><span class="c">/*Blue */</span>
+<span class="nt">color</span><span class="o">:</span><span class="w"> </span><span class="nt">hsl</span><span class="o">(</span><span class="nt">39</span><span class="o">,</span><span class="w"> </span><span class="nt">100</span><span class="o">%,</span><span class="w"> </span><span class="nt">50</span><span class="o">%);</span><span class="w"> </span><span class="c">/* Golden */</span>
+<span class="nt">color</span><span class="o">:</span><span class="w"> </span><span class="nt">hsl</span><span class="o">(</span><span class="nt">274</span><span class="p">.</span><span class="nc">6</span><span class="o">,</span><span class="w"> </span><span class="nt">100</span><span class="o">%,</span><span class="w"> </span><span class="nt">25</span><span class="p">.</span><span class="nc">5</span><span class="o">%);</span><span class="w"> </span><span class="c">/* Indigo */</span>
+</code></pre></div></p>
+</li>
+</ul>
+<hr />
+<h2 id="css-positioning">CSS Positioning</h2>
+<p><strong>CSS positioning</strong> refers to how an element is positioned in a document. 
+* The <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties which refer to the distance in each respective direction from the window or other elements determine the final location of positioned elements. </p>
+<p>There are a few types of positioning in CSS:</p>
+<ul>
+<li><strong>Static Positioning</strong>: 
+  The element is positioned according to the normal flow of the document. The <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>, and <code>z-index</code> properties have no effect.This means that the element will appear in the same order as it is mentioned in the HTML document, and will take up the closest space availible.  This is the default value (<strong><em>we usually need to change this</em></strong>).
+  <div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">static</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li><strong>Relative Positioning</strong>:
+  The element is positioned according to the normal flow of the document, and then offset relative to it's position in a <code>static</code>(default position) based on the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were <code>static</code>.
+  <div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">static</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">h2</span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">h3</span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">static</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* Here, only the h2 element position will be changed by 40px downwards and  40 px right*/</span>
+<span class="c">/* relative to its default position. The other elements are unaffected*/</span>
+</code></pre></div></li>
+<li><strong>Absolute Positioning</strong>: 
+  Using absolute positioning, an element is positioned relative to its parent container, if any, otherwise, it is placed relative to the screen (initial containing block). We can also use <code>position: fixed</code> to directly position the element w.r.t the screen (initial containing block)
+  <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">parentdiv</span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">h1</span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* Here, h1 is present inside a div with class name &#39;parentdiv&#39;. */</span><span class="w"> </span>
+<span class="c">/*The h1 element is positioned with respect to the boundaries of the parentdiv and not its sibling elements. */</span>
+</code></pre></div></li>
+</ul>
+<hr />
+<h2 id="css-typography">CSS Typography</h2>
+<p><strong>CSS typography</strong> relates to the style, spacing, and proportions of text on a website. 
+* Good typography can greatly improve a site's user experience, and the readability of the text,allowing users to grasp the meaning of the text quicker, and makes it more aesthetic. </p>
+<p>There are a few properties relating to typography in CSS:</p>
+<ul>
+<li>
+<p><strong>Color</strong>:
+  You can set the color of text by using the <code>color</code> property. It can hold values of type RGB, RGBA, HSL or HEX values (<em>as discussed earlier</em>)</p>
+</li>
+<li>
+<p><strong>Font Family</strong>: 
+  You can use the <code>font-family</code> property to set which font the text will be using. You can also set multiple fonts to a text, so if the browser was not able to load the first font, then it will use the next font, and so on.
+  <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">text1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Source Sans Pro&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;sans-serif&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="c">/* The browser will use Arial if Source Sans is not availible, else sans-serif if Arial is not availible either */</span>
+<span class="p">}</span>
+<span class="c">/* sans-serif font. */</span>
+<span class="p">.</span><span class="nc">text2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sans-serif&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Font Size</strong>: 
+  You can control the font size of your text using the <code>font-size</code> property. Here's an example of how to use <code>font-size</code>:
+  <div class="highlight"><pre><span></span><code><span class="c">/* The text will use the browser&#39;s default medium size. */</span>
+<span class="p">.</span><span class="nc">text1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="kc">medium</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+    <code>font size</code> can also have various units such as using pixel values:<code>font-size: 20px;</code>, You can use em values. <code>em</code> means that the value is relative to the parent's font-size :<code>font-size: 1.2em;</code>, you can also use percentage:<code>font-size: 90%;</code>, relative keywords:<code>font-size: smaller;</code>, or absolute keywords like large, x-large, etc.<code>font-size: x-large;</code></p>
+</li>
+<li>
+<p><strong>Font Weight</strong>:
+  You can choose the font weight by using the <code>font-weight</code> property. It can store values like <code>normal</code>,<code>bold</code>, or numerical values like <code>600</code>, <code>800</code>, etc.
+  <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">text1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="kc">x-large</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">normal</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* BOLD text. */</span>
+<span class="p">.</span><span class="nc">text2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="kc">x-large</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* using a numerical value for the weight */</span>
+<span class="p">.</span><span class="nc">text3</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="kc">x-large</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Font Style</strong>: 
+  You can choose the Italics of the text using the <code>font-style</code> property. It can store values like <code>normal</code>, <code>italic</code>, or <code>oblique</code>.
+  <div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">text1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-style</span><span class="p">:</span><span class="w"> </span><span class="kc">normal</span><span class="p">;</span>
+<span class="w">  </span><span class="c">/* font-style can also hold values &quot;italic&quot; and &quot;oblique&quot; */</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Text Align and Decoration</strong>: 
+  You can set the alignment of the text using <code>text-align</code> property, or underline/ strikethrough the text using <code>text-decoration</code> property .
+  <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">text1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="kc">large</span><span class="p">;</span>
+<span class="w">    </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span>
+<span class="w">    </span><span class="c">/* Text align can also hold values: right, center, justify */</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">text5</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="kc">large</span><span class="p">;</span>
+<span class="w">    </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">underline</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+</ul>
+<hr />
+<h2 id="css-grids">CSS Grids</h2>
+<p>The <strong>CSS Grid Layout</strong> Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning. 
+ The Grid layout consists of a parent <strong><code>grid container</code></strong> element and any number of child <strong><code>grid items</code></strong>. These grid items are placed inside the columns and rows of the grid container.</p>
+<ul>
+<li>
+<p><strong>Grid Container</strong>: 
+  You can set any element as a grid container, but it must have the property of <code>display: grid;</code> or <code>display: inline-grid</code>. We use the <code>grid-template-columns</code> to set the number and width of the columns and similiarly <code>grid-template-rows</code> for rows.
+  <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">grid-container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="kt">px</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="w"> </span><span class="kc">auto</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="c">/* Represents 4 columns, with width of 80px,200px, auto and 40px.*/</span>
+<span class="w">  </span><span class="c">/* The width can be set to auto to make it evenly spaced*/</span>
+<span class="w">  </span><span class="k">grid-template-rows</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="kt">px</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="c">/* Represents 2 rows of 80px and 200px height. */</span>
+<span class="p">}</span>
+<span class="c">/* In this manner, we can define the dimensions of the grid. */</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Grid Item</strong>:</p>
+<blockquote>
+<p>A grid container contains grid items.
+ * By default, a container has one grid item for each column, in each row, but you can style the grid items so that they will span multiple columns and/or rows.
+ * Using the <strong><code>grid-column</code></strong> property on a grid item element, we specify which column the element will <strong><em>start</em></strong> and which column it will <strong><em>end</em></strong>, and vice versa for the <code>grid-row</code> property. 
+  <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">item1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">  </span><span class="c">/* Item starts on column  1 and ends before column 5. */</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">item2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">  </span><span class="c">/* Make &quot;item2&quot; start on column 1 and span 3 columns */</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">item3</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">    </span><span class="c">/* Make &quot;item3&quot; start on column 2 and span 3 columns */</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">item4</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="w">  </span><span class="c">/* Make &quot;item4&quot; start on row-line 1 and end on row-line 4 */</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">item5</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">span</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="c">/* Make &quot;item5&quot; start on row 1 and span 2 rows*/</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h2 id="css-flexbox">CSS Flexbox</h2>
+<p><strong>CSS Flexbox (Flexible Layout)</strong> aims at providing a more efficient way to lay out, align and distribute space among items in a container even when the size is unknown or dynamically changing. 
+* The flexbox design consists of two parts: A parent <strong>flexbox container</strong>, and the <strong>flexbox items</strong> inside the parent container. There are various properties for both flexbox container and flexbox items, which can be customised as per user needs. </p>
+<ul>
+<li>
+<p><strong>Flexbox Container</strong>:
+  The flexbox container is the parent element which will hold the inner flexbox items. Any HTML element can be set as a flexbox container by setting <code>display:flex;</code> inside the CSS class rules. 
+  The properties for flex container are :</p>
+<ul>
+<li><strong><code>flex-direction</code></strong>:
+The <code>flex-direction</code> property defines in which direction the container wants to stack the flex items.
+  <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">.</span><span class="nc">flex-container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">flex-direction</span><span class="p">:</span><span class="w"> </span><span class="kc">column</span><span class="p">;</span>
+<span class="w">  </span><span class="c">/* The column value stacks the flex items vertically (from top to bottom)*/</span>
+<span class="c">/* flex-direction can hold values &quot;column&quot;, &quot;column-reverse&quot;, &quot;row&quot;, &quot;row-reverse&quot; */</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li><strong><code>flex-wrap</code></strong>
+  The <code>flex-wrap</code> property specifies whether the flex items should wrap or not. 
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p">.</span><span class="nc">flex-container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">flex-wrap</span><span class="p">:</span><span class="w"> </span><span class="kc">wrap</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li><strong><code>flex-flow</code></strong>
+  The <code>flex-flow</code> property is a shorthand property for setting both the flex-direction and flex-wrap properties.
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">.</span><span class="nc">flex-container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">flex-flow</span><span class="p">:</span><span class="w"> </span><span class="kc">row</span><span class="w"> </span><span class="kc">wrap</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li><strong><code>justify-content</code></strong>
+  The <code>justify-content</code> property is used to align the flex items 
+  The center value aligns the flex items at the center of the container. It can also have values flex-start and flex end for left and right alignn respectively.
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p">.</span><span class="nc">flex-container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li><strong><code>align-items</code></strong>
+  The <code>align-items</code> property is used to align the flex items (vertically i.e top-bottom).It can have values flex-start, flex-end, stretch, or center.
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p">.</span><span class="nc">flex-container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Flexbox Items</strong>
+  The child divs inside a div assigned as flex container become the flexbox items. We can change the way flexbox items behave or are arranged inside a flexbox container by changing properties such as </p>
+<ul>
+<li><strong><code>align-self</code></strong>
+Specifies the alignment for a flex item (overrides the flex container's align-items property)
+  <div class="highlight"><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;flex-container&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;align-self: center&quot;</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>  /*This div is aligned vertically in the center */
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div></li>
+<li><strong><code>order</code></strong><br />
+  The order property specifies the order of the flex items.You can arrange the items in any order by setting the order property.
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;flex-container&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;order: 3&quot;</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;order: 2&quot;</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;order: 4&quot;</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;order: 1&quot;</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div></li>
+<li><strong><code>flex-grow</code></strong>
+  The flex-grow property specifies how much a flex item will grow relative to the rest of the flex items.
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;flex-container&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;flex-grow: 1&quot;</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;flex-grow: 1&quot;</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;flex-grow: 8&quot;</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>  /*Makes the third flex item grow eight times faster than the other flex items*/
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div></li>
+<li><strong><code>flex-shrink</code></strong>
+Similiarly, we can use the <code>flex-shrink</code> property to set how fast an item will shrink w.r.t. other items.
+  If it is set to 0, an item will not shrink</li>
+<li><strong><code>flex-basis</code></strong>
+  The flex-basis property specifies the initial length of a flex item.
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;flex-container&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;flex-basis: 200px&quot;</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div></li>
+<li><strong><code>flex</code></strong>
+  The flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties.
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;flex-container&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+/* Make the third flex item not growable (0), not shrinkable (0), and with an initial length of 200 pixels */
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;flex: 0 0 200px&quot;</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+Using CSS proficiently will give you a <strong>modern</strong>, <strong>beautiful</strong> and <strong>clean</strong> website design.
+<br></li>
+</ul>
+</li>
+</ul>
+<div align="center">
+<img src="assets/monicaclean.jpg" alt="drawing" style="width:450px;" /><br>
+</div>
+
+<hr />
+<h2 id="how-to-use-devtools"><strong>How to use DevTools</strong></h2>
+<p><strong>Browser Developer Tools (DevTools)</strong> is a menu option on your browser which can be used for inspection, debugging, or making minor changes in the code.There is also a console which can be referred to for error outputs (if any). </p>
+<p>Let's look at how to use it.</p>
+<ul>
+<li><strong>How to open it?</strong>
+  You can open it by pressing <code>Ctrl+Shift+I</code> on Windows, or <code>⌘ + ⌥ + I</code> on MacOS. You can also right click on any part of a webpage and choose <code>Inspect</code> to open Devtools.</li>
+<li><strong>DOM Inspector</strong>
+  The developer tools usually open by default to the <strong>DOM Inspector</strong>, which looks something like the following screenshot. 
+  This tool can:</li>
+<li>Show what the HTML on your page looks like at runtime, as well as what CSS is applied to each element on the page. </li>
+<li>Allows you to instantly modify the HTML and CSS and see the results of your changes reflected live in the browser viewport.</li>
+<li>You can modify HTML on the left pane, and CSS on the right side <code>styles</code> pane. The target element is highlighted (as shown below).  </li>
+</ul>
+<p><br></p>
+<div align="center"><img src="assets/DOMinspector.jpg" style="width:600px"></div>
+<p><br>
+  On top of the right CSS pane you also see a few other tabs.
+  - <strong>Computed</strong> : It's functions are:
+    * Shows the computed styles for the currently selected element (the final, normalized values that the browser applies). 
+    * It has a <code>box model</code> which represents visually the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is. 
+    * Additionally, Fonts tab which shows the fonts applied to the current element.</p>
+<ul>
+<li><strong>Layout</strong>:
+  If the page you are inspecting uses CSS Grid, this section allows you to view the grid details.</li>
+<li><strong>Sources/Debugger</strong>:
+  The JavaScript debugger allows you to watch the value of variables and set breakpoints, places in your code that you want to pause execution and identify the problems that prevent your code from executing properly.  </li>
+</ul>
+<p><br><div align='center'><img src="assets/debugger.jpg" style="width:600px"></div><br>
+  You can set a breakpoint by clicking on the line number (for example a breakpoint has been set by clicking on 19 in the above image.)
+  Once the breakpoint is set, the code executes and pauses at a breakpoint, and you can check the values of various variables at that line, and then restart the execution.
+- <strong>Console</strong>: 
+  The JavaScript console is an incredibly useful tool for debugging JavaScript that isn't working as expected. 
+  It's functions are:
+    * Allows you to run lines of JavaScript against the page currently loaded in the browser, and reports the errors encountered as the browser tries to execute your code.
+    * You can <code>console.log()</code> any variable values or messages that you want to check in your code, and they will appear here.
+  <br><div align='center'><img src="assets/console.jpg" style="width:600px"></div><br></p>
+<hr />
+<p><strong>To summarise, here are the topics we learnt today:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Intro to Web-Dev</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Languages (HTML/CSS/JS/SQL)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Tags (h, p, b, div, span, etc.)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> HTML Tables</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Semantic HTML</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Intro to CSS</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Different methods to link CSS with HTML</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Selectors and Visual Rules</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> "How to use Dev Tools?"</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Colors</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Position (absolute, relative, fixed)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Typography</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Grid</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Flexbox</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Forms</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> How to use DevTools?</li>
+</ul>
+<div align="center"><i><b>We hope you learnt a lot!!</b></i></div>
+<p><br></p>
+<div align="center">
+<img src="assets/byeee.gif" style="width:600px">
+</div>
+
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.sections", "navigation.instant"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>

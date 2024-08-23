@@ -1,0 +1,2708 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../04-API/">
+      
+      
+        <link rel="next" href="../06-GitHub/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>5: CLI & Git - ACM Coding Bootcamp</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#command-line-interfaces-and-git" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ACM Coding Bootcamp" class="md-header__button md-logo" aria-label="ACM Coding Bootcamp" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ACM Coding Bootcamp
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5: CLI & Git
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-HTML-CSS/" class="md-tabs__link">
+          
+  
+  Sessions
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ACM Coding Bootcamp" class="md-nav__button md-logo" aria-label="ACM Coding Bootcamp" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    ACM Coding Bootcamp
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Sessions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sessions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-HTML-CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1: HTML/CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-JavaScript-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2: JavaScript (Basics)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-JavaScript-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3: JavaScript (Advanced)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4: APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    5: CLI & Git
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    5: CLI & Git
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#so-why-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      So Why CLI?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-connected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Connected
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Connected">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-distros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Distros
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-begin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Begin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Let's Begin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-stuff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Stuff
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple Stuff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#printf" class="md-nav__link">
+    <span class="md-ellipsis">
+      printf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-git-bash-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Git Bash Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#echo" class="md-nav__link">
+    <span class="md-ellipsis">
+      echo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-sensitivty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Sensitivty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      pwd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ls" class="md-nav__link">
+    <span class="md-ellipsis">
+      ls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-line-options-in-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Line Options in Bash
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#man" class="md-nav__link">
+    <span class="md-ellipsis">
+      man
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      cd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Tricks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lets-get-creating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's get Creating
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Let's get Creating">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mkdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      mkdir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#touch" class="md-nav__link">
+    <span class="md-ellipsis">
+      touch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stat" class="md-nav__link">
+    <span class="md-ellipsis">
+      stat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nano" class="md-nav__link">
+    <span class="md-ellipsis">
+      nano
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cat" class="md-nav__link">
+    <span class="md-ellipsis">
+      cat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#head" class="md-nav__link">
+    <span class="md-ellipsis">
+      head
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tail" class="md-nav__link">
+    <span class="md-ellipsis">
+      tail
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#less" class="md-nav__link">
+    <span class="md-ellipsis">
+      less
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task Time
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task Time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filesdirectories-with-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Files/Directories with Spaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mv" class="md-nav__link">
+    <span class="md-ellipsis">
+      mv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      cp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    <span class="md-ellipsis">
+      rm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      rmdir
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cool-stuff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cool Stuff
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cool Stuff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wc" class="md-nav__link">
+    <span class="md-ellipsis">
+      wc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grep" class="md-nav__link">
+    <span class="md-ellipsis">
+      grep
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#piping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Piping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Redirection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commands-galore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands Galore!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands Galore!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      history
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expr" class="md-nav__link">
+    <span class="md-ellipsis">
+      expr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whoami" class="md-nav__link">
+    <span class="md-ellipsis">
+      whoami
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      sudo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git - Version Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    <span class="md-ellipsis">
+      config
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started with Version Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started with Version Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    <span class="md-ellipsis">
+      init
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      .git/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-areas-of-a-git-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logical Areas of a Git Repository
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logical Areas of a Git Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log" class="md-nav__link">
+    <span class="md-ellipsis">
+      log
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      checkout
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenge-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenge Time
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-GitHub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6: GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#so-why-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      So Why CLI?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-connected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Connected
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Connected">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-distros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Distros
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-begin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Begin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Let's Begin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-stuff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Stuff
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple Stuff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#printf" class="md-nav__link">
+    <span class="md-ellipsis">
+      printf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-git-bash-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Git Bash Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#echo" class="md-nav__link">
+    <span class="md-ellipsis">
+      echo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-sensitivty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Sensitivty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      pwd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ls" class="md-nav__link">
+    <span class="md-ellipsis">
+      ls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-line-options-in-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Line Options in Bash
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#man" class="md-nav__link">
+    <span class="md-ellipsis">
+      man
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      cd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Tricks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lets-get-creating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's get Creating
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Let's get Creating">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mkdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      mkdir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#touch" class="md-nav__link">
+    <span class="md-ellipsis">
+      touch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stat" class="md-nav__link">
+    <span class="md-ellipsis">
+      stat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nano" class="md-nav__link">
+    <span class="md-ellipsis">
+      nano
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cat" class="md-nav__link">
+    <span class="md-ellipsis">
+      cat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#head" class="md-nav__link">
+    <span class="md-ellipsis">
+      head
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tail" class="md-nav__link">
+    <span class="md-ellipsis">
+      tail
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#less" class="md-nav__link">
+    <span class="md-ellipsis">
+      less
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task Time
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task Time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filesdirectories-with-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Files/Directories with Spaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mv" class="md-nav__link">
+    <span class="md-ellipsis">
+      mv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      cp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    <span class="md-ellipsis">
+      rm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      rmdir
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cool-stuff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cool Stuff
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cool Stuff">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wc" class="md-nav__link">
+    <span class="md-ellipsis">
+      wc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grep" class="md-nav__link">
+    <span class="md-ellipsis">
+      grep
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#piping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Piping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Redirection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commands-galore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands Galore!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands Galore!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      history
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expr" class="md-nav__link">
+    <span class="md-ellipsis">
+      expr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whoami" class="md-nav__link">
+    <span class="md-ellipsis">
+      whoami
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      sudo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git - Version Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    <span class="md-ellipsis">
+      config
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started with Version Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started with Version Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    <span class="md-ellipsis">
+      init
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      .git/
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-areas-of-a-git-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logical Areas of a Git Repository
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logical Areas of a Git Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log" class="md-nav__link">
+    <span class="md-ellipsis">
+      log
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      checkout
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenge-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenge Time
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="command-line-interfaces-and-git">Command Line Interfaces (and Git)</h1>
+<p>A command-line interface (CLI) is a text-based interface used to run programs, manage computer files and interact with your computer. Most operating systems (OSes) also offer a graphical user interface (GUI) which is usually easier to learn.</p>
+<h2 id="so-why-cli">So Why CLI?</h2>
+<p>Fluency on the command line is a skill which improves your productivity and flexibility as a computer engineer:</p>
+<ul>
+<li>
+<p><strong>Functionality</strong>
+    A GUI does not have the same level of functionality and control as a CLI. CLI's can be used to easily do things that are difficult or even impossible to do with a GUI.</p>
+</li>
+<li>
+<p><strong>Automation</strong>
+    With a CLI, users have all the control over the file system and operating system, and the tasks become simple. You can create a script that contains a few lines of command and it will do the work for you.</p>
+</li>
+<li>
+<p><strong>Programming</strong>
+    The CLI is extremely helpful for programmers for: Installing modules, debugging code, setting up softwares like Git, NPM, Pip, MySQL etc.</p>
+</li>
+<li>
+<p><strong>Speed &amp; Memory</strong>
+    CLI's are faster and use lesser memory. They can even be used to salvage an older laptop that's too slow to run a GUI.</p>
+</li>
+</ul>
+<p>Another great thing about CLI's is that you look really cool working with it... In fact you might even feel - Legendary.</p>
+<div align='center'>
+  <img src="assets/himym-legendary.gif" alt="Nano">
+</div>
+
+<hr />
+<h2 id="getting-connected">Getting Connected</h2>
+<h3 id="windows"><strong>Windows</strong></h3>
+<p>We are going to be using a pretty nifty tool called <code>Git Bash</code>. <code>Git Bash</code> is an application for Microsoft Windows environments which provides an emulation layer for a command line experience. </p>
+<p><em>What Does that mean?</em> It means you can experience a <em>Linux</em>-like terminal within your windows PC. Git Bash comes included with Git itself, so just download Git from <a href="https://git-scm.com/download/win">git-scm.com</a></p>
+<p>If you don't know if you're a 32 or 64 bit system check <em>settings &gt; system &gt; about</em> (might vary depending on Windows version)</p>
+<p><strong>STEPS:</strong>
+* Once the <code>.exe</code> file is saved in your PC, run it.
+* Click on <strong>Yes</strong> when promted to allow this application to make changes to your PC
+* Read the Terms &amp; Conditions <em>(yeah right)</em>. Click on <strong>Next</strong>.
+* For the next few screen feel free to just keep clicking <strong>Next</strong> if you don't know what anything means.
+* Once Installation is done, you will see a screen like this</p>
+<div align='center'>
+  <img src="assets/gitsetup.jpg" alt="Nano">
+</div>
+
+<ul>
+<li>Check the <code>Launch Git Bash</code> Option. There you go, setup completed. You should now have a terminal screen launched.</li>
+</ul>
+<h3 id="mac"><strong>Mac</strong></h3>
+<p>The Mac shell is Unix based just like Linux, so no extra installation will be required initially. Simply launch the CLI by pressing <code>cmd+space</code>, type in <code>terminal</code> and hit enter.</p>
+<h3 id="linux-distros"><strong>Linux Distros</strong></h3>
+<p>Linux? Great, simply launch a new terminal by either pressing <code>Ctrl+Alt+T</code> or right click the desktop and Open Terminal.</p>
+<hr />
+<h2 id="lets-begin">Let's Begin</h2>
+<h3 id="simple-stuff"><strong>Simple Stuff</strong></h3>
+<h4 id="printf"><code>printf</code></h4>
+<p>The <code>printf</code> command is used to print output on screen. It can also be used to print in a specific format. This is similar to the printf command from the C language.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;Hello, %s\n&quot;</span><span class="w"> </span><span class="s2">&quot;World&quot;</span>
+</code></pre></div>
+<blockquote>
+<h4 id="windows-git-bash-users"><strong>Windows Git Bash Users</strong></h4>
+<p>You might find pasting stuff to Git Bash isn't as simple as <code>Ctrl+V</code>. If you right click on the terminal you will see that paste is <code>Shift+Insert</code>. You can go into <em>Options&gt;Keys&gt;Ctrl+Shift+Letter Shortcuts</em> to enable <code>Ctrl+Shift+V</code> for pasting.</p>
+</blockquote>
+<h4 id="echo"><code>echo</code></h4>
+<p>Echo is another command which can be used for displaying/printing whatever follows to the standard output (screen).</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, world.&quot;</span>
+</code></pre></div>
+<h4 id="comments"><strong>Comments</strong></h4>
+<p><div class="highlight"><pre><span></span><code>Anything<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>right<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span><span class="c1"># is ignored by the command line interface.</span>
+</code></pre></div>
+They are there just for you. So you know what you're doing.</p>
+<hr />
+<h3 id="navigation"><strong>Navigation</strong></h3>
+<p>When working with a GUI, we navigate across the filesystem using a file explorer:</p>
+<ul>
+<li>File Explorer (Windows)</li>
+<li>Finder (macOS)</li>
+<li>Dolphin, Nautilus, Thunar and many others! (Linux)</li>
+</ul>
+<p>Akin to those, CLI's use paths to refer to files and to let you know where you are. The <em>path</em> of a file or a directory describes their location on a computer.</p>
+<h4 id="path">Path</h4>
+<p>The <em>path</em> of a file or a directory describes their location on a computer.</p>
+<p>There are two types of paths:</p>
+<ul>
+<li>
+<p><strong>Relative Path</strong>: It refers to the location of a file or directory, <em>relative</em> to the <em>current</em> directory (or <em>present working directory/pwd</em>). The paths can look something like <code>stolen/bluehorn.txt</code> (no '<code>/</code>' in the start)</p>
+</li>
+<li>
+<p><strong>Absolute Path</strong>: It is the location of a file or a directory, <em>relative</em> to the <em>root</em> directory. These will look something like <code>/c/Users/TedMosby</code>. The main difference in how the system recognises Relative and Absolute paths are the leading '<code>/</code>' in absolute paths.</p>
+</li>
+</ul>
+<p>Some important shorthand notations:
+- <code>.</code> refers to the <em>current</em> directory
+- <code>..</code> refers to the <em>parent</em> of the <em>current</em> directory
+- <code>~</code> refers to the <code>HOME</code> directory
+- <code>/</code> refers to the <em>root</em> directory</p>
+<blockquote>
+<h4 id="case-sensitivty"><strong>Case Sensitivty</strong></h4>
+<p>Since <code>Git Bash</code> resides in a Windows Machine, it is not case sensitive, so you can refer to your location as /c/Users/Ted or /c/users/ted and both will work. This is not the case in a traditional linux distro where directories and files are case sensitive.</p>
+</blockquote>
+<h4 id="pwd"><code>pwd</code></h4>
+<p>Use the <code>pwd</code> command to find the present working directory.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">pwd</span><span class="w"> </span><span class="c1"># this will tell you exactly where you are (absolute path)</span>
+</code></pre></div>
+<h4 id="ls"><code>ls</code></h4>
+<p>The <code>ls</code> command is used to list all the files and directories. You may even type <code>ls {path} # relative or absolute</code> to list files from a specific path, by default it lists files from your present working directory.</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span><span class="c1"># Simply prints all files and directories, which may even be colour coded depending on the client you are using</span>
+
+ls<span class="w"> </span>Desktop/<span class="w"> </span><span class="c1"># Prints all files and directories within /pwd/Desktop (relative path)</span>
+
+ls<span class="w"> </span>/c/Users/<span class="o">{</span>your_username<span class="o">}</span>/Desktop<span class="w"> </span><span class="c1"># Prints all files and directories within /c/Users/{your_username}/Desktop, same as previous command but using an absolute path</span>
+</code></pre></div>
+<p>This command is used to list out all files and directories along with hidden files and links to parent directories. Hidden directories/files are represented by a '.' before the filename, such as <em>.bashrc</em></p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-a<span class="w"> </span><span class="c1"># The -a is known as a command line option, a single command can have multiple options</span>
+</code></pre></div>
+<blockquote>
+<h4 id="command-line-options-in-bash"><strong>Command Line Options in Bash</strong></h4>
+<p>Almost all command such as <code>pwd</code>, <code>ls</code> come with Command line options. These options are recognised by a minus sign for example <code>ls -a</code>. </p>
+<p>You can see all command line options for a certain command by using the command <code>man</code></p>
+</blockquote>
+<h4 id="man"><code>man</code></h4>
+<p>The <code>man</code> command displays the user manual entry for the command mentioned.</p>
+<p><em>Unfortunately the <code>man</code> command is not supported with <code>Git Bash</code>, alternatively most commands come with a command line option --help, or you can refer the <a href="#cool-stuff-1">Resources</a> for a help sheet.</em></p>
+<div class="highlight"><pre><span></span><code>man<span class="w"> </span>ls<span class="w"> </span><span class="c1"># this will bring up a screen with the manual entry, use your ↓ arrow key to scroll, and press q to go back to your CLI</span>
+ls<span class="w"> </span>--help<span class="w"> </span><span class="c1"># for Git Bash users</span>
+</code></pre></div>
+<h4 id="clear"><code>clear</code></h4>
+<p>Terminal is getting messy? <code>clear</code> the output simply by using:</p>
+<div class="highlight"><pre><span></span><code>clear
+</code></pre></div>
+<p>You may also use <code>Ctrl+L</code> for <em>similar</em> functionality.</p>
+<h4 id="cd"><code>cd</code></h4>
+<p>The <code>cd</code> is used for traversal between directories.</p>
+<p>Once you have used the <code>ls</code> command and you see the existing directories, you can cd/change directory into them using this command</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>Directory_name
+</code></pre></div>
+<p>If the directory we wish to explore is nested we use
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>Documents/CodingBootcamp
+</code></pre></div>
+It can only be used to enter directories not files.</p>
+<p>The <code>cd</code> command is also use to traverse up directories, we do this by typing, as mentioned in the <a href="#path">path</a> section above.
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>..
+</code></pre></div>
+which moves up a directory.</p>
+<p>To return to the home directory you can simply
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span>
+</code></pre></div></p>
+<p>remember you can always check where you are by typing <code>pwd</code>.</p>
+<blockquote>
+<h4 id="quick-tricks"><strong>Quick Tricks</strong></h4>
+<p>One great way to make your CLI workflow faster is by using some keyboard shortcuts. Use the ↑, ↓ arrows on your keyboard to recall the commands you have typed in previously</p>
+<p><em>Tab button</em>, once you type <code>cd</code> and begin typing in a directory name, <code>cd maind</code> you can press <em>tab</em> to autofill the rest of the name, of course this would only work if the first few letters of the directory existed. </p>
+</blockquote>
+<hr />
+<h3 id="lets-get-creating"><strong>Let's get Creating</strong></h3>
+<h4 id="mkdir"><code>mkdir</code></h4>
+<p>The <code>mkdir</code> command is used to create a <em>directory</em>. So let's make one, ensure you are at your <em>home directory</em>, use <code>cd</code> to get there.</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>TedMosby<span class="w"> </span><span class="c1"># Makes a directory called TedMosby</span>
+</code></pre></div>
+<p>To see that it has been created use <code>ls</code>, then <code>cd</code> into your newly created directory with </p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>TedMosby
+</code></pre></div>
+<h4 id="touch"><code>touch</code></h4>
+<p>Use the <code>touch</code> command to create a file, if the file already exists, touch will just update timestamps.</p>
+<div class="highlight"><pre><span></span><code>touch<span class="w"> </span>teds_friends.txt<span class="w"> </span><span class="c1"># creates an empty file named &#39;teds_friends.txt&#39;</span>
+</code></pre></div>
+<p>Most systems have in-built text editors.
+<a href="https://www.vim.org/">Vim</a> (the sequel to <a href="https://en.wikipedia.org/wiki/Vi">Vi</a>) and <a href="https://www.gnu.org/software/emacs/">Emacs</a> are the best to use.
+However, due to their <em>steep learning curves</em>, they are <em>not advisable for beginners</em>.</p>
+<h4 id="stat"><code>stat</code></h4>
+<p>The <code>stat</code> command is similar to properties of a file in windows.
+<div class="highlight"><pre><span></span><code>stat<span class="w"> </span>teds_friends.txt
+</code></pre></div></p>
+<h4 id="nano"><code>nano</code></h4>
+<p>Let's start editing files, for that we will use a simple command line text editor known as <code>nano</code>.</p>
+<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>teds_friends.txt<span class="w"> </span><span class="c1"># opens &#39;teds_friends.txt&#39; with nano</span>
+</code></pre></div>
+<p>Let's keep track of Ted's best friends with this file.</p>
+<div class="highlight"><pre><span></span><code>Marshall Eriksen
+Robin Scherbatsky
+Barney Stinson
+Lily Aldrin
+</code></pre></div>
+<p>To save the contents of the file:</p>
+<ul>
+<li>Hit <code>Ctrl</code> + <code>S</code> to save the contents of the file.</li>
+<li>Hit <code>Ctrl</code> + <code>X</code> to exit <code>nano</code>.</li>
+</ul>
+<hr />
+<h3 id="reading-files"><strong>Reading Files</strong></h3>
+<h4 id="cat"><code>cat</code></h4>
+<p>Use the <code>cat</code> command to display the contents of the file</p>
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>teds_friends.txt<span class="w"> </span><span class="c1"># This will print the text you entered in the previous step </span>
+</code></pre></div>
+<h4 id="head"><code>head</code></h4>
+<p>Use the <code>head</code> command to display the first few lines of the file</p>
+<div class="highlight"><pre><span></span><code>head<span class="w"> </span>teds_friends.txt<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="c1"># prints the first 2 lines, change the number to print a different number of lines, if you dont specify -n option it will print 10 lines by default</span>
+</code></pre></div>
+<h4 id="tail"><code>tail</code></h4>
+<p>Similarly, you can display the last few lines with <code>tail</code></p>
+<div class="highlight"><pre><span></span><code>tail<span class="w"> </span>teds_friends.txt<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span>
+</code></pre></div>
+<h4 id="less"><code>less</code></h4>
+<p>When it comes to larger files, it becomes inconvenient to just print the entire file to your terminal, so the <code>less</code> command comes in handy, it generates a page layout.</p>
+<div class="highlight"><pre><span></span><code>less<span class="w"> </span>teds_friends.txt<span class="w"> </span><span class="c1"># You can use arrow keys to scroll, and type q to quit</span>
+</code></pre></div>
+<hr />
+<h3 id="task-time"><strong>Task Time</strong></h3>
+<p>Create files with the following content using <code>nano</code>:</p>
+<blockquote>
+<h4 id="filesdirectories-with-spaces"><strong>Files/Directories with Spaces</strong></h4>
+<p>Making files with spaces is slightly different, all you need to do is
+<div class="highlight"><pre><span></span><code>nano<span class="w"> </span><span class="s1">&#39;Marshall Eriksen.txt&#39;</span><span class="w"> </span><span class="c1"># The Quotes allow you to use spaces in the filename</span>
+</code></pre></div>
+You can even use double quotes, or the escape character for spaces such as <code>nano Marshall\ Eriksen.txt</code></p>
+</blockquote>
+<p>Now getting back to making these files, and recording Ted's friends birthdays!</p>
+<div align='center'>
+  <img src="assets/birthday-lilly.gif" alt="Nano">
+</div>
+
+<ul>
+<li>
+<p><code>Marshall Eriksen.txt</code>
+    <div class="highlight"><pre><span></span><code>1978
+</code></pre></div></p>
+</li>
+<li>
+<p><code>Robin Scherbatsky.txt</code>
+    <div class="highlight"><pre><span></span><code>1980
+</code></pre></div></p>
+</li>
+<li>
+<p><code>Barney Stinson.txt</code>
+    <div class="highlight"><pre><span></span><code>1976
+</code></pre></div></p>
+</li>
+<li>
+<p><code>Lily Aldrin.txt</code>
+    <div class="highlight"><pre><span></span><code>1978
+</code></pre></div></p>
+</li>
+</ul>
+<p>Now <code>ls</code> should show you:</p>
+<p><div class="highlight"><pre><span></span><code>ls
+<span class="s1">&#39;Barney Stinson.txt&#39;</span><span class="w">  </span><span class="s1">&#39;Marshall Eriksen.txt&#39;</span><span class="w">    </span>teds_friends.txt
+<span class="s1">&#39;Lily Aldrin.txt&#39;</span><span class="w">     </span><span class="s1">&#39;Robin Scherbatsky.txt&#39;</span>
+</code></pre></div>
+The workspace is very messy. Let us use directories to organize our files</p>
+<p>Create 2 new directories:</p>
+<ul>
+<li><code>married</code></li>
+<li><code>single</code></li>
+</ul>
+<h4 id="mv"><code>mv</code></h4>
+<p>We can move files into specific directories using the <code>mv</code> command</p>
+<p>Try the following commands to move <code>Marshall Eriksen.txt</code> and <code>Lily Aldrin.txt</code> into <code>married</code>:</p>
+<ul>
+<li>
+<p><code>mv "Marshall Eriksen.txt" married/ # 'Marshall Eriksen.txt' is moved into the directory 'married'</code></p>
+</li>
+<li>
+<p><code>mv "Lily Aldrin.txt" "married/Lily Aldrin.txt" # renames 'Lily Aldrin.txt' as 'married/Lily Aldrin.txt' and hence moves it into 'married'</code></p>
+</li>
+</ul>
+<p>The <code>mv</code> command works the same as <em>cut and paste</em> functionality.</p>
+<h4 id="cp"><code>cp</code></h4>
+<p>We can create copies of files using the <code>cp</code> command, some might prefer combining <code>cp</code> and <code>rm</code> over using <code>mv</code> since it gives you a chance to double check.</p>
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span><span class="s1">&#39;Barney Stinson.txt&#39;</span><span class="w"> </span><span class="s1">&#39;single/Barney Stinson.txt&#39;</span><span class="w"> </span><span class="c1"># makes a copy of &#39;Barney Stinson.txt&#39; and pastes it into single/Barney Stinson.txt</span>
+</code></pre></div>
+<p>Do the same for <code>Robin Scherbatsky.txt</code></p>
+<h4 id="tree"><code>tree</code></h4>
+<p>At this point <code>ls</code> can get confusing, to better visualize the contents of <code>PWD</code> use the <code>tree</code> command.</p>
+<p><em>Unfortunately <code>tree</code> doesn't work on <code>Git Bash</code> so you can use <code>ls -R</code> instead or even access the windows alternative with <code>tree.com //F</code>.</em></p>
+<p><div class="highlight"><pre><span></span><code>tree<span class="w"> </span><span class="c1"># displays the names of files and directories in the PWD in a recursive manner</span>
+.
+├──<span class="w"> </span>Barney<span class="w"> </span>Stinson.txt
+├──<span class="w"> </span>Robin<span class="w"> </span>Scherbatsky.txt
+├──<span class="w"> </span>married
+│<span class="w">   </span>├──<span class="w"> </span>Lily<span class="w"> </span>Aldrin.txt
+│<span class="w">   </span>└──<span class="w"> </span>Marshall<span class="w"> </span>Eriksen.txt
+├──<span class="w"> </span>single
+│<span class="w">   </span>├──<span class="w"> </span>Barney<span class="w"> </span>Stinson.txt
+│<span class="w">   </span>└──<span class="w"> </span>Robin<span class="w"> </span>Scherbatsky.txt
+└──<span class="w"> </span>teds_friends.txt
+
+tree.com<span class="w"> </span>//F<span class="w"> </span><span class="c1"># *what is this?* tree is a windows command, by using the .com we are accessing windows commands from within git bash, the //F is a command option, just like how linux uses -f, -h etc, windows uses /F, /H etc.</span>
+C:.
+▒<span class="w">   </span>teds_friends.txt
+▒
++---married
+▒<span class="w">       </span>Lily<span class="w"> </span>Aldrin.txt
+▒<span class="w">       </span>Marshall<span class="w"> </span>Eriksen.txt
+▒
++---single
+<span class="w">        </span>Barney<span class="w"> </span>Stinson.txt
+<span class="w">        </span>Robin<span class="w"> </span>Scherbatsky.txt
+</code></pre></div>
+If you've done everything right till this point, you will see this as the output.</p>
+<h4 id="rm"><code>rm</code></h4>
+<p>We made copies of <code>Barney Stinson.txt</code> and <code>Robin Scherbatsky.txt</code>, so now let's delete the originals with a simple, yet <strong>permanent</strong> command.</p>
+<p>Use the <code>rm</code> command to delete files</p>
+<div class="highlight"><pre><span></span><code>rm<span class="w"> </span><span class="s1">&#39;Barney Stinson.txt&#39;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>rm<span class="w"> </span><span class="s1">&#39;Robin Scherbatsky.txt&#39;</span>
+</code></pre></div>
+<p>Run <code>tree</code> / <code>ls -R</code> / <code>tree.com //F</code> again to see what your <code>pwd</code> now looks like.</p>
+<p>Now let's make a folder for saving the names of all of Ted Mosby's dates called <code>dates</code>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>dates
+</code></pre></div></p>
+<h4 id="rmdir"><code>rmdir</code></h4>
+<p>Who are we kidding, Ted went on like a 100 different dates, let's just <em>delete the folder</em>.</p>
+<div align='center'>
+  <img src="assets/himym-ted.gif" alt="Nano">
+</div>
+<p>Poor Ted :(</p>
+<p>Use the <code>rmdir</code> command to delete directories.</p>
+<div class="highlight"><pre><span></span><code>rmdir<span class="w"> </span>dates
+</code></pre></div>
+<p>If the directory had files in them you could use rm -rf to recursively delete the files and then the directory itself, using the below command.</p>
+<div class="highlight"><pre><span></span><code>rm<span class="w"> </span>-rf<span class="w"> </span>dates<span class="w"> </span><span class="c1"># -r specifies recursion, -f specifies force. Deletes a directory recursively</span>
+</code></pre></div>
+<p>Be careful while using this command as a few mistypes and you might end up accidentally deleting every single file from the system!</p>
+<hr />
+<h3 id="cool-stuff"><strong>Cool Stuff</strong></h3>
+<p>Remember when we said CLI's can do stuff GUI's easily cannot, well now that we covered the basics, let's look at some of the possibilities.</p>
+<h4 id="wc"><code>wc</code></h4>
+<p>The <code>wc</code> command or the word count command is used, as its name suggests, to get the counts. It can be used to get the number of lines, word counts, byte/character count.</p>
+<p>Try
+<div class="highlight"><pre><span></span><code>wc<span class="w"> </span>teds_friends.txt
+<span class="m">4</span><span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">62</span><span class="w"> </span>teds_friends.txt
+</code></pre></div></p>
+<p>So what do these numbers mean?
+*   4 - Number of lines</p>
+<ul>
+<li>
+<p>8 - Number of Words</p>
+</li>
+<li>
+<p>62 - Number of Characters (includes spaces and newlines)</p>
+</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<p>Adding the <code>-l</code> option, gives you only the number of lines in the file. Adding the <code>-w</code> option, gives you only the number of words in the file. Adding the <code>-c</code> option, gives you only the number of characters in the file.</p>
+<p>Feel free to use the <code>man</code> command to see more about the command options
+<div class="highlight"><pre><span></span><code>man<span class="w"> </span>wc
+</code></pre></div></p>
+<p><em>or for <code>Git Bash</code> users</em>
+<div class="highlight"><pre><span></span><code>wc<span class="w"> </span>--help
+</code></pre></div></p>
+<h4 id="grep"><code>grep</code></h4>
+<p><code>grep</code> command is used to search for a specific string in a given file. <code>GREP</code> stands for   <em>Global Regular Expression Print</em>. It has a simple syntax given by:</p>
+<p><div class="highlight"><pre><span></span><code>grep<span class="w"> </span>string_to_search<span class="w"> </span>file_to_search_from
+</code></pre></div>
+So let's try it</p>
+<p><div class="highlight"><pre><span></span><code>grep<span class="w"> </span>Lil<span class="w"> </span>teds_friends.txt
+Lily<span class="w"> </span>Aldrin
+</code></pre></div>
+This finds the phrase Lil in the file, and prints the line it was in.</p>
+<h4 id="variables"><strong>Variables</strong></h4>
+<p>The Linux command line can even have variables, variables are used to store any sort of information, and they can be referenced later.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="nv">temp_variable</span><span class="o">=</span><span class="s2">&quot;hello world&quot;</span>
+</code></pre></div></p>
+<p>Now there is a <strong>local</strong> variable called temp_variable saved in this session, make sure there are no spaces before or after the <code>=</code> sign.</p>
+<p><em>Referencing the created variable</em>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$temp_variable</span>
+</code></pre></div></p>
+<p>The <code>$</code> is used to reference this variable in the terminal. But the functionality of the <code>$</code> doesn't end here.</p>
+<p><strong>Command Substitution</strong></p>
+<p>Here's another cool thing you can do with this concept
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;The output of the wc command is </span><span class="k">$(</span>wc<span class="w"> </span>teds_friends.txt<span class="k">)</span><span class="s2">&quot;</span>
+The<span class="w"> </span>output<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>wc<span class="w"> </span><span class="nb">command</span><span class="w"> </span>is<span class="w">  </span><span class="m">4</span><span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">62</span><span class="w"> </span>teds_friends.txt
+</code></pre></div></p>
+<p>As you can see, by using $(command) this allows you to combine commands easily, you might find use for this in combination with mathemathical commands such as <code>expr</code> and more.</p>
+<h4 id="piping"><strong>Piping</strong></h4>
+<p>Piping can be very useful and it allows you to do more complex tasks.</p>
+<p>Piping commands enables the output of one command to be used as the input for another.</p>
+<p><em>Syntax</em>:
+<div class="highlight"><pre><span></span><code>command_1<span class="w"> </span><span class="p">|</span><span class="w"> </span>command_2<span class="w"> </span><span class="p">|</span><span class="w"> </span>command_3<span class="w"> </span><span class="p">|</span><span class="w"> </span>....<span class="w"> </span><span class="p">|</span><span class="w"> </span>command_N
+</code></pre></div></p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Ted Mosby&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>wc
+<span class="w">      </span><span class="m">1</span><span class="w">       </span><span class="m">2</span><span class="w">      </span><span class="m">10</span>
+</code></pre></div>
+So what just happened?</p>
+<p>The output of <code>echo "Ted Mosby"</code> is sent to <code>wc</code>, so wc then outputs 1 line, 2 words, 10 characters (including the newline).</p>
+<p>Let's do something slightly more complex to understand piping better.
+<strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;Ted Mosby\nAnd Friends&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Friends<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc
+<span class="w">      </span><span class="m">1</span><span class="w">       </span><span class="m">2</span><span class="w">      </span><span class="m">12</span>
+</code></pre></div>
+So again, what just happened?</p>
+<p><code>printf</code> outputs
+<div class="highlight"><pre><span></span><code>Ted Mosby
+And Friends
+</code></pre></div>
+then <code>grep Friends</code> searches that string and outputs
+<div class="highlight"><pre><span></span><code>And Friends
+</code></pre></div>
+Now this is passed to <code>wc</code> which of course prints the final output that is, 1 line, 2 words, and 12 characters. Pretty nifty right!</p>
+<h4 id="output-redirection"><strong>Output Redirection</strong></h4>
+<p>The symbols used for output redirection are <code>&gt;</code> and <code>&gt;&gt;</code>. Output redirection allows you to save the output of a certain command into a file instead of just printing it to terminal and losing it forever.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Ted Mosby&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>tempfile.txt<span class="w"> </span><span class="c1"># Writes &quot;Ted Mosby&quot; to new file called tempfile.txt, or replaces content if the file already exists</span>
+</code></pre></div></p>
+<p>And now you can use <code>ls</code> to see a new file, and <code>cat</code> to see what just happened.</p>
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>tempfile.txt
+Ted<span class="w"> </span>Mosby
+</code></pre></div>
+<p>Let's also explore the <code>&gt;&gt;</code> symbol</p>
+<p><div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;the architect&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>tempfile.txt<span class="w"> </span><span class="c1"># Adds to existing file called tempfile.txt or creates file if it doesn&#39;t exist</span>
+</code></pre></div>
+Now if you <code>cat tempfile.txt</code> you will see
+<div class="highlight"><pre><span></span><code>Ted<span class="w"> </span>Mosby
+the<span class="w"> </span>architect
+</code></pre></div></p>
+<hr />
+<h3 id="commands-galore"><strong>Commands Galore!</strong></h3>
+<p>Let's just see a few more commands, of course there are so much more, but that's what Google is for!</p>
+<h4 id="history"><code>history</code></h4>
+<p>Use the <code>history</code> command to show your command history</p>
+<div class="highlight"><pre><span></span><code><span class="nb">history</span>
+</code></pre></div>
+<p>You can combine <code>grep</code> and <code>history</code> to search for a particular command</p>
+<div class="highlight"><pre><span></span><code>history | grep &quot;cd&quot;
+</code></pre></div>
+<h4 id="expr"><code>expr</code></h4>
+<p>Use the <code>expr</code> command to do simple math or comparisions</p>
+<div class="highlight"><pre><span></span><code>expr<span class="w"> </span><span class="m">1</span><span class="w"> </span>+<span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="c1"># ensure correct spacing</span>
+<span class="m">2</span>
+</code></pre></div>
+<h4 id="whoami"><code>whoami</code></h4>
+<p>It displays the username of the current user when this command is invoked</p>
+<div class="highlight"><pre><span></span><code>whoami
+</code></pre></div>
+<h4 id="sudo"><code>sudo</code></h4>
+<p>Sudo stands for SuperUser DO and is used to access restricted files and operations</p>
+<p><em>This is command does not work with <code>Git Bash</code>. It is recommended not to use <code>sudo</code> anywhere unless you really know what you are doing.</em></p>
+<p><div class="highlight"><pre><span></span><code>sudo<span class="w"> </span><span class="nb">command</span>
+</code></pre></div>
+Replace command with the command you wish to use</p>
+<hr />
+<p><br></p>
+<h2 id="git-version-control">Git - Version Control</h2>
+<p>Now that you are <em>somewhat fluent</em> in CLI's. Let's learn about Git, Git isn't restricted to Linux though, you can set it up on your windows machine too and use the same commands that you'll learn below. If you used <code>Git Bash</code> for the earlier section, your setup is already done!</p>
+<p><strong>What is Version Control?</strong></p>
+<p>Version control system (VCS) is a software tool that helps the developers keep track of every modification to the code. If a mistake is made and things break down, developers can go back and compare earlier versions to debug and help fix the problem.</p>
+<p><strong>Why use Version Control?</strong></p>
+<p>Version control allow ease of collaboration  with other developers with different teams working on different features. Besides that, developing software without using version control is risky, like not having backups.</p>
+<p><strong>What is Git?</strong></p>
+<p>Git is a version control system created by Linus Torvalds in 2005 for development of the Linux kernel. Git is distributed, every directory on every computer has a working copy of the code with a complete history of changes and full version tracking capabilities. </p>
+<p><strong>Why use Git?</strong></p>
+<p>Git is the best choice for developers. Here are the main reasons why:</p>
+<ul>
+<li>Git is <strong>fast</strong> in terms of performance using highly efficient algorithms to track all changes.</li>
+<li>Git is <strong>secure</strong> with all files, directories, versions, commits and tags secured with a cryptographically secure hashing algorithm called SHA1.</li>
+<li>Git is <strong>flexible</strong> with developers requiring no network access, when ready they can <code>push</code> their changes with one command.</li>
+<li>Git is <strong>free</strong> and an open-source project with thousands of developers maintaining it.</li>
+<li>Git is the factory <strong>standard</strong>, it is by far the most widely used version control system today.</li>
+</ul>
+<p>And finally Git can help keep your work safe, so you won't lose valuable checkpoints of your progress, it can also create a habit of saving, so that hopefully you don't end up like Barney Stinson here!</p>
+<div align='center'>
+  <img src="assets/barney-stinson-no-barney-stinson.gif" alt="Nano">
+</div>
+
+<hr />
+<h2 id="installation">Installation</h2>
+<p>First check that you don't already have git installed</p>
+<p>Try the following command:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>--version
+</code></pre></div>
+<p>If you don't have git installed you will see</p>
+<div class="highlight"><pre><span></span><code>command not found: git
+</code></pre></div>
+<hr />
+<p>So Follow the instructions on <a href="https://git-scm.com/downloads">this</a> page to install <code>git</code>.</p>
+<p>After installation, try the following command:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>--version
+</code></pre></div>
+<p>If the installation is successful, you should see the version of the installed software.</p>
+<div class="highlight"><pre><span></span><code>git version 2.23.0
+</code></pre></div>
+<p>If something went wrong, you would see the following message instead:</p>
+<div class="highlight"><pre><span></span><code>command not found: git
+</code></pre></div>
+<hr />
+<h2 id="configuration">Configuration</h2>
+<h4 id="config"><code>config</code></h4>
+<p>To use <code>git</code> properly, you must set your name and email.</p>
+<p>Use the <code>config</code> subcommand for this purpose.</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;[full name]&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;[email address]&quot;</span>
+</code></pre></div>
+<p>To check the values with <code>config</code></p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--list
+</code></pre></div>
+<p>Since we used the <code>--global</code> flag with our <code>config</code>, the same name and email will be used for any <code>git</code> repo we have on our system.</p>
+<p>If you want to use a different name and email for a particular repo, use the <code>--local</code> flag instead</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;[full name]&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;[email address]&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="getting-started-with-version-control">Getting Started with Version Control</h2>
+<p>Create a directory anywhere</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>himym
+<span class="nb">cd</span><span class="w"> </span>himym
+</code></pre></div>
+<h4 id="init"><code>init</code></h4>
+<p>To initialize the repository, use the <code>init</code> subcommand.</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>init
+</code></pre></div>
+<blockquote>
+<h4 id="repository">Repository</h4>
+<p>A repository is a directory that has elevated functionality.</p>
+</blockquote>
+<p>You have now created a <code>git</code> repository on your local system. If you list all files.</p>
+<p><div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-la
+</code></pre></div>
+In Windows, you can also use your file explorer and check the show hidden items option.</p>
+<p>You should see a <strong>.git</strong> directory. </p>
+<blockquote>
+<h4 id="git"><code>.git/</code></h4>
+<p>The .git directory contains everything that's related to our repository. If you send a .git directory to someone else, they would have the complete git project and it's full history. </p>
+<p>If you ever want to stop tracking your project using git, you can just delete the .git directory.</p>
+</blockquote>
+<h3 id="logical-areas-of-a-git-repository">Logical Areas of a Git Repository</h3>
+<p>Git uses 3 logical areas to provide version control:</p>
+<ul>
+<li>
+<p><strong>Working Tree</strong></p>
+<p>Also called the working directory, this is what we see in our file system. When we add, delete, and edit files, we do that in the working tree.</p>
+</li>
+<li>
+<p><strong>Staging Area (Index)</strong></p>
+<p>The staging area is where you prepare the set of changes you want to add to your repository. It is the set of files that git will keep ready for a commit. This area allows us to have full control over the files we put into our next commit. If we have multiple files, only the changes in the staging area are put into the next commit.</p>
+</li>
+<li>
+<p><strong>Repository</strong></p>
+<p>This contains the commit history which allows us to access the previous versions of our project. The history is stored in the .git directory.</p>
+</li>
+</ul>
+<p>Create a file called <code>README.md</code></p>
+<div class="highlight"><pre><span></span><code>touch<span class="w"> </span>README.md
+</code></pre></div>
+<blockquote>
+<p>A <strong>README</strong> file contains information about your repository, directories and files. It is a form of documentation which is a guide to developers giving a description about your project and instructions on how to run the code. The <code>.md</code> stands for <strong>m</strong>ark<strong>d</strong>own file. Markdown is a markup language which is easy to use for formatting text.</p>
+</blockquote>
+<p>You can use <code>nano</code> to write the following into the file.</p>
+<div class="highlight"><pre><span></span><code># My First Repo
+
+Hello, world!
+</code></pre></div>
+<h4 id="status"><code>status</code></h4>
+<p>Use the <code>status</code> subcommand</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>status
+</code></pre></div>
+<p>You will be provided with the following information.</p>
+<div class="highlight"><pre><span></span><code>On<span class="w"> </span>branch<span class="w"> </span>master
+
+No<span class="w"> </span>commits<span class="w"> </span>yet
+
+Untracked<span class="w"> </span>files:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>include<span class="w"> </span><span class="k">in</span><span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+
+<span class="w">    </span>README.md
+
+nothing<span class="w"> </span>added<span class="w"> </span>to<span class="w"> </span>commit<span class="w"> </span>but<span class="w"> </span>untracked<span class="w"> </span>files<span class="w"> </span>present<span class="w"> </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add&quot;</span><span class="w"> </span>to<span class="w"> </span>track<span class="o">)</span>
+</code></pre></div>
+<blockquote>
+<h4 id="branches">Branches</h4>
+<p>Git can track file changes across multiple braches/versions of a repository.
+Each branch is its own universe. Git allows you to create branches from existing ones and move across them.
+  The default branch is called <code>master</code>.</p>
+<h4 id="commits">Commits</h4>
+<p>A commit is nothing but a checkpoint.</p>
+<p>The <code>commit</code> command takes the staged changes and commits it to the project history.</p>
+<p>When making commits use a clear and concise message describing the changes you have made.</p>
+</blockquote>
+<p><code>git</code> assigns <code>README.md</code> as <em>Untracked</em> since it's a new file.
+It will start tracking the file once we add it to the staging area.</p>
+<p>In order to <code>commit</code> something, <code>git</code> needs to know exactly what to <code>commit</code>. In our case we want <code>git</code> to save the new file that we created, i.e. <code>README.md</code>. </p>
+<h4 id="add"><code>add</code></h4>
+<p>First let us add <code>README.md</code> to the staging area with the <code>add</code> subcommand</p>
+<p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>README.md
+</code></pre></div>
+You can alternatively use <code>git add .</code> when there are a lot of files and you wish to add all of them into your repo.</p>
+<p>Check the <code>status</code> of the repository</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>status
+On<span class="w"> </span>branch<span class="w"> </span>master
+
+No<span class="w"> </span>commits<span class="w"> </span>yet
+
+Changes<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>committed:
+<span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git rm --cached &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>unstage<span class="o">)</span>
+
+<span class="w">    </span>new<span class="w"> </span>file:<span class="w">   </span>README.md
+</code></pre></div>
+<p>Earlier, our file was untracked. <code>git</code> has now added the file into the staging area, it expresses this by putting the <code>README.md</code> in <em>Changes to be committed</em>. After adding it to the staging area, <code>git</code> realizes that we are planning to commit this file.</p>
+<h4 id="commit"><code>commit</code></h4>
+<p>Confirm the changes with <code>commit</code> and a message by using the <code>-m</code> flag</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Intial Commit&quot;</span><span class="w"> </span><span class="c1"># the -m flag is for a message. A message usually describes what the commit has done.</span>
+</code></pre></div>
+<p>Checking the status again</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>status
+On<span class="w"> </span>branch<span class="w"> </span>master
+nothing<span class="w"> </span>to<span class="w"> </span>commit,<span class="w"> </span>working<span class="w"> </span>tree<span class="w"> </span>clean
+</code></pre></div>
+<p><em>Nothing to commit</em> means everything in the staging area has already been committed.</p>
+<p><em>Working tree clean</em> means there is nothing new in our directory.</p>
+<h4 id="log"><code>log</code></h4>
+<p>We can <code>log</code> the <code>commit</code> history</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>log<span class="w"> </span><span class="c1"># shows the most recent commit at the top</span>
+</code></pre></div>
+<!-- Feel free to remove this -->
+<p>You can notice the following:</p>
+<ul>
+<li>40 hexadecimal character hash</li>
+<li>Author name and email</li>
+<li>Timestamp</li>
+<li>The message we provided</li>
+</ul>
+<p>Try to use the <code>-p</code> flag with <code>log</code></p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>log<span class="w"> </span>-p<span class="w">  </span><span class="c1"># shows what changed with each commit</span>
+</code></pre></div>
+<h4 id="branch"><code>branch</code></h4>
+<p>Earlier we mentioned the master branch, we can even make branches of our own.</p>
+<p><strong>Q) But why branches?</strong></p>
+<div align='center'>
+  <img src="assets/bald-marshall.gif" alt="Nano">
+</div>
+
+<p>It's always a good idea to make a new branch if you're planning on making any big changes and you want to keep the older versions alive. You don't want to be like Marshall here and make an irreversible mistake, commits and branches all make it easier for you to <em>get your hair</em> or your code back.</p>
+<p>To make a new branch all you need to do is
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>haircut
+</code></pre></div></p>
+<h4 id="checkout"><code>checkout</code></h4>
+<p>Now that you have a new branch called <code>haircut</code>, before you can commit changes to it, you should check it out with a simple command called <code>checkout</code>.</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>haircut
+</code></pre></div>
+<p>And now you just moved from branch <code>master</code> to branch <code>haircut</code>. You can make any changes you want to the <code>README.md</code> file now and commit them to this branch.</p>
+<p><div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;I CUT MY HAIR&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+cat<span class="w"> </span>README.md
+<span class="c1"># My First Repo</span>
+
+Hello,<span class="w"> </span>World!
+I<span class="w"> </span>CUT<span class="w"> </span>MY<span class="w"> </span>HAIR
+</code></pre></div>
+Now let's commit to branch <code>haircut</code>, since we already used <code>checkout</code> all we need to do is
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>README.md
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Haircut commit&quot;</span>
+</code></pre></div></p>
+<p>Remeber anytime you want to return to the <code>master</code> branch <em>(and get your hair back)</em>, all you will need to do is.</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>master<span class="w"> </span><span class="c1"># Return to master branch</span>
+cat<span class="w"> </span>README.md
+<span class="c1"># My First Repo</span>
+
+Hello,<span class="w"> </span>World!
+</code></pre></div>
+<p>See thanks to <code>Git</code> we can get our hair back just like that.</p>
+<p>You can switch between branches using <code>git checkout</code> at any time and the files will be updated to when you last commited in said branch.</p>
+<p><br></p>
+<p>Congrats you just learned CLI + Simple Local Version Control.</p>
+<hr />
+<h2 id="challenge-time">Challenge Time</h2>
+<div align='center'>
+  <img src="assets\challenge-accepted-himym.gif" alt="Nano">
+</div>
+
+<ul>
+<li>
+<p>Earlier today we made a folder <code>TedMosby</code>, make sure you are in that folder. 
+<br />
+<details><summary>Hint</summary><pre>
+  Use `pwd` to check, `cd` to navigate
+  </pre></details></p>
+</li>
+<li>
+<p>Ted drank waaay too much last night, he can't even remember how many friends he has, using the files at your disposal, can you tell him? 
+<br />
+<details><summary>Hint</summary><pre>
+  Think about the `wc` command and it's options in relation to the `teds_friends.txt` file
+  </pre></details></p>
+</li>
+<li>
+<p>Ted has a date tonight, the girl is way out of his league, but it worked out since Ted promised to bring a double date, can you tell him the names of his single friends. 
+<br />
+<details><summary>Hint</summary><pre>
+  For starters try the 'ls' command, but here's the tricky part, want to get rid of the .txt at the end of the file name, Google can be your friend. See the awk command. You will need to use piping for this.
+  <br>If you're sure you can't figure out the answer >
+    <details><summary>Final Answer</summary><pre>
+  ls single | awk '{gsub(".txt","");print}'
+    </pre></details>
+  </pre></details></p>
+</li>
+<li>
+<p>Well that didn't go well, but Barney seemed to have <em>fun</em>, as usual, we need to put him in his place, can you calculate his age, so we can remind him to stop acting like a child :D
+<br />
+<details><summary>Hint</summary><pre>
+  Use command substitution with a math command such as `expr`
+    <details><summary>Final Answer</summary><pre>
+  echo "Barney's Age $(expr 2022 - $(cat "single/Barney Stinson.txt"))"
+    </pre></details>
+  </pre></details></p>
+</li>
+<li>
+<p>Alright time to make some changes, but before we do remember version control, can you make the <code>TedMosby</code> folder into a git repo and commit all the files in it, don't forget to put a simple message with the commit.
+<br />
+<details><summary>Hint</summary><pre>
+    This one is simple, just to test what you know about git. Ensure you are in the `TedMosby` folder before executing the following.
+    <details><summary>Answer</summary><pre>
+    git init
+    git status # will show you the status of the files in the repo
+    git add . # will add all directories and files
+    git commit -m "First Commit"  
+    git log # will shows you your commit status
+    </pre></details>
+  </pre></details></p>
+</li>
+<li>
+<p>Ted's fighting with Lily and Marshall, it's time to cut them out, but just in case they stop fighting, lets make a new branch called <code>fight</code> (<code>git branch</code>, <code>checkout</code>), delete the <code>married</code> folder and it's files, and also edit the <code>teds_friends.txt</code> file to cut out Marshall Eriksen and Lily Aldrin.
+<br />
+<details><summary>Hint</summary><pre>
+  Use `git branch fight` to make a new branch `fight` and `git checkout fight` to get onto the newly created branch `fight`.
+
+  Use rm -rf for deleting the folder `married`, and use nano to edit `teds_friends.txt`
+  </pre></details></p>
+</li>
+<li>
+<p>Commit the new changes to the new branch <code>fight</code>, let the message be "In a fight!". Don't forget to <code>git add</code> and check if it worked with <code>git log</code>.</p>
+</li>
+<li>Good news, Ted's made up with his friends, um but we deleted Lily and Marshall, can we bring them back? That's the magic of <code>Git</code>. Find a way to <code>checkout</code> the other branch and get the friends back together!</li>
+</ul>
+<p>And that's happily ever after... kinda... <em>Checkout</em> the resources below if you weren't able to do any of these tasks or you just want to learn more. Find Cheatsheets, documentations, courses, games and more. 
+<br></p>
+<h1 id="whats-next">What's next?</h1>
+<p>Here are some Github repositories that you can make use of for additional information.</p>
+<h2 id="learn-by-doing">Learn By Doing</h2>
+<ul>
+<li><a href="https://overthewire.org/wargames/">A very fun CTF style game to learn CLI's</a>
+. The Game requires SSH capabilites, you can do that from the default windows terminal but we recommend installing something like <a href="https://www.putty.org/">PuTTY</a></li>
+<li><a href="https://learngitbranching.js.org/">Game To help you visualise and learn Git commands</a></li>
+</ul>
+<h2 id="learn-traditionally">Learn Traditionally</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=yz7nYlnXLfE">CLI Crash Course - <em>freeCodeCamp</em></a></li>
+<li><a href="https://www.youtube.com/watch?v=8JJ101D3knE">Basics of Git Course</a></li>
+</ul>
+<h2 id="cool-stuff_1">Cool Stuff</h2>
+<ul>
+<li><a href="https://cheat.sh/">Quick Help sheet for <strong>LOADS</strong> of linux commands</a></li>
+<li><a href="https://ss64.com/">Command Line <strong>Cheat Sheet</strong></a></li>
+<li><a href="https://rogerdudler.github.io/git-guide/">Basic Git Guide for beginners</a></li>
+<li><a href="https://git-scm.com/docs">Git Documentation</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.sections", "navigation.instant"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>

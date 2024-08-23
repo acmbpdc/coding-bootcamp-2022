@@ -1,0 +1,2080 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../02-JavaScript-1/">
+      
+      
+        <link rel="next" href="../04-API/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>3: JavaScript (Advanced) - ACM Coding Bootcamp</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#section-0306-break-and-continue-statements" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ACM Coding Bootcamp" class="md-header__button md-logo" aria-label="ACM Coding Bootcamp" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ACM Coding Bootcamp
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3: JavaScript (Advanced)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-HTML-CSS/" class="md-tabs__link">
+          
+  
+  Sessions
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ACM Coding Bootcamp" class="md-nav__button md-logo" aria-label="ACM Coding Bootcamp" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    ACM Coding Bootcamp
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Sessions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sessions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-HTML-CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1: HTML/CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-JavaScript-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2: JavaScript (Basics)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3: JavaScript (Advanced)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    3: JavaScript (Advanced)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#section-0306-break-and-continue-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 03.06 Break and Continue Statements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0306-break-and-continue-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.06. Break and Continue statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0307-for-each-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.07. for each loop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0307-foreach-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.07. for...each loop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0405-objects-in-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      04.05. Objects in Javascript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-conditions-control-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5. Conditions - Control Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5. Conditions - Control Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#we-can-use-the-following-conditional-statements-in-javascript-to-make-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      We can use the following conditional statements in JavaScript to make decisions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0501-the-if-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      05.01. The if statement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-if-statement-and-comparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      The if statement and comparison operators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0502-the-if-else-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      05.02. The if else statement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0503-the-if-else-if-else-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      05.03. The if else if else statement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0504-the-switch-case-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      05.04. The switch case statement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0505-lookup-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      05.05 Lookup Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-regular-expressions-regex-in-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      06. Regular Expressions (RegEx) in Javascript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0601-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      06.01 Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0602-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      06.02 Replace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0603-the-test-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      06.03 The Test Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0604-the-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      06.04 The | Operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0606-regex-wildcards" class="md-nav__link">
+    <span class="md-ellipsis">
+      06.06 RegEx Wildcards
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-7-promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 7. promise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 7. promise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#701-what-is-a-promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.01. What is a promise?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#702-the-then-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.02. The .then() method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#703-promise-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.03 Promise chaining
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#704-promiseall" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.04 Promise.all()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-8-dom-document-object-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 8. DOM (Document Object Manager)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 8. DOM (Document Object Manager)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#801-finding-elements-using-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.01 Finding Elements using DOM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.01 Finding Elements using DOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#80101-id-of-an-html-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.01.01 Id of an HTML tag
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.01.01 Id of an HTML tag">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#80102-name-of-an-html-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.01.02 Name of an HTML tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#80103-name-of-a-class-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.01.03 Name of a Class Name
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#802-writing-information-from-javascript-to-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.02 Writing information from javascript to html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#803-altering-css-using-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.03 Altering CSS using javascript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#804-using-dom-to-dynamically-alter-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.04 Using DOM to dynamically alter html
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-9-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 9. Project
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4: APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-CLI-Git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5: CLI & Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-GitHub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6: GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#section-0306-break-and-continue-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 03.06 Break and Continue Statements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0306-break-and-continue-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.06. Break and Continue statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0307-for-each-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.07. for each loop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0307-foreach-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.07. for...each loop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0405-objects-in-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      04.05. Objects in Javascript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-conditions-control-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5. Conditions - Control Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5. Conditions - Control Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#we-can-use-the-following-conditional-statements-in-javascript-to-make-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      We can use the following conditional statements in JavaScript to make decisions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0501-the-if-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      05.01. The if statement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-if-statement-and-comparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      The if statement and comparison operators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0502-the-if-else-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      05.02. The if else statement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0503-the-if-else-if-else-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      05.03. The if else if else statement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0504-the-switch-case-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      05.04. The switch case statement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0505-lookup-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      05.05 Lookup Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-regular-expressions-regex-in-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      06. Regular Expressions (RegEx) in Javascript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0601-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      06.01 Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0602-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      06.02 Replace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0603-the-test-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      06.03 The Test Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0604-the-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      06.04 The | Operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0606-regex-wildcards" class="md-nav__link">
+    <span class="md-ellipsis">
+      06.06 RegEx Wildcards
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-7-promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 7. promise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 7. promise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#701-what-is-a-promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.01. What is a promise?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#702-the-then-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.02. The .then() method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#703-promise-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.03 Promise chaining
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#704-promiseall" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.04 Promise.all()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-8-dom-document-object-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 8. DOM (Document Object Manager)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 8. DOM (Document Object Manager)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#801-finding-elements-using-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.01 Finding Elements using DOM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.01 Finding Elements using DOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#80101-id-of-an-html-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.01.01 Id of an HTML tag
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.01.01 Id of an HTML tag">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#80102-name-of-an-html-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.01.02 Name of an HTML tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#80103-name-of-a-class-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.01.03 Name of a Class Name
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#802-writing-information-from-javascript-to-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.02 Writing information from javascript to html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#803-altering-css-using-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.03 Altering CSS using javascript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#804-using-dom-to-dynamically-alter-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.04 Using DOM to dynamically alter html
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-9-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 9. Project
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p align="center">
+  <img src="assets/images/js_logo.png" alt="JavaScript logo" title="JavaScript tutorial" width="200" />
+</p>
+
+<p><center><h1>Javascript Session 2</h1></center></p>
+<h2 id="section-0306-break-and-continue-statements">Section 03.06 Break and Continue Statements</h2>
+<h2 id="0306-break-and-continue-statement">03.06. Break and Continue statement</h2>
+<ul>
+<li><code>break</code> and <code>continue</code> keywords/statement can change <code>how the loop behaves</code></li>
+<li><code>break</code> and <code>continue</code> keywords can be used in all loops to stop or continue the loop</li>
+<li>The <code>break</code> statement is used to exit a loop early, to "jump out" of a loop, stops executing/running a loop</li>
+<li>The <code>continue</code> statement tells the interpreter to immediately start the next iteration of the loop and skip the remaining code block</li>
+</ul>
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// break continue statement</span>
+
+<span class="cm">/* break */</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">arrDays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Monday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;TuesDay&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Thursday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Friday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Saturday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Sunday&quot;</span><span class="p">];</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">i</span><span class="o">++</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;// ------------------------------&#39;</span><span class="p">);</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">arrDays</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arrDays</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;// ------------------------------&#39;</span><span class="p">);</span>
+
+<span class="cm">/* continue */</span>
+<span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// console.log(&#39;Even Number &#39;, i);</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="c1">// skip rest of the loop body</span>
+
+<span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span><span class="w"> </span><span class="c1">// not of use</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;just in even num continue&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// not of use</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Odd Number &#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;// ------------------------------&#39;</span><span class="p">);</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="c1">// skip rest of the loop body</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;just after 5 continue...&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// not of use</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;// ------------------------------&#39;</span><span class="p">);</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="kr">int</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;2 is favorite EVEN number&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;at 5 stop the loop&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;current Number is:&#39;</span><span class="p">,</span><span class="w"> </span><span class="kr">int</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0307-for-each-loop">03.07. for each loop</h2>
+<h2 id="0307-foreach-loop">03.07. for...each loop</h2>
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>: ``
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">arrDays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Monday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;TuesDay&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Thursday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Friday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Saturday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Sunday&quot;</span><span class="p">];</span>
+
+<span class="nx">arrDays</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">day</span><span class="p">)){</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">day</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0405-objects-in-javascript">04.05. Objects in  Javascript</h2>
+<p>04.05.01 Objects
+- An object in javascript is a variable that can have multiple attributes and methods.
+- Attributes of objects are values that represent different features of that  class.
+- Methods of objects are actions that can be performed by the class using functions.</p>
+<blockquote>
+<p><strong>Syntax &amp; Example</strong>
+Let us make an object to represent a person, we will begin with atributes of the person such as their name and age.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">firstName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Sheldon&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">lastName</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Cooper&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">age</span><span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="mf">35</span>
+<span class="p">};</span>
+
+<span class="c1">// We can view these atributes with the syntax variable_name.atribute_name</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;The name of this person is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">person</span><span class="p">.</span><span class="nx">firstName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">person</span><span class="p">.</span><span class="nx">lastName</span><span class="p">);</span>
+</code></pre></div></p>
+<p>We can also alter these atributes to update their values
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Current age: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">person</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span>
+
+<span class="nx">person</span><span class="p">.</span><span class="nx">age</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Current age: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">person</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span>
+</code></pre></div></p>
+<p>Javascript also allows us to add and remove atributes of a class
+<div class="highlight"><pre><span></span><code><span class="c1">// We can add an atribute using the syntax variable_name.atribute_name = value</span>
+<span class="nx">person</span><span class="p">.</span><span class="nx">iq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">187</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Sheldon&#39;s iq: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">person</span><span class="p">.</span><span class="nx">iq</span><span class="p">);</span>
+
+<span class="c1">// We can also delete these atributes using the delete keyword</span>
+<span class="ow">delete</span><span class="w"> </span><span class="nx">person</span><span class="p">.</span><span class="nx">iq</span><span class="p">;</span>
+
+<span class="c1">// This line will now give us an error as the atribute has been deleted</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Sheldon&#39;s iq: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">person</span><span class="p">.</span><span class="nx">iq</span><span class="p">);</span>
+</code></pre></div>
+If we need to check if and object has a paticular atribute we can use the hasOwnProperty method which is inbuilt into all classes</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Do we have this person&#39;s iq?\n&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">person</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="s2">&quot;iq&quot;</span><span class="p">));</span>
+</code></pre></div>
+<ul>
+<li>We can now add our own methods to our class using functions
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">firstName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Sheldon&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">lastName</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Cooper&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">age</span><span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="mf">35</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">greetPenny</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hey Penny!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">person</span><span class="p">.</span><span class="nx">greetPenny</span><span class="p">();</span><span class="w"> </span><span class="c1">// This calls the method greetPenny</span>
+</code></pre></div></li>
+</ul>
+<p align="center">
+  <img src="assets/images/hello_penny.jpeg" alt="JavaScript logo" title="JavaScript tutorial" width="400" />
+</p>
+
+<h1 id="section-5-conditions-control-flow">Section 5. Conditions - Control Flow</h1>
+<ul>
+<li>Conditional statements are used to perform different action based on different condition</li>
+<li>Conditional statements allow the developer to make correct decisions and perform right actions as per condition</li>
+<li>It helps to perform different actions for different decisions</li>
+<li>We can use conditional operator to check our condition: &gt;, &lt;, &gt;=, &lt;=, ==, !=, ===</li>
+</ul>
+<h4 id="we-can-use-the-following-conditional-statements-in-javascript-to-make-decisions">We can use the following conditional statements in JavaScript to make decisions:</h4>
+<ol>
+<li>If Statement</li>
+<li>If...else Statement</li>
+<li>If...else if...else Statement</li>
+<li>Switch...Case Statement</li>
+</ol>
+<h2 id="0501-the-if-statement">05.01. The if statement</h2>
+<h2 id="the-if-statement-and-comparison-operators">The if statement and comparison operators</h2>
+<ul>
+<li>If the conditional statement is the simplest and basic control statement make decisions and execute statements conditionally</li>
+<li>The if statement is used to execute a block of code <code>only if the specified condition evaluates to true</code></li>
+<li>It evaluates the content only <code>if an expression is true</code></li>
+</ul>
+<p>If conditional statements are used to evaluate some kind of condition and do something/perform some actions based on the result</p>
+<blockquote>
+<p><strong>Note</strong>: <br/>
+Use <code>if</code> to specify a block of code to be executed, <code>if a specified condition is true</code></p>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// if conditional statement</span>
+
+<span class="cm">/*if(condition/expression) {</span>
+<span class="cm">  // Code to be executed if condition/expression is true</span>
+<span class="cm">}</span>
+<span class="cm">*/</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Sheldon&#39;</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">user</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Sheldon&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Welcome Sheldon!&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Welcome Sheldon!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">user</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Sheldon&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Welcome Authorised User: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;!&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Welcome Authorised User: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// ------------------------------</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;MAJOR! Eligible for Voting&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;MAJOR! Eligible for Voting&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// ------------------------------</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">currentHours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nx">currentHours</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">12</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Good Morning!&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Good Morning!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nx">currentHours</span><span class="w"> </span><span class="o">&gt;=</span><span class="mf">6</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">currentHours</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">12</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Good Morning!&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Good Morning!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0502-the-if-else-statement">05.02. The if else statement</h2>
+<ul>
+<li>The JavaScript <code>if...else statement</code> is used to execute the code <code>weather condition is true or false</code></li>
+<li>The developer can enhance the decision-making capabilities by providing an alternative choice through adding an <code>else</code> statement to the <code>if</code> statement</li>
+<li>The condition can be any expression that evaluates to true or false</li>
+<li>If the condition evaluates to true, statements_1 are executed; otherwise, statements_2 are executed</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: <br/>
+Use <code>else</code> to specify a block of code to be executed, <code>if the same condition is false</code></p>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// if...else conditional statement</span>
+
+<span class="cm">/*if(condition/expression){</span>
+<span class="cm">// content to be executed if condition is true - statements_1</span>
+<span class="cm">}</span>
+<span class="cm">else{</span>
+<span class="cm">// content to be executed if condition is false - statements_2</span>
+<span class="cm">}*/</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Ambar&#39;</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">user</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Sheldon&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Welcome Sheldon!&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Welcome Sheldon!&#39;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Welcome Guest!&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Welcome Guest!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// ------------------------------</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;MAJOR! Eligible for Voting&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;MAJOR! Eligible for Voting&#39;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;MINOR! NOT Eligible for Voting&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;MINOR! NOT Eligible for Voting&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// ------------------------------</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">currentHours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nx">currentHours</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">12</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Good Morning!&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Good Morning!&#39;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Good Evening!&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Good Evening!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0503-the-if-else-if-else-statement">05.03. The if else if else statement</h2>
+<ul>
+<li>The <code>if...else if...else</code> a special statement that is used to <code>combine multiple if...else statements</code></li>
+<li>It is an advanced form of if...else that allows us to <code>make a correct decision out of several conditions</code></li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: <br/>
+Use <code>else if</code> to specify a new condition to test, <code>if the first condition is false</code></p>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// If...else if...else conditional statement</span>
+
+<span class="cm">/*if(condition/expression 1) {</span>
+<span class="cm">    // Code to be executed if condition1 is true statements_1</span>
+<span class="cm">} else if(condition/expression 2) {</span>
+<span class="cm">    // Code to be executed if the condition1 is false and condition2 is true statements_2</span>
+<span class="cm">} else {</span>
+<span class="cm">    // Code to be executed if both condition1 and condition2 are false statements_3</span>
+<span class="cm">}*/</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">200</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Both numbers are equal&#39;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Number2 is greater!&#39;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Number1 is greater!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// ------------------------------</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">60</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;SINIOR CIRIZEN!&#39;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">age</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;MINOR!&#39;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;MAJOR - Middle Age!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// ------------------------------</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">currentHours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span><span class="p">;</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nx">currentHours</span><span class="w"> </span><span class="o">&gt;=</span><span class="mf">6</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">currentHours</span><span class="o">&lt;</span><span class="w"> </span><span class="mf">12</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Good Morning!&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Good Morning!&#39;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">currentHours</span><span class="w"> </span><span class="o">&gt;</span><span class="mf">12</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">currentHours</span><span class="w"> </span><span class="o">&lt;=</span><span class="mf">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Good AfterNoon!&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Good AfterNoon!&#39;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Good Evening!&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Good Evening!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0504-the-switch-case-statement">05.04. The switch case statement</h2>
+<ul>
+<li>The switch...case statement is alternative to an if...else if...else statement, both do almost the same thing</li>
+<li>This matches the <code>case</code> and the <code>value of condition</code> and if the case matches, the subsequent block is executed and if none of the case matches <code>default block</code> is executed</li>
+<li>The JavaScript switch statement is used to execute one code from multiple blocks of expressions</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: <br/>
+Use <code>switch</code> to specify many <code>alternative blocks of code to be executed</code></p>
+<p><strong>Syntax &amp; Example</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// switch...case conditional statement</span>
+
+<span class="cm">/* switch(variable/expression){</span>
+<span class="cm">  case value1:</span>
+<span class="cm">    // Code to be executed if variable/expression === value1</span>
+<span class="cm">    break;</span>
+<span class="cm">  case value2:</span>
+<span class="cm">    // Code to be executed if variable/expression === value2</span>
+<span class="cm">    break;</span>
+<span class="cm">  default:</span>
+<span class="cm">    // Code to be executed if variable/expression is different from all values</span>
+<span class="cm">} */</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;B&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// A.B,C, or something</span>
+
+<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">grade</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;A&#39;</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Great Job! - A Grade&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;B&#39;</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Good! - B Grade&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;C&#39;</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Congratulations! - Passed&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">default</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Sorry! - Failed...Keep trying!&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// ------------------------------</span>
+</code></pre></div></p>
+</blockquote>
+<p align="center">
+  <img src="assets/images/food.png" alt="JavaScript logo" title="JavaScript tutorial" width="300" />
+</p>
+
+<p><div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">sweets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">//cake, chocolates, biscuits</span>
+
+<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">sweets</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;chocolates&#39;</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Chubby Chocolates!&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;cake&#39;</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Happy BirthDay Cake!&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;biscuits&#39;</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Enjoy Biscuits!&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">default</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;No Sweets! Try some other sweets!&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="p">;</span>
+
+<span class="k">switch</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The Dark RED&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Go Green&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;blue&#39;</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Boys are Blue&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;yellow&#39;</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Golden Yellow&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">default</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Its some other Color, Enter correct color&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">currentDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">currentDay</span><span class="p">;</span>
+
+<span class="k">switch</span><span class="p">(</span><span class="nx">currentDate</span><span class="p">.</span><span class="nx">getDay</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mf">0</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">currentDay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Sunday&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mf">1</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">currentDay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Monday&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mf">2</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">currentDay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Tuesday&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mf">3</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">currentDay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Wednesday&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mf">4</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">currentDay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Thursday&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mf">5</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">currentDay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Friday&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mf">6</span><span class="o">:</span>
+<span class="w">    </span><span class="nx">currentDay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Saturday&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Today is </span><span class="si">${</span><span class="nx">currentDay</span><span class="si">}</span><span class="sb">!`</span><span class="p">);</span>
+</code></pre></div></p>
+<p align="center">
+  <img src="assets/images/bazinga.png" alt="JavaScript logo" title="JavaScript tutorial" width="400" />
+</p>
+
+<h2 id="0505-lookup-tables">05.05 Lookup Tables</h2>
+<blockquote>
+<p>In javascript, we can use objects to create a lookup or mapping between different values.
+A lookup is a variable that maps an input value to a paticular output value.</p>
+</blockquote>
+<p><div class="highlight"><pre><span></span><code><span class="c1">// This is a lookup table that maps names to mobile numbers</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">mobile_number_lookup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;Penny&quot;</span><span class="o">:</span><span class="mf">58538902</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Raj&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">98745689</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Sheldon&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">789023456</span><span class="p">};</span>
+
+<span class="c1">// To get the corresponding mobile number from a name we use the syntax variable[input value]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Raj&#39;s number is: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">mobile_number_lookup</span><span class="p">[</span><span class="s2">&quot;Raj&quot;</span><span class="p">);</span>
+</code></pre></div>
+05.07 Object Freeze</p>
+<hr />
+<blockquote>
+<p>If we want to prevent our object or lookuptable from having any future changes, we make use of the Object.freeze function.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">firstName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Sheldon&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">lastName</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Cooper&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">age</span><span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="mf">35</span>
+<span class="p">};</span>
+<span class="c1">// We can chage atributes like normal</span>
+<span class="nx">person</span><span class="p">.</span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">37</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span>
+
+<span class="c1">// We now freeze to prevent future changes</span>
+<span class="nb">Object</span><span class="p">.</span><span class="nx">freeze</span><span class="p">(</span><span class="nx">person</span><span class="p">);</span>
+
+<span class="c1">// This will not take effect since this object is now frozen</span>
+<span class="nx">person</span><span class="p">.</span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">35</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="06-regular-expressions-regex-in-javascript">06. Regular Expressions (RegEx) in  Javascript</h2>
+<blockquote>
+<p>Regular Expressions is a type of format for strings that allows you to easily find and replace characters as you like.</p>
+</blockquote>
+<h2 id="0601-search">06.01 Search</h2>
+<blockquote>
+<p>The search method allows us to get the index of the substring in the text.
+Note that this search is regardless of case sensitivity.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Big Bang Theory&quot;</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="sr">/Theory/i</span><span class="p">));</span>
+</code></pre></div>
+<h2 id="0602-replace">06.02 Replace</h2>
+<blockquote>
+<p>The replace method allows us to replace a substring with any string of our choice.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Big Bang Theory&quot;</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/Big/i</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Massive&quot;</span><span class="p">));</span>
+</code></pre></div>
+<h2 id="0603-the-test-method">06.03 The Test Method</h2>
+<blockquote>
+<p>This checks if the substring contains a string that meets the following criteria.
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/Season 1/</span><span class="w"> </span><span class="c1">// this expression will return true for all strings with the term Season 1</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">expression</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s2">&quot;Season 1 Episode 12&quot;</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">expression</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s2">&quot;Season 2 Episode 12&quot;</span><span class="p">));</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0604-the-operator">06.04 The | Operator</h2>
+<blockquote>
+<p>This operator searches for any of the alternatives provided by the user
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/Season 1|Season 2/g</span><span class="w"> </span><span class="c1">// this expression will return true for all strings with Season 1 or Season 2</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">expression</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s2">&quot;Season 1 Episode 12&quot;</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">expression</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s2">&quot;Season 2 Episode 12&quot;</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">expression</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s2">&quot;Season 3 Episode 12&quot;</span><span class="p">));</span>
+</code></pre></div>
+06.05 The Match Function</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>This returns all instances where a substring matching the regex expression is found.
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Big Bang Theory&quot;</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/Big/g</span><span class="p">));</span>
+</code></pre></div></p>
+</blockquote>
+<h2 id="0606-regex-wildcards">06.06 RegEx Wildcards</h2>
+<blockquote>
+<p>Wildcards are placeholders that can represent multiple characters in a string.</p>
+</blockquote>
+<ul>
+<li>\d represents numbers</li>
+<li>\s represents whitespace</li>
+<li>\b represents the beginning of a word</li>
+<li>* represents zero or more whitespaces</li>
+<li>\A represents the start of a string</li>
+<li>[a-z | A-z] can represent any character
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/[a-z | A-z]/g</span><span class="w"> </span><span class="c1">// checks if the string contains an alphabet</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">expression</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">expression</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s2">&quot;xy&quot;</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">expression</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">));</span>
+</code></pre></div></li>
+</ul>
+<h1 id="section-7-promise">Section 7. promise</h1>
+<h2 id="701-what-is-a-promise">7.01. What is a promise?</h2>
+<p>Why is a JavaScript ES6 <code>promise</code> called a 'promise'? Here is a snippet from the <em>Oxford Dictionary of English</em> definition of 'promise':</p>
+<blockquote>
+<p><strong>promise</strong> |ˈprɒmɪs|<br>
+noun<br>
+1 a declaration or assurance that one will do something or that a particular thing will happen</p>
+</blockquote>
+<p>This pretty well sums up what a promise means in JavaScript: something that will be delivered in the future (if and when the promise is <em>fulfilled</em>).</p>
+<p>Traditionally, <em>callbacks</em> are used as a way to receive the data that is delivered asynchronously (meaning that the data is not likely to be available at the time it is requested but can be expected some time later). Using callbacks can quickly become unwieldy when dealing with many asynchronous events (e.g., ajax calls), especially when they depend on each other (google for <em>callback hell</em>).</p>
+<p>JavaScript ES6 introduces promises as a better alternative for callbacks when dealing with asynchronous events.</p>
+<p>We can state a number of simple facts about ES6 promises:</p>
+<ul>
+<li>A promise is a JavaScript object (<code>typeof somePromise === 'object'</code>) that serves as a placeholder for a (future) value.</li>
+<li>Because a promise is an ordinary JavaScript object you can pass it around as an argument to a function, return it from a function, assign it to a variable, push it to an array, etc.</li>
+<li>You can receive the 'promised' value by calling the <code>.then()</code> method of the promise, passing it a function that will receive that value as its argument as soon as it is available.</li>
+<li>You can create a promise by calling the ES6 <code>Promise</code> constructor function with <code>new</code> (see Listing 1 below), then call <code>resolve()</code> when results are ready or <code>reject()</code> on detecting an error.</li>
+<li>Sometimes you can get a ready-made promise by calling an appropriate API or library function, like the <code>fetch()</code> Web API function in Listing 1.</li>
+<li>Internally, a promise can be in one of three states:</li>
+<li><strong>pending</strong>: the asynchronous result is still awaiting delivery</li>
+<li><strong>fulfilled</strong>: the asynchronous result has been delivered and is available (<code>resolve()</code> was called)</li>
+<li><strong>rejected</strong>: an error was encountered: the promise could not be fulfilled (<code>reject()</code> was called)</li>
+<li>A promise that is no longer pending because it was either fulfilled or rejected is said to be <em>settled</em>.</li>
+<li>A promise that is <em>settled</em> has reached its final state. Its state and value can no longer be changed. It has become <em>immutable</em>. Subsequently calling <code>resolve()</code> or <code>reject()</code> does no longer affect the outcome of the promise.</li>
+</ul>
+<h2 id="example-code">Example code</h2>
+<p>Listing 1 shows an example based on an asynchronous XMLHttpRequest that we will use throughout the rest of this discussion.</p>
+<div class="highlight"><pre><span></span><code><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">fetchJSON</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="nx">reject</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">xhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">XMLHttpRequest</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;json&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">400</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">resolve</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">reject</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">statusText</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="c1">// alternative:</span>
+<span class="c1">// const fetchJSON = url =&gt; fetch(url).then(res =&gt; res.json());</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;http://api.nobelprize.org/v1/laureate.json?gender=female&#39;</span><span class="p">;</span>
+
+<span class="nx">fetchJSON</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">renderData</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+<span class="w">  </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">renderError</span><span class="p">(</span><span class="nx">err</span><span class="p">));</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">renderData</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">renderError</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Listing 1. Asynchronous <code>XMLHttpRequest</code> (and <code>fetch</code> alternative) using a promise.</p>
+<p>The <code>fetchJSON()</code> function in Listing 1 returns a <code>promise</code> that resolves to a value converted from JSON data received from a remote API end point. The alternative version of <code>fetchJSON()</code> (commented out here) uses a more modern browser function that natively returns a promise.</p>
+<h2 id="702-the-then-method">7.02. The .then() method</h2>
+<p>A promise exposes a <code>.then()</code> method through which you can obtain its fulfilled value or an error value in the case the promise was rejected:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">somePromise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">onFulfilled</span><span class="p">,</span><span class="w"> </span><span class="nx">onRejected</span><span class="p">);</span>
+</code></pre></div>
+<p>The <code>.then()</code> method takes as its parameters two <strong>optional</strong> functions, the first one dealing with the 'happy' scenario (the promise is fulfilled) and the second one dealing with the error case (the promise is rejected). If you are only interested in the success case you can leave out the second parameter:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">somePromise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>If you are only interested in the error case, you can pass <code>null</code> for the first argument:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">somePromise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">//...</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>or you can use another method available on a promise, <code>.catch()</code>, which is just a shorthand for calling <code>then()</code> with <code>null</code> as its first argument:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">somePromise</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="p">})</span>
+<span class="w">  </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="p">});</span>
+</code></pre></div>
+<p>Note that the <code>onFulfilled</code> and <code>onRejected</code> handler functions always execute asynchronously. When the promise is settled, the <code>onFulFilled</code> or <code>onRejected</code> handler is placed on the event/callback queue. They execute when the currently executing JavaScript code runs to completion, causing the <a href="./event_loop.md#call-stack">call stack</a> to become empty and enabling the event loop to process the next event from the queue. This holds true even if the promise is immediately fulfilled or rejected, as in this example:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="mf">42</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;after promise&#39;</span><span class="p">);</span>
+
+<span class="c1">// console output:</span>
+<span class="c1">// after promise</span>
+<span class="c1">// 42</span>
+</code></pre></div>
+<p>This example also shows how you can create a promise that is immediately resolved. There is no need to use <code>new</code> or to pass a <code>(resolve, reject) =&gt; {}</code> function to the <code>Promise</code> constructor. Similarly you can create a promise that is immediately rejected:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s1">&#39;oops&#39;</span><span class="p">))</span>
+<span class="w">  </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">));</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;after promise&#39;</span><span class="p">);</span>
+
+<span class="c1">// console output:</span>
+<span class="c1">// after promise</span>
+<span class="c1">// oops</span>
+</code></pre></div>
+<h2 id="703-promise-chaining">7.03 Promise chaining</h2>
+<p>It is important to understand that the <code>.then()</code> method returns a new promise that resolves to the return value of <code>onFulfilled</code> (if specified) in case of the 'happy' scenario or the return value of <code>onRejected()</code> (if specified) in case of an error. If the return value of these functions is a plain JavaScript value, the new promise is immediately fulfilled with that value. If the return value is yet another promise then the outcome is determined by the inner promise, once settled. If the function does not return a value, the new promise is immediately fulfilled with the value <code>undefined</code>.</p>
+<p>Because <code>.then()</code> (and <code>.catch</code>) return new promises, you can chain them together such that your code can be read as: do <em>this</em>, then do <em>that</em> and then <em>that</em>, etc.:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">fetchAndRender</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">otherUrl</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">fetchJSON</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">renderData</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">fetchJSON</span><span class="p">(</span><span class="nx">otherUrl</span><span class="p">);</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">otherData</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">renderOtherData</span><span class="p">(</span><span class="nx">otherData</span><span class="p">);</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="w">    </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">renderError</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nx">fetchAndRender</span><span class="p">();</span>
+</code></pre></div>
+<p>Listing 2. Chaining of <code>then</code> and <code>catch</code></p>
+<p>Let's examine Listing 2 in a bit more detail. There two calls to <code>fetchJSON()</code>. Errors are handled in one place, by means of the <code>.catch()</code> method that terminates the promise "chain".</p>
+<p>If you embed another promise inside the function that you pass to the <code>.then()</code> method (in Listing 2 this is done in the first <code>.then()</code>) you should return that promise as the function's return value. If you don't return the promise, there is no way for the <code>.catch()</code> at the end of the chain to "see" a <code>reject()</code> of the inner promise, leaving the rejection unhandled.</p>
+<p>In case a promise in the chain is rejected due to some error, the promise chain will be traversed until an <code>onRejected</code> handler (e.g., in a terminating <code>.catch()</code> method) is found. All intermediate <code>onFulfilled</code> handlers (e.g. <code>.then()</code>) will be skipped.</p>
+<p>Handling errors at the end of a promise chain is a major advantage over the repetition of error handling code in the case of callbacks.</p>
+<p>Note however that a <code>.catch()</code> method does not necessarily have to be the last method in the chain. It can be used to handle errors midway. As mentioned previously, the <code>.catch()</code> method returns a new promise which can be used to provide some "fallback" value in case of errors.</p>
+<p>In the example below a promise is created that is immediately rejected. The promise is subsequently "consumed" twice.</p>
+<ol>
+<li>
+<p>In the first case ('consumer 1'), the rejection is caught by a <code>.catch()</code> method and the rejection value <code>'bad'</code> is printed on the console.</p>
+</li>
+<li>
+<p>In the second case ('consumer 2'), the rejection is also caught by a <code>.catch()</code> method, but now the catch handler completely ignores the rejection value and just returns the fallback value <code>'good.</code>. This becomes the fulfilled value of the promise returned by <code>.catch()</code>. The next <code>.then()</code> in the chain, completely oblivious that an error ever occurred, now prints the fulfilled value <code>'good'</code> on the console.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">promise</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="s1">&#39;bad&#39;</span><span class="p">);</span>
+
+<span class="c1">// consumer 1</span>
+<span class="nx">promise</span>
+<span class="w">  </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span><span class="w"> </span><span class="c1">// -&gt; &quot;bad&quot;</span>
+
+<span class="c1">// consumer 2</span>
+<span class="nx">promise</span>
+<span class="w">  </span><span class="p">.</span><span class="k">catch</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s1">&#39;good&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span><span class="w"> </span><span class="c1">// -&gt; &quot;good&quot;</span>
+</code></pre></div>
+<h2 id="704-promiseall">7.04 Promise.all()</h2>
+<p>There may be situations where you want to execute multiple promises in parallel and wait until all promises are resolved. Of course, these promises must not be interdependent (i.e. a promise must not depend on the result of another promise running in parallel). The <code>Promise.all()</code> method accepts an array (or more precisely, an <em>iterable</em>) of promises. It return a new promise that is resolved when all promises in the array are resolved, or rejected as soon as one of the promises in the array is rejected.</p>
+<p>The fulfilled value of the new promise is an array of fulfilled values of the individual promises passed to <code>Promise.all()</code>, in the same order.</p>
+<h1 id="section-8-dom-document-object-manager">Section 8. DOM (Document Object Manager)</h1>
+<p>DOM is a system which allows javascript to interact with the html of a webpage. The elements are stored in a type of tree structure that represents the HTML format. Below we can see a visualization of what this looks like.</p>
+<p align="center">
+  <img src="assets/images/htmltree.jpeg" alt="htmltree" title="htmltree" width="500" />
+</p>
+
+<p>As we can see, the tree begins with an element called document. This is actually an inbuilt object that javascript gives us. It serves as a starting point from which we can access it's many methods and attributes that allow us to interact with the webpage.</p>
+<h2 id="801-finding-elements-using-dom">8.01 Finding Elements using DOM</h2>
+<p>To find an element using DOM, we need an identifier to understand which element we are looking for. Below are examples of HTML and javascript code using different identifiers. First see what the raw html looks like in codepen and then add the javascript later to see the difference.</p>
+<h3 id="80101-id-of-an-html-tag">8.01.01 Id of an HTML tag</h3>
+<p>Html code
+<div class="highlight"><pre><span></span><code>&lt;html&gt;
+&lt;body&gt;
+&lt;p id=&quot;demo&quot;&gt; Who is smart?&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+JS code
+<div class="highlight"><pre><span></span><code>document.getElementById(&quot;demo&quot;).innerHTML = &quot;Sheldon is smart!&quot;;
+</code></pre></div></p>
+<h4 id="80102-name-of-an-html-tag">8.01.02 Name of an HTML tag</h4>
+<p>Html code
+<div class="highlight"><pre><span></span><code>&lt;html&gt;
+&lt;body&gt;
+&lt;p id=&quot;demo&quot;&gt; Who is smart?&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+JS code
+<div class="highlight"><pre><span></span><code>const element = document.getElementsByTagName(&quot;p&quot;);
+
+document.getElementById(&quot;demo&quot;).innerHTML = &#39;The question is: &#39; + element[0].innerHTML;
+</code></pre></div></p>
+<h4 id="80103-name-of-a-class-name">8.01.03 Name of a Class Name</h4>
+<p>Html code
+<div class="highlight"><pre><span></span><code>&lt;html&gt;
+&lt;body&gt;
+&lt;p class=&quot;intro&quot;&gt; Who is smart?&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+JS code
+<div class="highlight"><pre><span></span><code>const element = document.getElementsByClassName(&quot;intro&quot;);
+
+document.getElementById(&quot;demo&quot;).innerHTML = &#39;The question is: &#39; + element[0].innerHTML;
+</code></pre></div></p>
+<h2 id="802-writing-information-from-javascript-to-html">8.02 Writing information from javascript to html</h2>
+<p>In some cases we might want javascript to simply paste information onto the page. For this we can use the document.write() function.
+<div class="highlight"><pre><span></span><code>&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;The date and time is&lt;/p&gt;
+
+&lt;script&gt;
+document.write(Date()); // Date() returns the current date and time
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></p>
+<h2 id="803-altering-css-using-javascript">8.03 Altering CSS using javascript</h2>
+<p>We use the .style attribute of the document object to edit the css code. Here we take the following steps to change the color of the text</p>
+<blockquote>
+<ol>
+<li>Get the HTML tag using document.getElementById</li>
+<li>Get the CSS of this tag from the style attribute.</li>
+<li>In the CSS attribute get the color attribute.</li>
+<li>Set this value to "green".</li>
+</ol>
+</blockquote>
+<p>HTML code
+<div class="highlight"><pre><span></span><code>&lt;html&gt;
+&lt;body&gt;
+&lt;p id=&quot;p2&quot;&gt;This text can change color.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+JS code
+<div class="highlight"><pre><span></span><code>document.getElementById(&quot;p2&quot;).style.color = &quot;green&quot;;
+</code></pre></div></p>
+<h2 id="804-using-dom-to-dynamically-alter-html">8.04 Using DOM to dynamically alter html</h2>
+<p>Changing simple text using DOM is well and good, but how can we use the more powerful aspects of JS such as loops to edit HTML in a dynamic way? To demonstrate this type of behavior we will show you some simple code to use a loop that constantly moves a paragraph across the screen.</p>
+<p>HTML code
+<div class="highlight"><pre><span></span><code>&lt;html&gt;
+&lt;body&gt;
+&lt;p id=&quot;p3&quot; style = &quot;position: absolute;top : 100px;&quot;&gt;This text is moving across the screen.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></p>
+<p>JS code
+The setTimeout function is a simple function that waits a set amount of milliseconds before executing some code.
+If we run this with i * 10 timeout the it will wait in intervals of 0, 10, 20 and so on before executing the code. This will allow us to see the text move across the screen instead of the loop running faster than we can comprehend it.
+<div class="highlight"><pre><span></span><code>for (let i = 0; i &lt; 1000; i += 0.5) {
+  setTimeout(function () {
+        document.getElementById(&quot;p3&quot;).style.left = i + &quot;px&quot;;
+    }, i * 100);
+}
+</code></pre></div></p>
+<h1 id="section-9-project">Section 9. Project</h1>
+<p><a href="https://anuragkj.github.io/JS_Project/">Click here</a> for a simple project made by the concepts we learnt till now. Try making more!!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.sections", "navigation.instant"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>
